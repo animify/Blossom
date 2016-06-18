@@ -4,9 +4,24 @@
 	border-radius border-radius-normal
 	height 1.7em
 	content ''
+	&.tiny
+		height 0.3em
+	&.small
+		height 0.8em
+	&.large
+		height 2.6em
 	.bar
 		height 100%
-		content ''
-		width 50%
 		border-radius border-radius-normal
 		background-color darken(background-light-gray, 32%)
+		position relative
+		&.show
+			.status
+				display block
+		.status
+			color #fff
+			absolute right 8px
+			opacity 0.8
+			font-size .875em
+			line-height 1.9125em
+			display none

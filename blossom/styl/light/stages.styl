@@ -1,0 +1,61 @@
+.stages
+	display inline-flex
+	flex-direction row
+	align-items stretch
+	border-radius border-radius-normal
+	border 1px solid border-gray
+	.stage
+		display flex
+		flex 1 0 auto
+		flex-wrap wrap
+		vertical-align center
+		flex-direction row
+		align-items center
+		background-color #fff
+		padding 1em 2em
+		position relative
+		.header
+			display block
+			font-weight 600
+			font-size 1.1em
+			margin-bottom .1em
+		&:last-child
+			&:before, &:after
+				display none
+		&:before
+			content ''
+			width 0
+			height 0
+			border-top .8em solid transparent
+			border-bottom .8em solid transparent
+			border-left .8em solid #fff
+			absolute right -0.55em
+			z-index 900
+		&:after
+			content ''
+			width 0
+			height 0
+			border-top .6em solid transparent
+			border-bottom .6em solid transparent
+			border-left .6em solid border-gray
+			absolute right -0.6em
+			z-index 800
+		& + .stage
+			border-left 1px solid border-gray
+		&.disabled > *
+			opacity 0.3
+		&.completed
+			i
+				color color-green
+		&.active
+			background-color background-lightest-gray
+			.header
+				color text-link
+			&:before
+				border-left-color background-lightest-gray
+		.icon
+			margin-right 1em
+			i
+				font-size 2.2em
+		.content
+			flex 0 1 auto

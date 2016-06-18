@@ -18,6 +18,9 @@
 .show-lists > .list {
   margin: 20px 0;
 }
+.show-progress > .progress {
+  margin: 6px 0;
+}
 .module.example img + img {
   margin-top: 2em;
 }
@@ -35,4 +38,7 @@
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+.stages {
+  margin-top: 20px;
 }
