@@ -1,0 +1,52 @@
+.button
+	display inline-block
+	position relative
+	overflow hidden
+	border-radius border-radius-normal
+	color text-button-default
+	background-color background-light-gray
+	outline 0
+	padding 0 1.4em
+	text-align center
+	border 0
+	height em-height
+	line-height em-height
+	font-size 1em
+	font-weight 600
+	cursor pointer
+	transition all 0.2s ease
+	&.labeled
+		padding 0 1.4em 0 4em
+		i
+			absolute top left
+			width 2.6em
+			background-color rgba(0, 0, 0, 0.1)
+			text-align center
+			color #fff
+			height 100%
+			font-size 1em
+			line-height em-height
+		&.labeled-right
+			padding 0 4em 0 1.4em
+			i
+				absolute top right
+				left auto
+	&.icon
+		padding 0 0.8275em
+	&:hover
+		color hover-text-button-default
+		background-color hover-background-light-gray
+	&-primary
+		color primary-white
+		background-color background-primary
+		&:hover
+			color primary-white
+			background-color hover-background-primary
+
+for clr in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black')
+	.button-{clr}
+		btn-color(clr)
+		btn-background(clr)
+		&:hover
+			btn-color(clr)
+			btn-background-hover(clr)

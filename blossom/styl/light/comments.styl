@@ -1,0 +1,56 @@
+.comments
+	span(1/1)
+	.comment
+		position relative
+		margin-top .8em
+		cf()
+		.comment
+			margin-left -1.8em
+		.avatar
+			width 2.5em
+			height 2.5em
+			height auto
+			display block
+			vertical-align top
+			margin-top .26em
+			float left
+			border-radius border-radius-normal
+			img
+				max-width 100%
+				border-radius border-radius-normal
+		.content
+			display block
+			vertical-align top
+			margin-left 3.4em
+			.actions
+				display block
+				font-size .875em
+				margin-top .63em
+				.action
+					display inline-block
+					vertical-align top
+					color text-light-link
+					& + .action
+						margin-left 0.6em
+					&.active
+						color text-light-link-hover
+					&:hover
+						color text-light-link-hover
+			.meta
+				font-size .875em
+				color text-lightest-grey
+				margin-left .6em
+			.creator
+				font-weight 600
+				color text-grey !important
+				line-height 1.62em
+				&:hover
+					color primary-color
+			.text
+				line-height 1.14em
+	.reply
+		position relative
+		textarea
+			margin-top 1em
+		.button-group
+			margin-top 1em

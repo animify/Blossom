@@ -1,0 +1,28 @@
+.label
+	font-size 0.875em
+	background-color background-light-gray
+	color text-lighter-grey
+	padding 0.55em 0.72em
+	display inline-block
+	border-radius border-radius-normal
+	font-weight 600
+	.detail
+		background-color rgba(0, 0, 0, .1)
+		padding 0.55em 0.72em
+		height 100%
+		margin -0.55em -0.72em -0.55em 0.72em
+		border-radius inherit
+		display inline-block
+		opacity .8
+		vertical-align top
+		float right
+	i
+		margin-right 0.3em
+	a
+		color text-lighter-link
+		padding-left 0.35em
+		&:hover
+			color text-lighter-link-hover
+	for bc in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black')
+		&.{bc}
+			color white

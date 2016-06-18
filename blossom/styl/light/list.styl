@@ -1,0 +1,75 @@
+ul.list, ol.list
+	padding 0
+	margin 0
+	list-style none
+
+.list
+	font-size 1em
+	li, .item
+		padding 0.22em 0
+		position relative
+		line-height 1.15em
+		display list-item
+		table-layout fixed
+		&:after
+			display block
+			content ''
+			height 0
+			clear both
+		a.header
+			display block
+		.header
+			font-weight 600
+			line-height 1.15em
+		.icon
+			&.large
+				font-size 1.6em
+				line-height 1.4em
+			display inline-block
+			vertical-align middle !important
+			margin-right 8px
+		.content
+			display inline-block
+			vertical-align top
+	&.spaced
+		li, .item
+			padding 0.4em 0
+	&.very-spaced
+		li, .item
+			padding 0.8em 0
+	&.links
+		> .item
+			opacity .52
+			transition opacity 0.14s ease
+			&:hover
+				opacity 1
+			&.active
+				opacity 1
+	&.divided
+		li:first-child, .item:first-child
+			border none
+		li, .item
+			border-top 1px solid border-light-red-gray
+
+	&.ordered
+		counter-reset item
+		.list
+			counter-reset item
+			padding .55em 0 .05em .5em
+		li, .item
+			&:before
+				counter-increment item
+				content counters(item,".") " "
+				margin-right 5px
+				opacity 0.8
+	&.bulleted
+		padding-left 1em
+		.item
+			&:before
+				content '•'
+				absolute left auto top auto
+				margin-left -0.77em
+
+ol.ordered
+	li[value]:before
+		content attr(value)

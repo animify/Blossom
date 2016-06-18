@@ -1,0 +1,38 @@
+.block-grey {
+  width: 100%;
+  height: 190px;
+  background-color: #e0e1e2;
+}
+.show-grid > [class^='clm-'] {
+  padding-top: 15px;
+}
+.show-input > .input {
+  margin: 10px 0;
+}
+.show-cards {
+  margin: 12px 0;
+}
+.show-cards > .card:not(.fluid) {
+  margin-right: 20px;
+}
+.show-lists > .list {
+  margin: 20px 0;
+}
+.module.example img + img {
+  margin-top: 2em;
+}
+.module.example .loader {
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

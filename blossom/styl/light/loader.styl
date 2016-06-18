@@ -1,0 +1,78 @@
+.loader
+	width 3.4em
+	height 3.4em
+	position relative
+	text-align center
+	font-size 1em
+	color #fff
+	padding-top 3.64em
+	&:empty
+		width 3em
+		height 3em
+		padding-top 0 !important
+	&.disabled, &.hidden
+		display none
+	&.inline
+		display inline-block
+	&.small
+		width 3.3em
+		height 3.3em
+		padding-top 1.7em
+		&:empty
+			width 1.2em
+			height 1.2em
+			padding-top 0 !important
+		&:before, &:after
+			width 1.2em
+			height 1.2em
+	&.large
+		width 5em
+		height 5em
+		padding-top 5.7em
+		&:empty
+			width 5em
+			height 5em
+			padding-top 0 !important
+		&:before, &:after
+			width 5em
+			height 5em
+	&.dark
+		color text-grey
+		&:before, &:after
+			background-color invert(background-light-gray)
+	&:before, &:after
+		width 3em
+		height 3em
+		border-radius 50%
+		absolute top left 0 right 0
+		background-color background-light-gray
+		opacity 0.3
+		display block
+		margin 0 auto
+		content ''
+		-webkit-animation bounce 2s infinite ease-in-out
+		animation bounce 2s infinite ease-in-out
+	&:after
+		-webkit-animation-delay -1.0s
+		animation-delay -1.0s
+
+
+@-webkit-keyframes bounce
+	0%
+		-webkit-transform scale(0.0)
+	50%
+		-webkit-transform scale(1.0)
+	100%
+		-webkit-transform scale(0.0)
+
+
+@keyframes bounce
+	0%
+		transform scale(0.0)
+		-webkit-transform scale(0.0)
+	 50%
+		transform scale(1.0)
+		-webkit-transform scale(1.0)
+	100%
+		transform scale(0.0)
+		-webkit-transform scale(0.0)

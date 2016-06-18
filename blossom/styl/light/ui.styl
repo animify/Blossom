@@ -1,0 +1,19 @@
+body
+	font-family font-family-standard
+	font-size font-size-standard
+	color text-grey
+
+for h in (1..6)
+	h{h}
+		font-size lookup('font-size-h' + h)
+		font-weight 600
+
+::selection
+	color black
+	background-color lighten(primary-color, 80%)
+a
+	color text-link
+	text-decoration none
+	cursor pointer
+	&:hover
+		color text-link-hover

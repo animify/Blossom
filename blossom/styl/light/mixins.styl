@@ -1,0 +1,46 @@
+$grid
+	padding 0 grid-padding
+	*zoom 1
+	float left
+	clear none
+	text-align inherit
+	margin-left 0%
+	margin-right 0%
+	&:before, &:after
+		display table
+		content ''
+	&:after
+		clear both
+
+placeholder()
+	&::-webkit-input-placeholder
+			{block}
+	&:-moz-placeholder
+			{block}
+	&::-moz-placeholder
+			{block}
+	&:-ms-input-placeholder
+			{block}
+
+image-size(s)
+	img
+		width lookup('image-' + s)
+		height auto
+
+grid(n)
+	width percentage(n/grid-length)
+
+text-color(c)
+	color lookup('color-' + c)
+
+btn-color(c)
+	color lookup('text-button-' + c)
+
+btn-background(c)
+	background-color lookup('background-' + c)
+
+btn-background-hover(c)
+	if c == 'black'
+		background-color lighten(lookup('background-' + c), 14%)
+	else
+		background-color darken(lookup('background-' + c), 8%)

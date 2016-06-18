@@ -1,0 +1,51 @@
+.cards
+	display flex
+	flex-wrap wrap
+.card
+	position relative
+	background-color #fff
+	box-shadow 0 1px 2px 0 box-shadow-gray
+	border 1px solid border-gray
+	border-radius border-radius-normal
+	width 285px
+	display flex
+	flex-direction column
+	&.fluid
+		span(1/1)
+	.image
+		flex 0 0 auto
+		img
+			max-width 100%
+		&.header
+			img
+				border-radius border-radius-normal border-radius-normal 0 0
+	.content
+		padding 1em
+		flex-grow 1
+		&:after
+			display block
+			content ''
+			clear both
+		.header
+			font-size 1.3em
+		.sub
+			line-height 1.5em
+			color text-lightest-grey
+		p
+			margin-top .6em
+			line-height 1.3em
+			color text-lighter-grey
+		&.footer
+			flex-grow 0
+			&.button
+				padding 0
+				text-align center
+				border-radius 0 0 border-radius-normal border-radius-normal
+			i
+				margin-right 5px
+				font-size 0.84em
+			span(1/1)
+			padding 0.875em 1em
+			color text-lightest-grey
+			font-size 0.925em
+			border-top 1px solid lighten(border-gray, 25%)
