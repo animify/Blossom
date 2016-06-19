@@ -33,8 +33,14 @@ grid(n)
 text-color(c)
 	color lookup('color-' + c)
 
+btn-border(c)
+	box-shadow inset 0px 0px 0px 1px lookup('color-' + c)
+
 btn-color(c)
 	color lookup('text-button-' + c)
+
+btn-color-outlined(c)
+	color lookup('color-' + c)
 
 btn-background(c)
 	background-color lookup('background-' + c)

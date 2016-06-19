@@ -15,6 +15,13 @@
 	font-weight 600
 	cursor pointer
 	transition all 0.2s ease
+	&.outlined
+		box-sizing border-box
+		background-color transparent
+		box-shadow inset 0px 0px 0px 1px background-light-gray
+		color text-button-default
+		&:hover
+			box-shadow none
 	&.labeled
 		padding 0 1.4em 0 4em
 		i
@@ -47,6 +54,9 @@ for clr in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pin
 	.button-{clr}
 		btn-color(clr)
 		btn-background(clr)
+		&.outlined
+			btn-color-outlined(clr)
+			btn-border(clr)
 		&:hover
 			btn-color(clr)
 			btn-background-hover(clr)
