@@ -50,29 +50,6 @@
 		display block
 		margin 0 auto
 		content ''
-		-webkit-animation bounce 2s infinite ease-in-out
-		animation bounce 2s infinite ease-in-out
+		animation double-bounce 2s infinite ease-in-out
 	&:after
-		-webkit-animation-delay -1.0s
 		animation-delay -1.0s
-
-
-@-webkit-keyframes bounce
-	0%
-		-webkit-transform scale(0.0)
-	50%
-		-webkit-transform scale(1.0)
-	100%
-		-webkit-transform scale(0.0)
-
-
-@keyframes bounce
-	0%
-		transform scale(0.0)
-		-webkit-transform scale(0.0)
-	 50%
-		transform scale(1.0)
-		-webkit-transform scale(1.0)
-	100%
-		transform scale(0.0)
-		-webkit-transform scale(0.0)

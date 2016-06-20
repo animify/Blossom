@@ -45,3 +45,12 @@
 .stages {
   margin-top: 20px;
 }
+.y-block {
+  background-color: #ffc82c;
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  display: block;
+  content: '';
+}
