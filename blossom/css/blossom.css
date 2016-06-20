@@ -935,6 +935,68 @@ a:hover {
 .reverse-grid > [class^='clm-'] {
   float: right;
 }
+.cf {
+  *zoom: 1;
+}
+.cf:before,
+.cf:after {
+  content: '';
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown.open .menu {
+  display: block;
+}
+.dropdown .toggle {
+  color: #2185d0;
+}
+.dropdown .menu {
+  background-color: #fff;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  border: 1px solid #e1e5e9;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  min-width: 180px;
+  z-index: 2000;
+  display: none;
+  -webkit-box-shadow: 0 2px 3px 0 rgba(34,36,38,0.15);
+  box-shadow: 0 2px 3px 0 rgba(34,36,38,0.15);
+}
+.dropdown li {
+  font-size: 15px;
+  display: block;
+}
+.dropdown li:first-child a {
+  -webkit-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+}
+.dropdown li:last-child a {
+  -webkit-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+}
+.dropdown li:hover a {
+  background-color: #f2f3f5;
+}
+.dropdown li a {
+  color: #212121;
+  display: block;
+  padding: 0.6em 1.06em;
+}
+.dropdown.right .menu {
+  left: auto;
+  right: 0;
+}
+.dropdown .sub {
+  left: 180px;
+}
 .table {
   width: 100%;
   -webkit-border-radius: 4px;
@@ -946,6 +1008,12 @@ a:hover {
   background-color: #f9f9fa;
 }
 .table.simple th {
+  background-color: transparent;
+}
+.table.basic {
+  border: 0;
+}
+.table.basic th {
   background-color: transparent;
 }
 .table.cells th {
@@ -2406,6 +2474,98 @@ ol.ordered li[value]:before {
     transform: scale(0);
   }
 }
+@-moz-keyframes spring {
+  0% {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  40% {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes spring {
+  0% {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  40% {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@-o-keyframes spring {
+  0% {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  40% {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes spring {
+  0% {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  40% {
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
 .transitionDuration-0 {
   -webkit-transition-duration: 0s;
   -moz-transition-duration: 0s;
@@ -2510,4 +2670,11 @@ ol.ordered li[value]:before {
   -o-animation: bounce 1.4s infinite cubic-bezier(0.04, 0.95, 0.17, 1);
   -ms-animation: bounce 1.4s infinite cubic-bezier(0.04, 0.95, 0.17, 1);
   animation: bounce 1.4s infinite cubic-bezier(0.04, 0.95, 0.17, 1);
+}
+.animation-spring {
+  -webkit-animation: spring 0.3s cubic-bezier(0.04, 0.95, 0.17, 1);
+  -moz-animation: spring 0.3s cubic-bezier(0.04, 0.95, 0.17, 1);
+  -o-animation: spring 0.3s cubic-bezier(0.04, 0.95, 0.17, 1);
+  -ms-animation: spring 0.3s cubic-bezier(0.04, 0.95, 0.17, 1);
+  animation: spring 0.3s cubic-bezier(0.04, 0.95, 0.17, 1);
 }

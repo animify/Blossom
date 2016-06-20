@@ -1,0 +1,40 @@
+.dropdown
+	position relative
+	display inline-block
+	&.open
+		.menu
+			display block
+	.toggle
+		color color-primary
+	.menu
+		background-color #fff
+		absolute top 25px left 0
+		border 1px solid background-light-gray
+		border-radius border-radius-normal
+		min-width 180px
+		z-index 2000
+		display none
+		box-shadow 0 2px 3px 0 rgba(34,36,38,.15)
+	li
+		font-size font-size-standard
+		display block
+		&:first-child
+			a
+				border-radius border-radius-normal border-radius-normal 0 0
+		&:last-child
+			a
+				border-radius 0 0 border-radius-normal border-radius-normal
+
+		&:hover
+			a
+				background-color background-lightest-gray
+		a
+			color text-grey
+			display block
+			padding 0.6em 1.06em
+	&.right
+		.menu
+			left auto
+			right 0
+	.sub
+		left 180px

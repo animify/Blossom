@@ -5,7 +5,38 @@ if (typeof(jQuery) == 'undefined') {
 		$(function() {
 			loadProgressBars()
 			loadActiveProgressBars();
+			$('.dropdown').dropdown();
 		});
+
+		$.fn.extend({
+			dropdown: function(o){
+				var o = $.extend({ maxHeight: 600, buffer: 100, delay: 500 }, o);
+
+				return this.each(function(){
+					var dropdown = $(this),
+						toggle = dropdown.find('.toggle'),
+						menu = dropdown.find('.menu'),
+						a = dropdown.find('a'),
+						liheight = dropdown.height();
+
+					if(!dropdown.length){ return; }
+
+
+					toggle.click(function(e){
+						if(!menu.is(':visible')) {
+							$('.menu').parent().removeClass('open');
+						}
+						menu.parent().addClass('open');
+					});
+
+					$(document).bind('click', function(e){
+						if (! $(e.target).parents().hasClass('dropdown'))
+							menu.parent().removeClass('open');
+					 });
+				});
+			}
+		});
+
 
 		function loadProgressBars() {
 			$('.progress:not(.active) .bar[data-percent]').each(function () {
