@@ -1713,23 +1713,23 @@ ol.ordered li[value]:before {
   -ms-animation: spin 1.3s infinite linear;
   animation: spin 1.3s infinite linear;
 }
-.disabled,
-.hidden {
+.loader.disabled,
+.loader.hidden {
   display: none;
 }
-.inline {
+.loader.inline {
   display: inline-block;
 }
-.small {
+.loader.small {
   width: 3.3em;
   height: 3.3em;
   border-width: 0.35em;
 }
-.large {
+.loader.large {
   width: 5em;
   height: 5em;
 }
-.dark {
+.loader.dark {
   border-color: rgba(0,0,0,0.2);
   border-left-color: #212121;
 }
