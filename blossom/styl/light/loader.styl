@@ -1,15 +1,12 @@
 .loader
-	width 3.4em
-	height 3.4em
-	position relative
-	text-align center
-	font-size 1em
-	color #fff
-	padding-top 3.64em
-	&:empty
-		width 3em
-		height 3em
-		padding-top 0 !important
+		border-style solid
+		border-width .5em
+		border-color rgba(255, 255, 255, 0.2)
+		border-left-color #ffffff
+		width 5em
+		height 5em
+		border-radius 50%
+		animation spin 1.3s infinite linear
 	&.disabled, &.hidden
 		display none
 	&.inline
@@ -17,39 +14,10 @@
 	&.small
 		width 3.3em
 		height 3.3em
-		padding-top 1.7em
-		&:empty
-			width 1.2em
-			height 1.2em
-			padding-top 0 !important
-		&:before, &:after
-			width 1.2em
-			height 1.2em
+		border-width .35em
 	&.large
 		width 5em
 		height 5em
-		padding-top 5.7em
-		&:empty
-			width 5em
-			height 5em
-			padding-top 0 !important
-		&:before, &:after
-			width 5em
-			height 5em
 	&.dark
-		color text-grey
-		&:before, &:after
-			background-color invert(background-light-gray)
-	&:before, &:after
-		width 3em
-		height 3em
-		border-radius 50%
-		absolute top left 0 right 0
-		background-color background-light-gray
-		opacity 0.3
-		display block
-		margin 0 auto
-		content ''
-		animation double-bounce 2s infinite ease-in-out
-	&:after
-		animation-delay -1.0s
+		border-color rgba(0, 0, 0, 0.2)
+		border-left-color text-grey

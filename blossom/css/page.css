@@ -29,7 +29,7 @@
 .module.example img + img {
   margin-top: 2em;
 }
-.module.example .loader {
+.module.example .hold {
   position: absolute;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
