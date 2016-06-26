@@ -1,5 +1,5 @@
 if (typeof(jQuery) == 'undefined') {
-	console.log('Blossom did not detect jQuery. Add the src to your HTML.')
+	console.log('Blossom did not detect jQuery. Include the src in your HTML.')
 } else {
 
 		$(function() {

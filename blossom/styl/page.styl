@@ -1,6 +1,7 @@
 @import 'jeet'
 @import 'nib'
 @import 'rupture'
+@import 'light/variables'
 
 .block-grey
 	width 100%
@@ -44,3 +45,87 @@
 	border-radius 3px
 	display block
 	content ''
+
+.sidebar.top, .subbar
+	background-color #202020
+	padding 17px 0
+	.logo, .sub
+		float left
+		display inline-block
+		vertical-align top
+		img
+			max-height 13px
+			absolute top 1px
+		p
+			color #fff
+			margin 0
+	.links
+		float right
+		display inline-block
+		vertical-align top
+		& > *
+			display inline-block
+			vertical-align top
+		li
+			& + li
+				margin-left 23px
+			a
+				color #fff
+				opacity 0.4
+				cursor pointer
+				&:hover
+					opacity 0.6
+			&.active
+				a
+					opacity 1
+
+.subbar
+	top 49px
+	background-color #333
+	padding 13px 0
+	color #fff
+	width 100%
+	.sub
+		font-size .9em
+
+	.link
+		font-size .9em
+		margin 0
+		padding 0
+		line-height 1em
+		float right
+		a
+			color #fff
+			opacity .6
+			&:hover
+				opacity 1
+			i
+				margin-right 4px
+
+aside.sidebar
+	width 30%
+	max-width 170px
+	absolute left 1em
+	float right
+	border-right 1px solid border-gray
+	h6
+		margin 0 0 .5em 0
+	li
+		padding .4em 0
+		display block
+		&.active
+			a
+				color color-primary
+				opacity 1
+				font-weight 700
+		a
+			color text-grey
+			opacity .6
+
+.main-content
+	margin-top 130px
+	position relative
+	span(1/1)
+	.page
+		padding-left 210px
+		font-size 1em
