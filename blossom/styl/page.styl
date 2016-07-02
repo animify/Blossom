@@ -24,19 +24,24 @@
 		margin-right 20px
 
 .show-lists > .list
-	margin 20px 0
+	margin 20px 0 0 0
 
 .show-progress > .progress
 	margin 6px 0
 
-.module.example
-	img + img
-		margin-top 2em
-	.hold
-		align(both)
+.example.loaders
+	.module
+		img + img
+			margin-top 2em
+		.hold
+			align(both)
 
 .stages
 	margin-top 20px
+
+.labels
+	.label + .label
+		margin-left 8px
 
 .y-block
 	background-color #FFC82C
@@ -46,9 +51,28 @@
 	display block
 	content ''
 
+.example
+	& + .example
+		margin-top 40px
+		padding-top 40px
+		border-top 1px solid border-gray
+	.explanation
+		margin-bottom 15px
+		h6
+			font-weight 400
+		p
+			color text-lighter-grey
+			margin-top 6px
+
+	&.buttons
+		.button
+			margin-top 10px
+			margin-right .6em
+
 .sidebar.top, .subbar
 	background-color #202020
 	padding 17px 0
+	z-index 2100
 	.logo, .sub
 		float left
 		display inline-block
@@ -85,6 +109,7 @@
 	padding 13px 0
 	color #fff
 	width 100%
+	z-index 1900
 	.sub
 		font-size .9em
 
@@ -107,7 +132,6 @@ aside.sidebar
 	max-width 170px
 	absolute left 1em
 	float right
-	border-right 1px solid border-gray
 	h6
 		margin 0 0 .5em 0
 	li
@@ -117,7 +141,6 @@ aside.sidebar
 			a
 				color color-primary
 				opacity 1
-				font-weight 700
 		a
 			color text-grey
 			opacity .6
@@ -127,5 +150,23 @@ aside.sidebar
 	position relative
 	span(1/1)
 	.page
-		padding-left 210px
 		font-size 1em
+		span(1/1)
+		padding-bottom 60px
+
+.sidebar
+	& + .page
+		padding-left 210px
+		+below('m')
+			padding-left 0
+
+.outer-title
+	span(1/1)
+	border-bottom 1px solid border-gray
+	padding-bottom 28px
+	margin-bottom 40px
+	h4
+		font-weight 400
+	p
+		color text-lighter-grey
+		margin-top 11px
