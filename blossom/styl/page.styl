@@ -29,6 +29,13 @@
 .show-progress > .progress
 	margin 6px 0
 
+.example
+	.cards
+		.card
+			margin-top 12px
+		& > .card:not(.fluid)
+			margin-right 20px
+
 .example.loaders
 	.module
 		img + img
@@ -36,10 +43,10 @@
 		.hold
 			align(both)
 
-.stages
+.stages.example
 	margin-top 20px
 
-.labels
+.labels.example
 	.label + .label
 		margin-left 8px
 
