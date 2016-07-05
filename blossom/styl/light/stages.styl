@@ -4,6 +4,27 @@
 	align-items stretch
 	border-radius border-radius-normal
 	border 1px solid border-gray
+	&.vertical
+		flex-direction column
+		overflow visible
+		.stage
+			justify-content flex-start
+			border-left 0 !important
+			.icon
+				width 2.0625em
+				text-align center
+			& + .stage
+				border-top 1px solid border-gray
+			&:first-child
+				border-radius border-radius-normal border-radius-normal 0 0
+			&:last-child
+				border-radius 0 0 border-radius-normal border-radius-normal
+			&:not(.active)
+				&:before, &:after
+					display none
+			&.active
+				&:before, &:after
+					display block
 	.stage
 		display flex
 		flex 1 0 auto
