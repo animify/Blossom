@@ -43,10 +43,10 @@ btn-color-outlined(c)
 	color lookup('color-' + c)
 
 btn-background(c)
-	background-color lookup('background-' + c)
+	background-color lookup('color-' + c)
 
 btn-background-hover(c)
 	if c == 'black'
-		background-color lighten(lookup('background-' + c), 14%)
+		background-color lighten(lookup('color-' + c), 14%)
 	else
-		background-color darken(lookup('background-' + c), 8%)
+		background-color darken(lookup('color-' + c), 8%)

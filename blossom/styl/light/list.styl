@@ -53,6 +53,11 @@ ul.list, ol.list
 		li, .item
 			border-top 1px solid border-light-red-gray
 
+	&.horizontal
+		li
+			display inline-block
+			& + li
+				margin-left 16px
 	&.ordered
 		counter-reset item
 		.list

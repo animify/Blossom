@@ -2,6 +2,10 @@ for clr in ('primary' 'red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'pu
 	.text-{clr}
 		text-color(clr)
 
-for bc in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black')
+for bc in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black' 'primary' 'ash' 'smoke')
 	.{bc}
-		background-color lookup('background-' + bc) !important
+		background-color lookup('color-' + bc) !important
+		&.light
+			background-color lookup('light-color-' + bc) !important
+		&.dark
+			background-color lookup('dark-color-' + bc) !important

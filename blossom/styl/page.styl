@@ -3,9 +3,24 @@
 @import 'rupture'
 @import 'light/variables'
 
-body
-	+mobile()
-		font-size 24px
+#app
+	width 100%
+	min-height 100%
+	height 100%
+	& > div
+		width 100%
+		height 100%
+
+.main-content
+	padding-top 130px
+	position relative
+	min-height 100%
+	width 100%
+	.page
+		font-size 1em
+		span(1/1)
+		padding-bottom 110px
+
 .block-grey
 	width 100%
 	height 40px
@@ -74,6 +89,7 @@ body
 			color text-lighter-grey
 			margin 6px 0 0 0
 			display block
+			line-height 1.3em
 
 	&.buttons
 		.button
@@ -84,8 +100,41 @@ body
 	& + span
 		margin-left 9px
 
+.schemes
+	display inline-flex
+	flex-direction row
+	align-items flex-start
+	&.dark
+		.scheme
+			color text-grey
+	& + .schemes
+		margin-top 20px
+	.scheme
+		justify-content flex-start
+		padding 1em
+		display flex
+		flex 1 0 auto
+		content ''
+		color #fff
+		flex-wrap wrap
+		vertical-align center
+		position relative
+		align-items stretch
+		width 180px
+		p
+			display block
+			span(1/1)
+		span
+			opacity .7
+			margin 4px 0 0 0
+			text-transform uppercase
+		&:first-child
+			border-radius border-radius-normal 0 0 border-radius-normal
+		&:last-child
+			border-radius 0 border-radius-normal border-radius-normal 0
+
 .sidebar.top, .subbar
-	background-color #202020
+	background-color dark-color-ash
 	padding 17px 0
 	z-index 2100
 	.logo, .sub
@@ -120,7 +169,7 @@ body
 
 .subbar
 	top 49px
-	background-color #333
+	background-color color-ash
 	padding 13px 0
 	color #fff
 	width 100%
@@ -160,15 +209,6 @@ aside.sidebar
 			color text-grey
 			opacity .6
 
-.main-content
-	margin-top 130px
-	position relative
-	span(1/1)
-	.page
-		font-size 1em
-		span(1/1)
-		padding-bottom 60px
-
 .sidebar
 	& + .page
 		padding-left 210px
@@ -185,3 +225,24 @@ aside.sidebar
 	p
 		color text-lighter-grey
 		margin-top 11px
+
+.footer
+	margin-top 30px
+	span(1/1)
+	absolute bottom 10px left
+	.madeby a
+		&:hover
+			color dark-color-grey
+	.aotik
+		position relative
+		display inline-block
+		&:after
+			content ''
+			border-bottom 1px dashed color-grey
+			display block
+	& .inner
+		padding 1em 0
+		border-top 1px solid border-gray
+		.links
+			li a
+				font-size .875em
