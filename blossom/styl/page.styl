@@ -55,6 +55,9 @@
 	display block
 	content ''
 
+.opening-message
+	margin -1.9em 0 1.8em 0
+
 .example
 	&:hover
 		.view-source
@@ -116,6 +119,13 @@
 		content ''
 		display block
 		margin 0 auto
+	&.layout
+		.block-grey
+			width 100px
+			height 100px
+		.relative
+			width 100%
+			height 300px
 	&.typeface
 		.module
 			padding 1.6em 1.8em
@@ -124,13 +134,10 @@
 				font-size 1.1em
 				& + p
 					margin-top 1.3em
-	&.alignment
+	&.alignment, &.transformtext
 		.module
-			padding 1.6em 1.8em
 			p
-				font-size 1.1em
-				& + p
-					margin-top 1.3em
+				padding .7em
 	&.stages
 		margin-top 20px
 	&.images > [class^='image-']

@@ -1,2 +1,23 @@
-.cf
+.clearfix
 	cf()
+
+.relative
+	position relative
+
+.fixed
+	position fixed
+
+.absolute, .pin
+	position absolute
+
+.pin, .fixed
+	&.top
+		top 0
+	&.left
+		left 0
+	&.right
+		right 0
+	&.bottom
+		bottom 0
+	&.fixed
+		position fixed
