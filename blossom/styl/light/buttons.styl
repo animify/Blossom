@@ -15,6 +15,16 @@
 	font-weight 600
 	cursor pointer
 	transition all 0.2s ease
+	for clr in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black' 'primary')
+		&.{clr}
+			btn-color(clr)
+			btn-background(clr)
+			&.outlined
+				btn-color-outlined(clr)
+				btn-border(clr)
+			&:hover
+				btn-color(clr)
+				btn-background-hover(clr)
 	&.outlined
 		box-sizing border-box
 		background-color transparent
@@ -46,20 +56,3 @@
 		box-shadow inset 0 -2px 0 rgba(37,51,66,.14)
 	&:active
 		box-shadow inset 0 2px 0 rgba(37,51,66,.14)
-	&-primary
-		color primary-white
-		background-color background-primary
-		&:hover
-			color primary-white
-			background-color hover-background-primary
-
-for clr in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black')
-	.button-{clr}
-		btn-color(clr)
-		btn-background(clr)
-		&.outlined
-			btn-color-outlined(clr)
-			btn-border(clr)
-		&:hover
-			btn-color(clr)
-			btn-background-hover(clr)

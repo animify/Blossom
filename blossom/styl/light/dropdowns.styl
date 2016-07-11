@@ -1,25 +1,40 @@
 .dropdown
 	position relative
 	display inline-block
+	&.disabled
+		.toggle
+			opacity .4
+			pointer-events none
+			cursor default
+	.toggle
+		cursor pointer
+	&.floating
+		.menu
+			margin-top 1em
 	&.open
 		.menu
 			display block
-	.toggle
-		color color-primary
 	.menu
 		background-color #fff
-		absolute top 25px left 0
+		absolute top 2em left 0
 		border 1px solid background-light-gray
 		border-radius border-radius-normal
 		min-width 180px
 		z-index 2000
 		display none
+		padding .4em 0
 		box-shadow 0 2px 3px 0 rgba(34,36,38,.15)
 	li
 		font-size 1em
 		display block
+		i
+			width 1.3em
 		&.divider
 			margin .4em 0
+		&.disabled
+			opacity .4
+			pointer-events none
+			cursor default
 		&.header
 			text-transform uppercase
 			color text-grey
@@ -37,5 +52,9 @@
 		.menu
 			left auto
 			right 0
+	&.upward
+		.menu
+			top auto
+			bottom 2em
 	.sub
 		left 180px

@@ -6,6 +6,10 @@ if (typeof(jQuery) == 'undefined') {
 			loadProgressBars()
 			loadActiveProgressBars();
 			$('.dropdown').dropdown();
+			$(window).on('hashchange', function(e){
+				console.log('changed');
+				$('.dropdown').dropdown();
+			});
 		});
 
 		$.fn.extend({
@@ -18,11 +22,12 @@ if (typeof(jQuery) == 'undefined') {
 						menu = dropdown.find('.menu'),
 						a = dropdown.find('a'),
 						liheight = dropdown.height();
-
 					if(!dropdown.length){ return; }
 
 
 					toggle.click(function(e){
+						console.log('dropdown');
+
 						if(!menu.is(':visible')) {
 							$('.menu').parent().removeClass('open');
 						}

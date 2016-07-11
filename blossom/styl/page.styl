@@ -69,6 +69,9 @@
 	.grid-row
 		[class^='clm-']
 			margin 6px 0
+	&.dropdowns
+		.stack + .stack
+			margin-top 14px
 	.group
 		border 1px solid border-gray
 		span(1/1)
@@ -244,7 +247,7 @@
 .sidebar.top, .subbar
 	background-color dark-color-ash
 	padding 17px 0
-	z-index 2100
+	z-index 2300
 	.logo, .sub
 		float left
 		display inline-block
@@ -281,7 +284,7 @@
 	padding 13px 0
 	color #fff
 	width 100%
-	z-index 1900
+	z-index 2200
 	.sub
 		font-size .9em
 
