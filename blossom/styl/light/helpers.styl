@@ -3,7 +3,7 @@
 
 .stack
 	stack()
-	
+
 .relative
 	position relative
 
@@ -24,3 +24,17 @@
 		bottom 0
 	&.fixed
 		position fixed
+
+.hidden
+	display none !important
+
+.invisible
+	visibility hidden !important
+
+.centered
+	&:not(.vertical):not(.horizontal)
+		align(both)
+	&.vertical
+		align(vertical)
+	&.horizontal
+		align(horizontal)

@@ -6,15 +6,11 @@ if (typeof(jQuery) == 'undefined') {
 			loadProgressBars()
 			loadActiveProgressBars();
 			$('.dropdown').dropdown();
-			$(window).on('hashchange', function(e){
-				console.log('changed');
-				$('.dropdown').dropdown();
-			});
 		});
 
 		$.fn.extend({
 			dropdown: function(o){
-				var o = $.extend({ maxHeight: 600, buffer: 100, delay: 500 }, o);
+				var o = $.extend({ maxHeight: 600, buffer: 100, delay: 0 }, o);
 
 				return this.each(function(){
 					var dropdown = $(this),
@@ -26,12 +22,16 @@ if (typeof(jQuery) == 'undefined') {
 
 
 					toggle.click(function(e){
-						console.log('dropdown');
-
 						if(!menu.is(':visible')) {
 							$('.menu').parent().removeClass('open');
 						}
-						menu.parent().addClass('open');
+						setTimeout(function(){
+							menu.parent().addClass('open');
+						}, o.delay)
+					});
+
+					a.bind('click', function(e){
+						menu.parent().removeClass('open');
 					});
 
 					$(document).bind('click', function(e){

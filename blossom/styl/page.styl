@@ -26,6 +26,7 @@
 	height 3em
 	background-color color-smoke
 	border-radius 4px
+	display block
 
 .show-grid > [class^='clm-']
 	padding-top 15px
@@ -72,12 +73,13 @@
 	&.dropdowns
 		.stack + .stack
 			margin-top 14px
-	.group
-		border 1px solid border-gray
-		span(1/1)
-		border-radius border-radius-normal
 	.message
 		margin 0
+	&.animations
+		.group
+			border 1px solid border-gray
+			span(1/1)
+			border-radius border-radius-normal
 	.animation
 		display inline-block
 		padding 1.4em 1.4em 3.45em 1.4em
@@ -171,6 +173,7 @@
 			absolute top right
 			&:hover
 				color color-primary
+				opacity 1
 		h6
 			font-size 1.1em
 		p
@@ -183,6 +186,11 @@
 	&.buttons
 		.button
 			margin .34em .6em .34em 0
+	&.showing
+		.view-source
+			display block
+			color color-primary
+			opacity .5
 .schemes
 	display inline-flex
 	flex-direction row
@@ -223,12 +231,12 @@
 
 .module
 	transition all 100ms cubic-bezier(0.16, 0.86, 0.44, 1)
-	&.invisible
+	&.collapsed
 		border 0
 		box-shadow none !important
 		padding 0
 		margin 0
-		.footer
+		.footer:not(.content)
 			display none
 	.footer
 		pre
