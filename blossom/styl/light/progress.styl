@@ -1,23 +1,14 @@
 .progress
 	background-color background-light-gray
-	span(1/1)
+	cf()
 	border-radius border-radius-normal
 	height 1.7em
 	content ''
-	&.tiny
-		height 0.3em
-	&.small
-		height 0.8em
-	&.large
-		height 2.6em
 	.bar
 		height 100%
 		border-radius border-radius-normal
 		background-color darken(background-light-gray, 62%)
 		position relative
-		&.show
-			.status
-				display block
 		.status
 			color #fff
 			absolute right 8px
@@ -25,3 +16,16 @@
 			font-size .875em
 			line-height 1.9125em
 			display none
+	&.tiny
+		height 0.3em
+	&.small
+		height 0.8em
+	&.large
+		height 2.7em
+		.status
+			line-height 2.6em
+			font-size 1em
+	&:not(.tiny):not(.small)
+		.bar.show
+			.status
+				display block
