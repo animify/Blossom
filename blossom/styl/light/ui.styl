@@ -14,7 +14,6 @@ body
 for h in (1..6)
 	h{h}
 		font-size lookup('font-size-h' + h)
-		font-weight 600
 
 ::selection
 	color black
@@ -25,6 +24,9 @@ a
 	cursor pointer
 	&:hover
 		color text-link-hover
+
+p
+	line-height 1.4em
 
 strong
 	font-weight 700
