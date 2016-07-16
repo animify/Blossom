@@ -45,7 +45,7 @@
 		font-weight 300
 	.button-group
 		margin-top 1.8em
-		& > *
+		.button + .button
 			margin-left .8em
 
 .icons
@@ -89,6 +89,19 @@
 			margin .6em 0 0 0
 			font-size 1.2em
 
+section.about, section.size
+	cf()
+	padding 7em 0
+	position relative
+	overflow hidden
+	h3
+		margin 0 0 0.6em 0
+		line-height 1.2em
+	p
+		color text-lighter-grey
+		font-size 1.15em
+		line-height 1.7em
+
 .features
 	cf()
 	border-top 1px solid border-gray
@@ -100,17 +113,28 @@
 		align-items stretch
 
 .about
-	padding 5em 0
 	background-color background-lightest-gray
-	h3
-		margin 0 0 0.6em 0
+	border-bottom 1px solid #dfe4e9
+	img
+		height 18em
+		bottom -.4em
+		pointer-events none
+		&.leftcut
+			absolute left -10em
+		&.rightcut
+			absolute right -13em
 	p
-		opacity 0.7
 		width 80%
 		display block
 		margin 0 auto
-		font-size 1.15em
-		line-height 1.6em
+	.button
+		margin-top 1.4em
+
+.size
+	.large60
+		absolute right -1em
+		img
+			height 28em
 
 .grid
 	cf()
@@ -185,10 +209,15 @@
 
 .module
 	.antiScroll
+		&:first-child
+			margin-top -1.6em
+		&:last-child
+			margin-bottom -1.6em
+		padding 1em 0
 		small
 			color text-lightest-grey
 			display block
-			margin .8em 0 1em 0
+			margin .8em 0 0 0
 			font-weight 300
 		& + .antiScroll
 			border-top 1px solid border-gray
@@ -415,7 +444,7 @@
 				margin-left 23px
 			a
 				color text-grey
-				opacity 0.5
+				opacity 0.55
 				cursor pointer
 				&:hover
 					opacity 0.7
@@ -441,7 +470,7 @@
 		float right
 		a
 			color #fff
-			opacity .6
+			opacity .55
 			&:hover
 				opacity 1
 			i
