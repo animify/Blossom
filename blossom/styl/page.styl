@@ -207,6 +207,37 @@ section.about, section.size
 .message + .module.collapsed
 	margin-top 1em
 
+.installing
+	.explanation
+		margin-top .3em
+	.module
+		margin 1.4em 0
+		padding 1.3em 1.3em 1.6em 1.3em
+	.contain + .contain
+		margin-top 4em
+
+.explanation
+	margin-bottom 1em
+	position relative
+	.view-source
+		color text-grey
+		display none
+		cursor pointer
+		font-size 1.1em
+		absolute top right
+		&:hover
+			color color-primary
+			opacity 1
+	h6
+		font-size 1.2em
+	p
+		color text-lighter-grey
+		margin .4em 0 0 0
+		display block
+		line-height 1.4em
+		& + p
+			margin .2em 0 0 0
+
 .module
 	.antiScroll
 		&:first-child
@@ -233,9 +264,11 @@ section.about, section.size
 		[class^='clm-']
 			margin 6px 0
 	&.menus
-		p
-			margin 2em 0
+		.note
+			margin 2em 0 0 0
 			color text-lighter-grey
+		.note + .menu
+			margin 2em 0 0 0
 	&.types
 		.progress + .progress
 			margin-top 14px
@@ -334,27 +367,6 @@ section.about, section.size
 			margin-top 12px
 		& > .card:not(.fluid)
 			margin-right 20px
-	.explanation
-		margin-bottom 15px
-		position relative
-		.view-source
-			color text-grey
-			display none
-			cursor pointer
-			font-size 1.1em
-			absolute top right
-			&:hover
-				color color-primary
-				opacity 1
-		h6
-			font-size 1.1em
-		p
-			color text-lighter-grey
-			margin 6px 0 0 0
-			display block
-			line-height 1.3em
-			& + p
-				margin 3px 0 0 0
 	&.buttons
 		.button
 			margin .34em .6em .34em 0
@@ -413,14 +425,14 @@ section.about, section.size
 	.footer
 		pre
 			background-color light-color-smoke
-			margin 1em -1em -1em -1em
+			margin 1em -1.3em -1.3em -1.3em
 			border-radius 0 0 border-radius-normal border-radius-normal
 			padding 0
 			border-top 1px solid border-gray
 			tab-size 4
 			overflow auto
 		code
-			padding 1em
+			padding 1.3em
 			margin 0
 			background-color transparent
 
@@ -539,7 +551,7 @@ footer.footer
 			li a
 				font-size .9em
 
-.homepage
+.wrap
 	& + footer.footer
 		position static
 		margin 0
