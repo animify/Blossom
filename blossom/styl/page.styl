@@ -113,7 +113,6 @@ section.about, section.size
 		align-items stretch
 
 .about
-	background-color background-lightest-gray
 	border-bottom 1px solid #dfe4e9
 	img
 		height 18em
@@ -173,7 +172,7 @@ section.about, section.size
 	border-radius 4px
 	display block
 
-.show-grid > [class^='clm-']
+.show-grid > *
 	padding-top 15px
 
 .show-tables > .table
@@ -261,7 +260,7 @@ section.about, section.size
 		padding-top 40px
 		border-top 1px solid border-gray
 	.grid-row
-		[class^='clm-']
+		> *
 			margin 6px 0
 	&.menus
 		.note
@@ -496,10 +495,17 @@ section.about, section.size
 				margin-right 4px
 
 aside.sidebar
-	width 30%
-	max-width 170px
 	absolute left 1em
 	float right
+	.fixed
+		width 30%
+		max-width 170px
+		height 100%
+		overflow scroll
+		.inner
+			padding 108px 0 80px 0
+			overflow scroll
+
 	h6
 		margin 0 0 .5em 0
 	li
