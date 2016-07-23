@@ -4,6 +4,7 @@ watch = require('gulp-watch'),
 rename = require('gulp-rename'),
 uglify = require('gulp-uglify'),
 argv = require('yargs').argv,
+appRoot = require('app-root-path'),
 del = require('del'),
 nib = require('nib'),
 jeet = require('jeet'),
@@ -11,13 +12,12 @@ rupture = require('rupture'),
 origin
 
 var source = {
-	ROOT: '../../blossom',
+	ROOT: appRoot + '/blossom',
 	ORIGIN: '.',
 }
 
 argv.root == 1 ? origin = source.ROOT : origin = source.ORIGIN
 
-console.log(origin)
 gulp.task('purge', function (cb) {
 	return del([
 		origin + '/css/*',
