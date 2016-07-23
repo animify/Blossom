@@ -1,10 +1,13 @@
 {
 	"name": "blossom-ui",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "A free open-source design framework for the modern web",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"build:root": "gulp build --root",
+		"build:origin": "gulp build",
+		"postinstall": "npm run build:root",
+		"build": "npm run build:origin"
 	},
 	"repository": {
 		"type": "git",
@@ -19,9 +22,23 @@
 		"responsive"
 	],
 	"author": "Stefan Mansson <st.mansson@icloud.com> (http://aotik.io)",
-	"license": "MIT",
+	"license": "MIT - See license in 'LICENSE'",
 	"bugs": {
 		"url": "https://github.com/Aotik/Blossom/issues"
 	},
-	"homepage": "https://github.com/Aotik/Blossom#readme"
+	"homepage": "http://getblossom.io",
+	"dependencies": {
+		"jeet": "^6.1.1",
+		"nib": "^1.1.0",
+		"rupture": "^0.6.1"
+	},
+	"devDependencies": {
+		"del": "^2.2.1",
+		"gulp": "^3.9.1",
+		"gulp-rename": "^1.2.2",
+		"gulp-stylus": "^2.5.0",
+		"gulp-uglify": "^1.5.4",
+		"gulp-watch": "^4.3.8",
+		"yargs": "^4.8.1"
+	}
 }
