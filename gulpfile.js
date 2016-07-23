@@ -20,11 +20,9 @@ argv.root == 1 ? origin = source.ROOT : origin = source.ORIGIN
 
 gulp.task('purge', function (cb) {
 	return del([
-		origin + '/css/*',
-		origin + '/js/*',
-		'!' + origin + '/js/blossom.js',
-		'!' + origin + '/css/font-awesome.css'
-	], cb);
+		origin + '/css/blossom.min.css',
+		origin + '/js/blossom.min.js'
+	], {force: true}, cb);
 });
 
 gulp.task('compile css', function () {
