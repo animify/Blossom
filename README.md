@@ -1,2 +1,2 @@
 # Blossom
-Blossom CSS
+`npm install blossom-ui --save`
