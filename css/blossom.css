@@ -128,18 +128,21 @@ h6 {
 }
 ::selection {
   color: #000;
-  background-color: #e0d6f4;
+  background-color: #d1e4ff;
 }
 a {
-  color: #6435c9;
+  color: #1877ff;
   text-decoration: none;
   cursor: pointer;
 }
 a:hover {
-  color: #4b2897;
+  color: #0056d1;
 }
 p {
   line-height: 1.4em;
+}
+small {
+  font-size: 0.875em;
 }
 strong {
   font-weight: 700;
@@ -1319,6 +1322,9 @@ strong {
 .unstack:last-child {
   margin-right: 0;
 }
+.inline {
+  display: inline-block !important;
+}
 .relative {
   position: relative;
 }
@@ -1464,7 +1470,7 @@ strong {
   font-weight: 900;
 }
 .dropdown li:hover a {
-  color: #6435c9;
+  color: #1877ff;
 }
 .dropdown li a {
   color: #3e464a;
@@ -1762,17 +1768,17 @@ strong {
 }
 .button.primary {
   color: #fff;
-  background-color: #6435c9;
+  background-color: #1877ff;
 }
 .button.primary.outlined {
-  color: #6435c9;
+  color: #1877ff;
   background-color: transparent;
-  -webkit-box-shadow: inset 0px 0px 0px 1px #6435c9;
-  box-shadow: inset 0px 0px 0px 1px #6435c9;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #1877ff;
+  box-shadow: inset 0px 0px 0px 1px #1877ff;
 }
 .button.primary:hover {
   color: #fff;
-  background-color: #5c31b9;
+  background-color: #026aff;
 }
 .button.labeled {
   padding: 0 1.4em 0 4em;
@@ -2146,7 +2152,7 @@ ol.ordered li[value]:before {
 }
 .input input:focus,
 .input textarea:focus {
-  border-color: #6435c9;
+  border-color: #1877ff;
 }
 .input textarea {
   line-height: 1.2em;
@@ -2302,7 +2308,7 @@ ol.ordered li[value]:before {
   background-color: #f5f6f7;
 }
 .text-primary {
-  color: #6435c9;
+  color: #1877ff;
 }
 .text-red {
   color: #ff4949;
@@ -2449,13 +2455,13 @@ ol.ordered li[value]:before {
   background-color: #000 !important;
 }
 .primary:not(.button) {
-  background-color: #6435c9 !important;
+  background-color: #1877ff !important;
 }
 .primary:not(.button).light {
-  background-color: #835dd4 !important;
+  background-color: #4692ff !important;
 }
 .primary:not(.button).dark {
-  background-color: #502aa1 !important;
+  background-color: #005cdf !important;
 }
 .ash:not(.button) {
   background-color: #2f3133 !important;
@@ -2778,7 +2784,7 @@ ol.ordered li[value]:before {
   line-height: 1.62em;
 }
 .comments .comment .content .creator:hover {
-  color: #6435c9;
+  color: #1877ff;
 }
 .comments .comment .content .text {
   line-height: 1.14em;
@@ -2994,7 +3000,7 @@ ol.ordered li[value]:before {
   background-color: #f7f9fb;
 }
 .stages .stage.active .header {
-  color: #6435c9;
+  color: #1877ff;
 }
 .stages .stage.active:before {
   border-left-color: #f7f9fb;
@@ -3037,14 +3043,16 @@ ol.ordered li[value]:before {
 }
 code {
   background-color: #f1f1f1;
-  color: #6435c9;
-  padding: 3px 8px;
+  color: #00baa9;
+  padding: 0.3em 0.5em;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-  margin: 0 3px;
   font-family: 'Source Code Pro', 'Consolas', 'Monaco', 'Lucida Console', monospace;
   line-height: 1.6em;
   font-size: 0.875em;
+}
+p code {
+  margin: 0 0.3em;
 }
 .message code {
   background-color: rgba(0,0,0,0.06);

@@ -6,6 +6,13 @@ if (typeof(jQuery) == 'undefined') {
 			loadProgressBars()
 			loadActiveProgressBars();
 			$('.dropdown').dropdown();
+
+			//TODO: Make into a function extend
+			$('body').on('click', '.menu .item', function(e) {
+				_parent = $(this).parents('.menu')
+				_parent.find('.item').removeClass('active')
+				$(this).addClass('active')
+			});
 		});
 
 		$.fn.extend({
