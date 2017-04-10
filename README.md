@@ -27,12 +27,12 @@ Directly link to the files built in your working directory
 
 _Coming soon_
 
+---
+
 ### Elements
 The [Elements section](http://getblossom.io/elements/buttons) provides a vast range of elements needed to build a site from scratch; ranging from buttons to progress bars, you have all the building blocks needed to make a truly unique page.
 
 Just hover over the element you want to use and click the _code_ icon. You'll see the HTML markup needed to clone the element for your website.
-
----
 
 ### Design
 The [Design section](http://getblossom.io/elements/buttons) gives you all the helper classes needed to make a customized layout. Use the [12 Column Grid](http://getblossom.io/design/grid) to make the basic structure of your page.
