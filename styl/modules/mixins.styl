@@ -6,6 +6,7 @@ $grid
 	text-align inherit
 	margin-left 0%
 	margin-right 0%
+	width 100%
 	&:before, &:after
 		display table
 		content ''
@@ -29,6 +30,12 @@ image-size(s)
 
 grid(n)
 	width percentage(n/grid-length)
+
+push(n)
+	margin-left percentage(n/grid-length)
+
+pull(n)
+	margin-left percentage(-(n)/grid-length)
 
 text-color(c)
 	color lookup('color-' + c)

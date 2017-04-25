@@ -1,0 +1,40 @@
+.accordion
+	span(1/1)
+	& > .title
+		padding .7rem 0
+		cursor pointer
+		& > i
+			width 1rem
+			display inline-block
+			height 1px
+			&::before
+				content '\f0da'
+				font normal normal normal 1em/1 FontAwesome
+		&.open
+			i::before
+				content '\f0d7'
+				font normal normal normal 1em/1 FontAwesome
+	& > .content
+		line-height 1.6rem
+		display none
+		&.open
+			display block
+		& + .title
+			margin-top .6rem
+	&.module
+		padding 0
+		max-width 40rem
+		&.fluid
+			max-width none
+		& > .title
+			padding 1.3rem 1.3rem
+			border-top 1px solid border-grey
+			font-weight 600
+			color text-grey
+			&:first-child
+				border none
+		& > .content
+			padding 0 1.3rem 1.3rem 1.3rem
+			margin-top -.8rem
+			& + .title
+					margin-top 0

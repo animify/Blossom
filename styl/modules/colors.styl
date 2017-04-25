@@ -6,6 +6,6 @@ for bc in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink
 	.{bc}:not(.button)
 		background-color lookup('color-' + bc) !important
 		&.light
-			background-color lookup('light-color-' + bc) !important
+			background-color lighten(lookup('color-' + bc), 20%) !important
 		&.dark
-			background-color lookup('dark-color-' + bc) !important
+			background-color darken(lookup('color-' + bc), 20%) !important

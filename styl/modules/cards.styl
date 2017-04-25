@@ -4,8 +4,8 @@
 .card
 	position relative
 	background-color #fff
-	box-shadow 0 1px 2px 0 box-shadow-gray
-	border 1px solid border-gray
+	box-shadow 0 1px 2px 0 box-shadow-grey
+	border 1px solid border-grey
 	border-radius border-radius-normal
 	width 285px
 	display flex
@@ -20,38 +20,41 @@
 			img
 				border-radius border-radius-normal border-radius-normal 0 0
 	.content
-		padding 1em
+		padding 1.2rem 1.4rem
 		flex-grow 1
+		a
+			color link-light
+			&:hover
+				color link-light-hover
 		&:after
 			display block
 			content ''
 			clear both
 		.header
-			font-size 1.3em
-			line-height 1.2em
+			font-size 1.3rem
+			line-height 1.7rem
 		.sub
-			line-height 1.7em
-			color text-lightest-grey
+			line-height 1.7rem
+			color color-light-grey
 		p
-			margin-top .6em
-			line-height 1.375em
-			color text-lighter-grey
+			margin-top .7rem
+			color color-light-grey
 		&.footer
 			flex-grow 0
+			span(1/1)
+			padding 1rem 1.4rem
+			color color-light-grey
+			border-top 1px solid lighten(border-grey, 25%)
+			font-size .86rem
 			&.button
 				padding 0
 				text-align center
 				border-radius 0 0 border-radius-normal border-radius-normal
-				color lighten(text-button-default, 30%)
 				&:hover
-					color text-button-default
+					color link-light-hover
 				&:hover, &:active
 					box-shadow none !important
 			i
-				margin-right 5px
-				font-size 0.84em
-			span(1/1)
-			padding 0.875em 1em
-			color text-lightest-grey
-			font-size 0.925em
-			border-top 1px solid lighten(border-gray, 25%)
+				margin-right .5rem
+				font-size 0.84rem
+				color text-grey

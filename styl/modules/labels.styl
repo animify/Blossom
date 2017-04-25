@@ -1,28 +1,31 @@
 .label
-	font-size 0.875em
-	background-color background-light-gray
+	background-color background-light-grey
 	color text-lighter-grey
-	padding 0.55em 0.72em
+	padding 0.6rem 1rem
 	display inline-block
 	border-radius border-radius-normal
-	font-weight 600
+	font-weight 500
+	&.circular
+		padding .6rem .4rem
 	.detail
 		background-color rgba(0, 0, 0, .1)
-		padding 0.55em 0.72em
+		padding 0.55rem 0.72rem
 		height 100%
-		margin -0.55em -0.72em -0.55em 0.72em
+		margin -0.55rem -1rem -0.55rem 1rem
 		border-radius inherit
 		display inline-block
-		opacity .8
+		font-weight 500
 		vertical-align top
 		float right
 	i
-		margin-right 0.6em
+		margin-right 0.6rem
+		relative top 1px
 	a
-		color text-lighter-link
-		margin-left 0.45em
+		color link-light
+		margin-left 2rem
+		font-weight 600
 		&:hover
-			color text-lighter-link-hover
+			color link-light-hover
 	for bc in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black' 'primary')
 		&.{bc}
 			color primary-white

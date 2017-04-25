@@ -3,7 +3,7 @@
 	flex-direction row
 	align-items stretch
 	border-radius border-radius-normal
-	border 1px solid border-gray
+	border 1px solid border-grey
 	&.vertical
 		flex-direction column
 		overflow visible
@@ -11,10 +11,10 @@
 			justify-content flex-start
 			border-left 0 !important
 			.icon
-				width 2.0625em
+				width 2rem
 				text-align center
 			& + .stage
-				border-top 1px solid border-gray
+				border-top 1px solid border-grey
 			&:first-child
 				border-radius border-radius-normal border-radius-normal 0 0
 			&:last-child
@@ -33,13 +33,13 @@
 		flex-direction row
 		align-items stretch
 		background-color #fff
-		padding 1em 1.8em
+		padding 1rem 1.6rem
 		position relative
 		.header
 			display block
-			font-weight 400
-			font-size 1.1em
-			margin-bottom .2em
+			font-weight 600
+			font-size 1rem
+			margin-bottom .4rem
 			color text-grey
 		&:last-child
 			&:before, &:after
@@ -48,37 +48,37 @@
 			content ''
 			width 0
 			height 0
-			border-top .8em solid transparent
-			border-bottom .8em solid transparent
-			border-left .8em solid #fff
-			absolute right -0.55em top 31%
+			border-top .8rem solid transparent
+			border-bottom .8rem solid transparent
+			border-left .8rem solid #fff
+			absolute right -0.55rem top 31%
 			z-index 900
 		&:after
 			content ''
 			width 0
 			height 0
-			border-top .6em solid transparent
-			border-bottom .6em solid transparent
-			border-left .6em solid border-gray
-			absolute right -0.6em top 35%
+			border-top .6rem solid transparent
+			border-bottom .6rem solid transparent
+			border-left .6rem solid border-grey
+			absolute right -0.6rem top 35%
 			z-index 800
 		& + .stage
-			border-left 1px solid border-gray
+			border-left 1px solid border-grey
 		&.disabled > *
-			opacity 0.3
+			opacity 0.4
 		&.completed
 			i
 				color color-green
 		&.active
-			background-color background-lightest-gray
+			background-color background-lightest-grey
 			.header
-				color text-link
+				color color-primary
 			&:before
-				border-left-color background-lightest-gray
+				border-left-color background-lightest-grey
 		.icon
-			margin-right 1em
+			margin-right 1.1rem
 			i
-				font-size 2.2em
+				font-size 2.2rem
 		.content
 			flex 0 1 auto
 			color text-lighter-grey

@@ -1,0 +1,114 @@
+.clearfix
+	cf()
+
+.stackable
+	& > *
+		stack()
+
+.stack
+	stack()
+
+.unstack
+	unstack()
+
+.inline
+	display inline-block !important
+
+.relative
+	position relative
+
+.fixed
+	position fixed
+
+.absolute, .pin
+	position absolute
+
+.pin, .fixed
+	&.top
+		top 0
+	&.left
+		left 0
+	&.right
+		right 0
+	&.bottom
+		bottom 0
+	&.fixed
+		position fixed
+
+.hidden
+	display none !important
+
+.invisible
+	visibility hidden !important
+
+.borderless
+	border 0 !important
+
+.centered
+	&:not(.vertical):not(.horizontal)
+		align(both)
+	&.vertical
+		align(vertical)
+	&.horizontal
+		align(horizontal)
+
+.nowrap
+	white-space nowrap
+
+.text-left
+	text-align left
+
+.text-right
+	text-align right
+
+.text-center
+	text-align center
+
+.text-justify
+	text-align justify
+	&:after
+		display inline-block
+		content ''
+		width 100%
+
+.float-left
+	float left
+
+.float-right
+	float right
+
+.float-reset
+	float none
+
+.align-top
+	vertical-align top
+	display inline-block
+
+.align-middle
+	vertical-align middle
+	display inline-block
+
+.align-bottom
+	vertical-align bottom
+	display inline-block
+
+.align-center
+	align(both)
+
+.align-horizontal
+	align(horizontal)
+
+.align-vertical
+	align(vertical)
+
+.transform
+	&.uppercase
+		text-transform uppercase
+	&.lowercase
+		text-transform lowercase
+	&.capitalize
+		text-transform capitalize
+
+for size in ('mini' 'tiny' 'small' 'medium' 'large' 'big' 'huge' 'massive')
+	.image-{size}
+		image-size(size)

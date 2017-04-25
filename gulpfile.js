@@ -1,37 +1,37 @@
-var gulp = require('gulp'),
-stylus = require('gulp-stylus'),
-watch = require('gulp-watch'),
-rename = require('gulp-rename'),
-uglify = require('gulp-uglify'),
-argv = require('yargs').argv,
-appRoot = require('app-root-path'),
-del = require('del'),
-nib = require('nib'),
-jeet = require('jeet'),
-rupture = require('rupture'),
-origin
+const gulp = require('gulp')
+const stylus = require('gulp-stylus')
+const watch = require('gulp-watch')
+const rename = require('gulp-rename')
+const uglify = require('gulp-uglify')
+const argv = require('yargs').argv
+const appRoot = require('app-root-path')
+const del = require('del')
+const nib = require('nib')
+const jeet = require('jeet')
+const rupture = require('rupture')
 
-var source = {
+let source = {
 	ROOT: appRoot + '/blossom',
-	ORIGIN: '.',
+	ORIGIN: '.'
 }
 
+let origin = source.ORIGIN
 argv.root == 1 ? origin = source.ROOT : origin = source.ORIGIN
 
 gulp.task('purge', function (cb) {
 	return del([
 		origin + '/css/blossom.min.css',
 		origin + '/js/blossom.min.js'
-	], {force: true}, cb);
-});
+	], {force: true}, cb)
+})
 
 gulp.task('compile css', function () {
 	return gulp.src('./styl/blossom.styl')
 		.pipe(stylus({
 			use: [jeet(), nib(), rupture()]
 		}))
-	 .pipe(gulp.dest(origin + '/css'));
-});
+	 .pipe(gulp.dest(origin + '/css'))
+})
 
 gulp.task('minify css', function () {
 	return gulp.src('./styl/blossom.styl')
@@ -43,13 +43,13 @@ gulp.task('minify css', function () {
 			basename: "blossom",
 			suffix: ".min",
 		}))
-		.pipe(gulp.dest(origin + '/css'));
-});
+		.pipe(gulp.dest(origin + '/css'))
+})
 
 gulp.task('compile js', function () {
 	return gulp.src('./js/blossom.js')
-		.pipe(gulp.dest(origin + '/js'));
-});
+		.pipe(gulp.dest(origin + '/js'))
+})
 
 gulp.task('minify js', function () {
 	return gulp.src('./js/blossom.js')
@@ -58,7 +58,7 @@ gulp.task('minify js', function () {
 			basename: "blossom",
 			suffix: ".min",
 		}))
-		.pipe(gulp.dest(origin + '/js'));
-});
+		.pipe(gulp.dest(origin + '/js'))
+})
 
-gulp.task('build', ['purge', 'compile css', 'compile js', 'minify css', 'minify js']);
+gulp.task('build', ['purge', 'compile css', 'compile js', 'minify css', 'minify js'])

@@ -1,0 +1,113 @@
+.sidebar
+	&.left
+		border-right 1px solid border-grey
+		height 100%
+		width 290px
+	&.right
+		border-left 1px solid border-grey
+		height 100%
+	&.top
+		span(1/1)
+		z-index 1100
+
+.menu
+	width 100%
+	cf()
+	&.panel
+		position relative
+		background-color #fff
+		border 1px solid border-grey
+		border-radius border-radius-normal
+		overflow hidden
+		&.borderless
+			border 1px solid border-grey !important
+			.item
+				border 0 !important
+		.item
+			padding .64rem 1.1rem
+			margin 0 !important
+			border-right 1px solid border-grey
+			&:hover
+				background-color background-lighter-grey
+			&.active
+				background-color color-primary
+				color #fff
+				font-weight 500
+
+		&.vertical
+			.item
+				border 0
+				display block
+				& + .item
+					border-top 1px solid border-grey
+	.item
+		display inline-block
+		position relative
+		padding .54rem 1.1rem
+		color text-grey
+		cursor pointer
+		line-height 1.4rem
+		font-weight 500
+		.label
+			padding 0.25rem 0.66rem
+			margin -0.25rem -0.66rem
+			margin-left .8rem
+		& + .item
+			margin-left .4rem
+	&.vertical
+		width 15rem
+		&:not(.panel)
+			.item
+				display block
+				& + .item
+					margin .4rem 0 0 0 !important
+	&.underlined
+		&.show
+			border-bottom 2px solid border-grey
+			.item
+				margin 0 0 -2px 0
+		.item
+			padding .85rem 1.14rem
+			color link-light
+			&.active
+				border-bottom 2px text-grey solid
+				color text-grey
+		&.vertical
+			&.show
+				border 0
+				border-right 2px solid border-grey
+			.item
+				padding .65rem 1.14rem
+				&:after
+					absolute right -2px top
+					width 2px
+					height 100%
+					display block
+					content ' '
+					background-color transparent
+				.label
+					float right
+					margin-right .3rem
+				&.active
+					border 0
+					&:after
+						background-color text-grey
+	&.pills
+		.item
+			border-radius border-radius-normal
+			&:hover
+				background-color background-lighter-grey
+			&.active
+				background-color color-primary
+				color #fff
+	&.basic
+		.item
+			padding-left 0
+			padding-right 0
+			color link-light
+			& + .item
+				margin-left 2.4rem
+			&:hover
+				color link-light-hover
+			&.active
+				color text-grey
