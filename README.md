@@ -7,13 +7,13 @@ Blossom has been built for the ground up to provide an easy way for beginner and
 ### Getting started
 
 #### Self hosting
-Download the [ZIP bundle](https://github.com/Aotik/Blossom-Styleguide/raw/master/blossom.zip)
+Download the [ZIP bundle](http://d1fb9glqs1l0dr.cloudfront.net/blossom-1.2.61.zip)
 
 Include it in your markup
 
-`<link rel="stylesheet" type="text/css" href="/path/to/folder/blossom.min.css"/>`
+`<link rel="stylesheet" type="text/css" href="/path/to/blossom.min.css"/>`
 
-`<script src="/path/to/folder/blossom.js"></script>`
+`<script src="/path/to/blossom.js"></script>`
 
 #### NodeJS Dependancy
 
@@ -48,6 +48,13 @@ Ensure that you use Blossom JS as mentioned in the section to get your Progress 
 Most theming can be achieved by editing the `variables.styl` file within Blossom's `src` folder. Changing single variables will have an effect across your whole website so try to experiment from the start to see what suits your site the most.
 
 A more extensive guide on theming will be released in the near future.
+
+### Building
+Upon installing Blossom, a gulpfile with come along with all source files in the install directory. Run `gulp build` to watch the source directory and to allow Blossom to be recompiled each time you edit any .styl files.
+
+The file `_.styl` in included within Blossoms source folder so that custom Style markup can be written in and compiled directly with Blossom.
+
+When you are ready for production, simply run `gulp build` so that Blossom JS and Blossom CSS can be compiled and minified.
 
 ### Issues
 Found any issues with the build? Make sure you let me know by posting an issue.
