@@ -39,14 +39,15 @@ ul.list, ol.list
 			padding 0.8rem 0
 	&.links
 		> .item
-			opacity .52
 			transition opacity 0.14s ease
 			a
-				color text-grey
+				color link-light
+				font-weight 500
 			&:hover
-				opacity 1
+				color link-light-hover
 			&.active
-				opacity 1
+				a
+					color color-primary
 	&.divided
 		li:first-child, .item:first-child
 			border none
@@ -57,24 +58,25 @@ ul.list, ol.list
 		li
 			display inline-block
 			& + li
-				margin-left 1.4rem
+				margin-left 1.8rem
+
 	&.ordered
-		counter-reset item
+		counter-reset ordereditem
 		.list
-			counter-reset item
+			counter-reset ordereditem
 			padding .55rem 0 .05rem .5rem
 		li, .item
 			list-style none
 			&:before
-				counter-incrrement item
-				content counters(item,".") " "
+				counter-increment ordereditem
+				content counters(ordereditem,".") " "
 				margin-right 5px
 				opacity 0.6
 	&.bulleted
 		padding-left 1rem
 		.item
 			&:before
-				content '•'
+				content '\2022'
 				absolute left auto top .2rem
 				margin-left -0.97rem
 
