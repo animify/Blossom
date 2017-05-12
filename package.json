@@ -1,6 +1,6 @@
 {
 	"name": "blossom-ui",
-	"version": "1.2.7",
+	"version": "1.2.71",
 	"description": "A free open-source design framework for the modern web",
 	"main": "index.js",
 	"scripts": {
@@ -16,11 +16,13 @@
 	},
 	"keywords": [
 		"blossom",
+		"blossom-ui",
 		"framework",
 		"ui",
 		"css",
 		"stylus",
-		"responsive"
+		"responsive",
+		"design"
 	],
 	"author": "Stefan Mansson <st.mansson@icloud.com> (http://cindr.io)",
 	"license": "SEE LICENSE IN LICENSE",

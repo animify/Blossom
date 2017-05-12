@@ -41,8 +41,10 @@ if (typeof(jQuery) == 'undefined') {
 
 					if(!dropdown.length) return
 
+					toggle.unbind("click")
 					toggle.click(function(e){
 						(!menu.is(':visible')) && $('.menu').parent().removeClass('open')
+						console.log('dropdown');
 
 						setTimeout(() => menu.parent().addClass('open'), o.delay)
 					})
