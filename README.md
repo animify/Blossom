@@ -7,13 +7,13 @@ Blossom has been built for the ground up to provide an easy way for beginner and
 ### Getting started
 
 #### Self hosting
-Download the [ZIP bundle](http://d1fb9glqs1l0dr.cloudfront.net/blossom-1.2.61.zip)
+Download the [ZIP bundle](http://getblossom.io/introduction)
 
 Include it in your markup
 
-`<link rel="stylesheet" type="text/css" href="/path/to/blossom.min.css"/>`
+`<link rel="stylesheet" type="text/css" href="/blossom-ui/css/blossom.min.css"/>`
 
-`<script src="/path/to/blossom.js"></script>`
+`<script src="/blossom-ui/js/blossom.js"></script>`
 
 #### NodeJS Dependancy
 
@@ -47,7 +47,7 @@ Ensure that you use Blossom JS as mentioned in the section to get your Progress 
 ### Theming
 Most theming can be achieved by editing the `variables.styl` file within Blossom's `src` folder. Changing single variables will have an effect across your whole website so try to experiment from the start to see what suits your site the most.
 
-A more extensive guide on theming will be released in the near future.
+A new [theming guide](http://getblossom.io/customization) has been released, going into detail about different parts of theming.
 
 ### Building
 Upon installing Blossom, a gulpfile with come along with all source files in the install directory. Run `gulp build` to watch the source directory and to allow Blossom to be recompiled each time you edit any .styl files.
@@ -59,7 +59,7 @@ When you are ready for production, simply run `gulp build` so that Blossom JS an
 ### Issues
 Found any issues with the build? Make sure you let me know by posting an issue.
 
-###### Feel free to post enchancements as well
+###### Feel free to post enchancements in the Issues section
 
 ---
 
