@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700,900");
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -470,8 +470,8 @@ strong {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 1rem;
+  padding-right: 1rem;
   position: relative;
   *zoom: 1;
 }
@@ -498,7 +498,6 @@ strong {
 .row {
   float: left;
   clear: none;
-  width: 100%;
   margin: 0 -15px;
   overflow: hidden;
   *zoom: 1;
@@ -3251,6 +3250,7 @@ ol.ordered li[value]:before {
 }
 .stages .stage pre {
   margin: 0.6rem 0 0 0;
+  white-space: pre-wrap;
 }
 .stages .stage pre code {
   display: inline-block;
@@ -3276,7 +3276,7 @@ ol.ordered li[value]:before {
   display: block;
 }
 code {
-  background-color: #f1f3f7;
+  background-color: #f2f4f8;
   color: #435ce2;
   padding: 0.3rem 0.5rem;
   border-radius: 4px;

@@ -18,11 +18,11 @@ if (typeof(jQuery) == 'undefined') {
 				}
 
 				if ($(this).hasClass('open')) {
-					$(this).removeClass('open').next().slideUp('fast', () => {
+					$(this).removeClass('open').next().slideUp('fast', function() {
 						$(this).next().removeClass('open')
 					})
 				} else {
-					$(this).addClass('open').next().slideDown('fast', () => {
+					$(this).addClass('open').next().slideDown('fast', function() {
 						$(this).next().addClass('open')
 					})
 				}
@@ -34,7 +34,7 @@ if (typeof(jQuery) == 'undefined') {
 				o = $.extend({ maxHeight: 600, buffer: 100, delay: 0 }, o)
 
 				return this.each(function(){
-					let dropdown = $(this),
+					var dropdown = $(this),
 						toggle = dropdown.find('.toggle'),
 						menu = dropdown.find('.menu'),
 						a = dropdown.find('a')
@@ -44,14 +44,17 @@ if (typeof(jQuery) == 'undefined') {
 					toggle.unbind("click")
 					toggle.click(function(e){
 						(!menu.is(':visible')) && $('.menu').parent().removeClass('open')
-						console.log('dropdown');
 
-						setTimeout(() => menu.parent().addClass('open'), o.delay)
+						setTimeout(function() {
+							menu.parent().addClass('open')
+						}, o.delay)
 					})
 
-					a.bind('click', (e) => menu.parent().removeClass('open'))
+					a.bind('click', function(e){
+						menu.parent().removeClass('open')
+					})
 
-					$(document).bind('click', (e) => {
+					$(document).bind('click', function(e) {
 						if (! $(e.target).parents().hasClass('dropdown'))
 							menu.parent().removeClass('open')
 					 })
@@ -60,7 +63,7 @@ if (typeof(jQuery) == 'undefined') {
 		})
 
 
-		loadProgressBars = () => {
+		function loadProgressBars() {
 			$('.progress:not(.active) .bar[data-percent]').each(function () {
 				const progress = $(this)
 				const status = $(this).find('.status')
@@ -70,7 +73,7 @@ if (typeof(jQuery) == 'undefined') {
 			})
 		}
 
-		loadActiveProgressBars = () => {
+		function loadActiveProgressBars() {
 			$('.progress.active .bar[data-percent]').each(function () {
 				const progress = $(this)
 				const status = $(this).find('.status')
@@ -79,7 +82,7 @@ if (typeof(jQuery) == 'undefined') {
 					duration: 1600,
 					easing:'linear',
 					step: function() {
-						let pct = ''
+						var pct = ''
 						if(percentage == 0){
 							pct = Math.floor(this.countNum) + '%'
 						}else{
