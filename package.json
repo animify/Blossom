@@ -1,6 +1,6 @@
 {
 	"name": "blossom-ui",
-	"version": "1.2.75",
+	"version": "1.2.751",
 	"description": "A free open-source design framework for the modern web",
 	"main": "index.js",
 	"scripts": {
@@ -31,7 +31,7 @@
 	},
 	"homepage": "http://getblossom.io",
 	"dependencies": {
-		"app-root-path": "^1.3.0",
+		"app-root-path": "^2.0.1",
 		"babel-preset-es2015": "^6.24.1",
 		"del": "^2.2.1",
 		"gulp": "^3.9.1",
@@ -41,11 +41,11 @@
 		"gulp-stylus": "^2.5.0",
 		"gulp-uglify": "^2.1.2",
 		"gulp-watch": "^4.3.11",
-		"jeet": "6.1.1",
+		"jeet": "^7.1.0",
 		"nib": "^1.1.0",
 		"pump": "^1.0.2",
 		"rupture": "^0.6.1",
-		"yargs": "^4.8.1"
+		"yargs": "^8.0.1"
 	},
 	"peerDependencies": {
 		"app-root-path": "^1.3.0",

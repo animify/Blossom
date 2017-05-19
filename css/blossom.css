@@ -463,7 +463,6 @@ strong {
   clear: both;
 }
 .contain {
-  *zoom: 1;
   width: auto;
   max-width: 1224px;
   float: none;
@@ -473,22 +472,10 @@ strong {
   padding-left: 1rem;
   padding-right: 1rem;
   position: relative;
-  *zoom: 1;
 }
-.contain:before,
-.contain:after {
+.contain::after {
   content: '';
   display: table;
-}
-.contain:after {
-  clear: both;
-}
-.contain:before,
-.contain:after {
-  content: '';
-  display: table;
-}
-.contain:after {
   clear: both;
 }
 .bind {
@@ -500,15 +487,6 @@ strong {
   clear: none;
   margin: 0 -15px;
   overflow: hidden;
-  *zoom: 1;
-}
-.row:before,
-.row:after {
-  content: '';
-  display: table;
-}
-.row:after {
-  clear: both;
 }
 .row:before,
 .row:after {
@@ -1314,17 +1292,6 @@ strong {
   padding: 0;
   margin: 0;
 }
-.clearfix {
-  *zoom: 1;
-}
-.clearfix:before,
-.clearfix:after {
-  content: '';
-  display: table;
-}
-.clearfix:after {
-  clear: both;
-}
 .stackable > * {
   display: block;
   clear: both;
@@ -1714,7 +1681,6 @@ strong {
   border-left: 0;
 }
 .accordion {
-  *zoom: 1;
   float: left;
   clear: none;
   text-align: inherit;
@@ -1722,12 +1688,9 @@ strong {
   margin-left: 0%;
   margin-right: 0%;
 }
-.accordion:before,
-.accordion:after {
+.accordion::after {
   content: '';
   display: table;
-}
-.accordion:after {
   clear: both;
 }
 .accordion > .title {
@@ -2420,7 +2383,6 @@ ol.ordered li[value]:before {
   height: 100%;
 }
 .sidebar.top {
-  *zoom: 1;
   float: left;
   clear: none;
   text-align: inherit;
@@ -2429,25 +2391,13 @@ ol.ordered li[value]:before {
   margin-right: 0%;
   z-index: 1100;
 }
-.sidebar.top:before,
-.sidebar.top:after {
+.sidebar.top::after {
   content: '';
   display: table;
-}
-.sidebar.top:after {
   clear: both;
 }
 .menu {
   width: 100%;
-  *zoom: 1;
-}
-.menu:before,
-.menu:after {
-  content: '';
-  display: table;
-}
-.menu:after {
-  clear: both;
 }
 .menu.panel {
   position: relative;
@@ -2817,7 +2767,6 @@ ol.ordered li[value]:before {
   flex-direction: column;
 }
 .card.fluid {
-  *zoom: 1;
   float: left;
   clear: none;
   text-align: inherit;
@@ -2825,12 +2774,9 @@ ol.ordered li[value]:before {
   margin-left: 0%;
   margin-right: 0%;
 }
-.card.fluid:before,
-.card.fluid:after {
+.card.fluid::after {
   content: '';
   display: table;
-}
-.card.fluid:after {
   clear: both;
 }
 .card .image {
@@ -2889,7 +2835,6 @@ ol.ordered li[value]:before {
   box-flex: 0;
   -webkit-flex-grow: 0;
   flex-grow: 0;
-  *zoom: 1;
   float: left;
   clear: none;
   text-align: inherit;
@@ -2901,12 +2846,9 @@ ol.ordered li[value]:before {
   border-top: 1px solid #e9edf3;
   font-size: 0.86rem;
 }
-.card .content.footer:before,
-.card .content.footer:after {
+.card .content.footer::after {
   content: '';
   display: table;
-}
-.card .content.footer:after {
   clear: both;
 }
 .card .content.footer.button {
@@ -2927,29 +2869,9 @@ ol.ordered li[value]:before {
   font-size: 0.84rem;
   color: #4c5767;
 }
-.comments {
-  *zoom: 1;
-}
-.comments:before,
-.comments:after {
-  content: '';
-  display: table;
-}
-.comments:after {
-  clear: both;
-}
 .comments .comment {
   position: relative;
   margin-top: 0.8rem;
-  *zoom: 1;
-}
-.comments .comment:before,
-.comments .comment:after {
-  content: '';
-  display: table;
-}
-.comments .comment:after {
-  clear: both;
 }
 .comments .comment .comment {
   margin-left: -1.8rem;
@@ -3019,18 +2941,9 @@ ol.ordered li[value]:before {
 }
 .progress {
   background-color: #e2e7ef;
-  *zoom: 1;
   border-radius: 4px;
   height: 1.7rem;
   content: '';
-}
-.progress:before,
-.progress:after {
-  content: '';
-  display: table;
-}
-.progress:after {
-  clear: both;
 }
 .progress .bar {
   height: 100%;
