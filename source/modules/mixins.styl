@@ -31,7 +31,17 @@ image-size(s)
 grid(n)
 	width percentage(n/grid-length)
 
-push(n)
+flexgridpadding()
+	padding 0 grid-padding
+
+gridrowmargin()
+	margin auto -(grid-padding)
+
+flexgrid(n)
+	flex 0 0 percentage(n/grid-length)
+	max-width percentage(n/grid-length)
+
+gridpush(n)
 	margin-left percentage(n/grid-length)
 
 pull(n)

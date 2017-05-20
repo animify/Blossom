@@ -1,6 +1,6 @@
 {
 	"name": "blossom-ui",
-	"version": "1.2.751",
+	"version": "1.3.0",
 	"description": "A free open-source design framework for the modern web",
 	"main": "index.js",
 	"scripts": {
@@ -12,7 +12,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/Aotik/Blossom.git"
+		"url": "git+https://github.com/aotik/Blossom.git"
 	},
 	"keywords": [
 		"blossom",
@@ -27,7 +27,7 @@
 	"author": "Stefan Mansson <st.mansson@icloud.com> (http://cindr.io)",
 	"license": "SEE LICENSE IN LICENSE",
 	"bugs": {
-		"url": "https://github.com/Aotik/Blossom/issues"
+		"url": "https://github.com/aotik/Blossom/issues"
 	},
 	"homepage": "http://getblossom.io",
 	"dependencies": {
@@ -55,7 +55,7 @@
 		"gulp-stylus": "*",
 		"gulp-uglify": "*",
 		"gulp-watch": "*",
-		"jeet": "6.1.1",
+		"jeet": "*",
 		"nib": "*",
 		"rupture": "*",
 		"yargs": "*"

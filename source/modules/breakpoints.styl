@@ -14,26 +14,32 @@
 	&xl-hide
 		+below('xl')
 			display none
-	&hd-hide
-		+below('hd')
+	&xxl-hide
+		+below('xxl')
 			display none
 	&xs-show
-		+above('xs')
+		display none
+		+below('xs')
 			display block
 	&s-show
-		+above('s')
+		display none
+		+below('s')
 			display block
 	&m-show
-		+above('m')
+		display none
+		+below('m')
 			display block
 	&l-show
-		+above('l')
+		display none
+		+below('l')
 			display block
 	&xl-show
-		+above('xl')
+		display none
+		+below('xl')
 			display block
-	&hd-show
-		+above('hd')
+	&xxl-show
+		display none
+		+below('xxl')
 			display block
 	&xs-stack
 		+below('xs')
@@ -85,13 +91,13 @@
 				stack()
 				margin 0 !important
 				padding 0 !important
-	&hd-stack
-		+below('hd')
+	&xxl-stack
+		+below('xxl')
 			stack()
 			margin 0 !important
 			padding 0 !important
 		&able > *
-			+below('hd')
+			+below('xxl')
 				stack()
 				margin 0 !important
 				padding 0 !important

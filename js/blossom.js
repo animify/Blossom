@@ -18,13 +18,9 @@ if (typeof(jQuery) == 'undefined') {
 				}
 
 				if ($(this).hasClass('open')) {
-					$(this).removeClass('open').next().slideUp('fast', function() {
-						$(this).next().removeClass('open')
-					})
+					$(this).removeClass('open').next().slideUp('fast')
 				} else {
-					$(this).addClass('open').next().slideDown('fast', function() {
-						$(this).next().addClass('open')
-					})
+					$(this).addClass('open').next().slideDown('fast')
 				}
 			})
 		})
