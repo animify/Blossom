@@ -1,32 +1,32 @@
 .row
-	display flex
-	flex-wrap wrap
-	gridrowmargin()
+  display flex
+  flex-wrap wrap
+  gridrowmargin()
 
 .equal
-	flex-basis 0
-	flex-grow 1
-	max-width 100%
-	flexgridpadding()
+  flex-basis 0
+  flex-grow 1
+  max-width 100%
+  flexgridpadding()
 
 .col
-	flex 0 0 100%
-	max-width 100%
-	flexgridpadding()
+  flex 0 0 100%
+  max-width 100%
+  flexgridpadding()
 
 for size in 'xs' 's' 'm' 'l' 'xl' 'xxl'
-	+above(size)
-		.{size}-equal
-			flex-basis 0
-			flex-grow 1
-			max-width 100%
-	for len in (1..grid-length)
-		+above(size)
-			.{size}-{len}
-				flexgrid(len)
-			.push-{size}-{len}
-				gridpush(len)
+  +above(size)
+    .{size}-equal
+      flex-basis 0
+      flex-grow 1
+      max-width 100%
+  for len in (1..grid-length)
+    +above(size)
+      .{size}-{len}
+        flexgrid(len)
+      .push-{size}-{len}
+        gridpush(len)
 
 .nogutter
-	padding 0
-	margin 0
+  padding 0
+  margin 0

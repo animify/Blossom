@@ -1,63 +1,63 @@
 {
-	"name": "blossom-ui",
-	"version": "1.3.0",
-	"description": "A free open-source design framework for the modern web",
-	"main": "index.js",
-	"scripts": {
-		"build:root": "gulp build --root",
-		"build:origin": "gulp build",
-		"postinstall": "npm run build:root",
-		"build": "npm run build:origin",
-		"postversion": "npm run build:root"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/aotik/Blossom.git"
-	},
-	"keywords": [
-		"blossom",
-		"blossom-ui",
-		"framework",
-		"ui",
-		"css",
-		"stylus",
-		"responsive",
-		"design"
-	],
-	"author": "Stefan Mansson <st.mansson@icloud.com> (http://cindr.io)",
-	"license": "SEE LICENSE IN LICENSE",
-	"bugs": {
-		"url": "https://github.com/aotik/Blossom/issues"
-	},
-	"homepage": "http://getblossom.io",
-	"dependencies": {
-		"app-root-path": "^2.0.1",
-		"babel-preset-es2015": "^6.24.1",
-		"del": "^2.2.1",
-		"gulp": "^3.9.1",
-		"gulp-babel": "^6.1.2",
-		"gulp-rename": "^1.2.2",
-		"gulp-run-sequence": "^0.3.2",
-		"gulp-stylus": "^2.5.0",
-		"gulp-uglify": "^2.1.2",
-		"gulp-watch": "^4.3.11",
-		"jeet": "^7.1.0",
-		"nib": "^1.1.0",
-		"pump": "^1.0.2",
-		"rupture": "^0.6.1",
-		"yargs": "^8.0.1"
-	},
-	"peerDependencies": {
-		"app-root-path": "^1.3.0",
-		"del": "*",
-		"gulp": "*",
-		"gulp-rename": "*",
-		"gulp-stylus": "*",
-		"gulp-uglify": "*",
-		"gulp-watch": "*",
-		"jeet": "*",
-		"nib": "*",
-		"rupture": "*",
-		"yargs": "*"
-	}
+  "name": "blossom-ui",
+  "version": "1.4.2",
+  "description": "A free open-source design framework for the modern web",
+  "main": "index.js",
+  "scripts": {
+    "build:root": "gulp build --root",
+    "build:origin": "gulp build",
+    "postinstall": "npm run build:root",
+    "build": "npm run build:origin",
+    "postversion": "npm run build:root"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aotik/Blossom.git"
+  },
+  "keywords": [
+    "blossom",
+    "blossom-ui",
+    "framework",
+    "ui",
+    "css",
+    "stylus",
+    "responsive",
+    "design"
+  ],
+  "author": "Stefan Mansson <st.mansson@icloud.com> (http://cindr.io)",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/aotik/Blossom/issues"
+  },
+  "homepage": "http://getblossom.io",
+  "dependencies": {
+    "app-root-path": "^2.0.1",
+    "babel-preset-es2015": "^6.24.1",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-run-sequence": "^0.3.2",
+    "gulp-stylus": "^2.5.0",
+    "gulp-uglify": "^2.1.2",
+    "gulp-watch": "^4.3.11",
+    "jeet": "^7.1.0",
+    "nib": "^1.1.0",
+    "pump": "^1.0.2",
+    "rupture": "^0.6.1",
+    "yargs": "^8.0.1"
+  },
+  "peerDependencies": {
+    "app-root-path": "^1.3.0",
+    "del": "*",
+    "gulp": "*",
+    "gulp-rename": "*",
+    "gulp-stylus": "*",
+    "gulp-uglify": "*",
+    "gulp-watch": "*",
+    "jeet": "*",
+    "nib": "*",
+    "rupture": "*",
+    "yargs": "*"
+  }
 }

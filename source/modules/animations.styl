@@ -1,116 +1,116 @@
 .transitionDuration
-	&-0
-		transition-duration duration-0
-	&-s
-		transition-duration duration-s
-	&-m
-		transition-duration duration-m
-	&-l
-		transition-duration duration-l
-	&-xl
-		transition-duration duration-xl
-	&-xxl
-		transition-duration duration-xxl
+  &-0
+    transition-duration duration-0
+  &-s
+    transition-duration duration-s
+  &-m
+    transition-duration duration-m
+  &-l
+    transition-duration duration-l
+  &-xl
+    transition-duration duration-xl
+  &-xxl
+    transition-duration duration-xxl
 
 .transitionType
-	&-linear
-		transition-timing-function linear
-	&-ease
-		transition-timing-function ease
-	&-scaleIn
-		transition-timing-function cubic-bezier(0, 1.42, 0.44, 1)
-	&-scaleOut
-		transition-timing-function cubic-bezier(0.16, 0.86, 0.44, 1)
-	&-spring
-		transition-timing-function cubic-bezier(0.68, -0.55, 0.27, 1.55)
-	&-bounce
-		transition-timing-function cubic-bezier(0.04, 0.89, 0.76, 1.74)
+  &-linear
+    transition-timing-function linear
+  &-ease
+    transition-timing-function ease
+  &-scaleIn
+    transition-timing-function cubic-bezier(0, 1.42, 0.44, 1)
+  &-scaleOut
+    transition-timing-function cubic-bezier(0.16, 0.86, 0.44, 1)
+  &-spring
+    transition-timing-function cubic-bezier(0.68, -0.55, 0.27, 1.55)
+  &-bounce
+    transition-timing-function cubic-bezier(0.04, 0.89, 0.76, 1.74)
 
 .animation-spin
-	animation spin duration-xxxl infinite linear
+  animation spin duration-xxxl infinite linear
 
 .animation-rotate
-	animation spin 3s duration-xxl infinite cubic-bezier(0.04, 0.95, 0.17, 1)
+  animation spin 3s duration-xxl infinite cubic-bezier(0.04, 0.95, 0.17, 1)
 
 .animation-bounce
-	animation bounce duration-xxxl infinite cubic-bezier(0.04, 0.95, 0.17, 1)
+  animation bounce duration-xxxl infinite cubic-bezier(0.04, 0.95, 0.17, 1)
 
 .animation-spring
-	animation spring duration-l cubic-bezier(0.04, 0.95, 0.17, 1)
+  animation spring duration-l cubic-bezier(0.04, 0.95, 0.17, 1)
 
 .landing-fadein
-	animation fadein duration-xl linear forwards
-	opacity 0
+  animation fadein duration-xl linear forwards
+  opacity 0
 
 .landing-ascend
-	animation ascend duration-xl linear forwards
-	opacity 0
+  animation ascend duration-xl linear forwards
+  opacity 0
 
 .landing-descend
-	animation descend duration-xl linear forwards
-	opacity 0
+  animation descend duration-xl linear forwards
+  opacity 0
 
 @keyframes spin
-	0%
-		transform rotate(0deg)
-	100%
-		transform rotate(1turn)
+  0%
+    transform rotate(0deg)
+  100%
+    transform rotate(1turn)
 
 @keyframes bounce
-	0%, 20%, 50%, 80%, 100%
-		transform translateY(0)
-	40%
-		transform translateY(-15px)
-	60%
-		transform translateY(-5px)
+  0%, 20%, 50%, 80%, 100%
+    transform translateY(0)
+  40%
+    transform translateY(-15px)
+  60%
+    transform translateY(-5px)
 
 
 @keyframes double-bounce
-	0%
-		transform scale(0.0)
-	 50%
-		transform scale(1.0)
-	100%
-		transform scale(0.0)
+  0%
+    transform scale(0.0)
+   50%
+    transform scale(1.0)
+  100%
+    transform scale(0.0)
 
 @keyframes spring
-	0%
-		transform scale(1.1)
-	40%
-		transform scale(0.9)
-	100%
-		transform scale(1)
+  0%
+    transform scale(1.1)
+  40%
+    transform scale(0.9)
+  100%
+    transform scale(1)
 
 @keyframes fadein
-	0%
-		opacity 0
-	100%
-		opacity 1
+  0%
+    opacity 0
+  100%
+    opacity 1
 
 @keyframes ascend
-	0%
-		transform translateY(30px)
-		opacity 0
-	60%
-		transform translateY(20px)
-		opacity 0
-	100%
-		opacity 1
-		transform translateY(0)
+  0%
+    transform translateY(30px)
+    opacity 0
+  60%
+    transform translateY(20px)
+    opacity 0
+  100%
+    opacity 1
+    transform translateY(0)
 
 @keyframes descend
-	0%
-		transform translateY(-30px)
-		opacity 0
-	60%
-		transform translateY(-20px)
-		opacity 0
-	100%
-		opacity 1
-		transform translateY(0)
+  0%
+    transform translateY(-30px)
+    opacity 0
+  60%
+    transform translateY(-20px)
+    opacity 0
+  100%
+    opacity 1
+    transform translateY(0)
 
 @keyframes load2
-	0%
-		transform: rotate(0deg)
-	100%
-		transform: rotate(360deg)
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)

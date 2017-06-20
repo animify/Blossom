@@ -59,8 +59,8 @@ When you are ready for production, simply run `gulp build` so that Blossom JS an
 ### Issues
 Found any issues with the build? Make sure you let me know by posting an issue.
 
-###### Feel free to post enchancements in the Issues section
+###### Feel free to post enhancements in the Issues section
 
 ---
 
-Licensed under MIT - Copyright (c) 2017
+Licensed under MIT - Copyright (c) Cindr.io 2017

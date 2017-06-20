@@ -1,32 +1,32 @@
 .progress
-	background-color background-light-grey
-	cf()
-	border-radius border-radius-normal
-	height 1.7rem
-	content ''
-	.bar
-		height 100%
-		border-radius border-radius-normal
-		background-color darken(background-light-grey, 62%)
-		position relative
-		width 0
-		.status
-			color #fff
-			absolute right .6rem
-			font-size .86rem
-			line-height 1.74rem
-			font-weight 700
-			display none
-	&.tiny
-		height 0.3rem
-	&.small
-		height 0.8rem
-	&.large
-		height 2.7rem
-		.status
-			line-height 2.7rem
-			font-size 1rem
-	&:not(.tiny):not(.small)
-		.bar.show
-			.status
-				display block
+  background-color background-light-grey
+  cf()
+  border-radius border-radius-normal
+  height 1.7rem
+  content ''
+  .bar
+    height 100%
+    border-radius border-radius-normal
+    background-color darken(background-light-grey, 62%)
+    position relative
+    width 0
+    .status
+      color #fff
+      absolute right .6rem
+      font-size .86rem
+      line-height 1.74rem
+      font-weight 700
+      display none
+  &.tiny
+    height 0.3rem
+  &.small
+    height 0.8rem
+  &.large
+    height 2.7rem
+    .status
+      line-height 2.7rem
+      font-size 1rem
+  &:not(.tiny):not(.small)
+    .bar.show
+      .status
+        display block

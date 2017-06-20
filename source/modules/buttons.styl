@@ -1,69 +1,69 @@
 .button
-	display inline-block
-	position relative
-	overflow hidden
-	border-radius border-radius-normal
-	color text-button-default
-	background-color background-light-grey
-	outline 0
-	padding 0 1.6rem
-	text-align center
-	border 0
-	height em-height
-	line-height em-height
-	font-size font-size-standard
-	font-weight 500
-	cursor pointer
-	transition all 0.2s ease
-	vertical-align top
-	for size in ('small' 'medium' 'large' 'big' 'massive')
-		&.{size}
-			btn-size(size)
+  display inline-block
+  position relative
+  overflow hidden
+  border-radius border-radius-normal
+  color text-button-default
+  background-color background-light-grey
+  outline 0
+  padding 0 1.8em
+  text-align center
+  border 0
+  height em-height
+  line-height 2.7em
+  font-size font-size-standard
+  font-weight 500
+  cursor pointer
+  transition all 0.2s ease
+  vertical-align top
+  for size in ('small' 'medium' 'large' 'big' 'massive')
+    &.{size}
+      btn-size(size)
 
-	&.outlined
-		box-sizing border-box
-		background-color transparent
-		box-shadow inset 0px 0px 0px 1px background-light-grey
-		color text-button-default
-		&.white
-			color #fff
-			&:hover
-				color text-button-default
-	&:hover
-		box-shadow none
-		background-color background-light-grey
-	for clr in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black' 'primary')
-		&.{clr}
-			btn-color(clr)
-			btn-background(clr)
-			&.outlined
-				btn-color-outlined(clr)
-				background-color transparent
-				btn-border(clr)
-			&:hover
-				btn-color(clr)
-				btn-background-hover(clr)
-	&.labeled
-		padding 0 1.4rem 0 4rem
-		i
-			absolute top left
-			width 2.6rem
-			background-color rgba(0, 0, 0, 0.1)
-			text-align center
-			color #fff
-			height 100%
-			font-size 1rem
-			line-height 2.4rem
-		&.labeled-right
-			padding 0 4rem 0 1.4rem
-			i
-				absolute top right
-				left auto
-	&.icon
-		padding 0 0.8275rem
-	&:hover
-		color hover-text-button-default
-		background-color hover-background-light-grey
-		box-shadow inset 0 -2px 0 rgba(37,51,66,.14)
-	&:active
-		box-shadow inset 0 2px 0 rgba(37,51,66,.14)
+  &.outlined
+    box-sizing border-box
+    background-color transparent
+    box-shadow inset 0px 0px 0px 1px background-light-grey
+    color text-button-default
+    &.white
+      color #fff
+      &:hover
+        color text-button-default
+  &:hover
+    box-shadow none
+    background-color background-light-grey
+  for clr in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black' 'primary')
+    &.{clr}
+      btn-color(clr)
+      btn-background(clr)
+      &.outlined
+        btn-color-outlined(clr)
+        background-color transparent
+        btn-border(clr)
+      &:hover
+        btn-color(clr)
+        btn-background-hover(clr)
+  &.labeled
+    padding 0 1.8rem 0 4.2rem
+    i
+      absolute top left
+      width 2.8rem
+      background-color rgba(0, 0, 0, 0.1)
+      text-align center
+      color #fff
+      height 100%
+      font-size 1rem
+      line-height em-height
+    &.labeled-right
+      padding 0 4.2rem 0 1.8rem
+      i
+        absolute top right
+        left auto
+  &.icon
+    padding 0 0.8275rem
+  &:hover
+    color hover-text-button-default
+    background-color hover-background-light-grey
+    box-shadow inset 0 -2px 0 rgba(37,51,66,.14)
+  &:active
+    box-shadow inset 0 2px 0 rgba(37,51,66,.14)

@@ -1,47 +1,48 @@
 *
-	box-sizing border-box
+  box-sizing border-box
 
 global-reset()
 
 html
-	height 100%
-	width 100%
+  height 100%
+  width 100%
 
 body
-	font-family font-family-standard
-	font-size font-size-standard
-	color text-grey
-	height 100%
-	width 100%
-	margin 0
-	padding 0
+  font-family font-family-standard
+  font-size font-size-standard
+  color text-grey
+  height 100%
+  width 100%
+  margin 0
+  padding 0
 
 for h in (1..6)
-	h{h}
-		line-height 1.5em
-		font-size lookup('font-size-h' + h)
-		letter-spacing -1px
-		font-weight 600
-		
+  h{h}
+    line-height 1.8em
+    font-size lookup('font-size-h' + h)
+    letter-spacing -.02em
+    font-weight 500
+    color color-heading
+
 ::selection
-	color #fff
-	background-color lighten(primary-color, 30%)
+  color #fff
+  background-color lighten(primary-color, 30%)
 
 a
-	color color-primary
-	text-decoration none
-	cursor pointer
-	&:hover
-		color darken(color-primary, 10%)
+  color color-primary
+  text-decoration none
+  cursor pointer
+  &:hover
+    color darken(color-primary, 10%)
 
 p
-	line-height 1.6rem
+  line-height 1.6em
 
 b
-	font-weight 900
+  font-weight 700
 
 small
-	font-size .86rem
+  font-size .86rem
 
 strong
-	font-weight 700
+  font-weight 700

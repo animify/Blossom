@@ -1,37 +1,43 @@
 .label
-	background-color background-light-grey
-	color text-lighter-grey
-	padding 0.5rem .8rem
-	display inline-block
-	font-size .86em
-	border-radius border-radius-normal
-	font-weight 600
-	text-transform uppercase
-	overflow hidden
-	&.circular
-		padding .48rem
-	.detail
-		background-color rgba(0, 0, 0, .1)
-		padding 0.48rem 0.72rem
-		height 100%
-		margin -0.5rem -.8rem -0.5rem .8rem
-		border-radius inherit
-		display inline-block
-		font-weight 500
-		vertical-align top
-		float right
-		color rgba(255,255,255, .7)
-	i
-		margin-right 0.6rem
-	a
-		color link-light
-		margin-left .8rem
-		padding-left .8rem
-		font-weight 600
-		text-transform none
-		border-left 2px solid rgba(0, 0, 0, .1)
-		&:hover
-			color link-light-hover
-	for bc in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black' 'primary')
-		&.{bc}
-			color primary-white
+  background-color background-light-grey
+  color text-lighter-grey
+  padding 0.5rem .86rem
+  display inline-block
+  font-size .7em
+  line-height .76em
+  border-radius border-radius-normal
+  font-weight 700
+  text-transform uppercase
+  overflow hidden
+  &.circular
+    padding .48rem
+    border-radius 50%
+    width 2.4em
+    height 2.4em
+    line-height .86em
+    text-align center
+  .detail
+    background-color rgba(0, 0, 0, .1)
+    padding 0.48rem 0.72rem
+    height 100%
+    margin -0.5rem -.8rem -0.5rem .8rem
+    border-radius inherit
+    display inline-block
+    font-weight 500
+    vertical-align top
+    float right
+    color rgba(255,255,255, .7)
+  i
+    margin-right 0.6rem
+  a
+    color link-light
+    margin-left .8rem
+    padding-left .8rem
+    font-weight 600
+    text-transform none
+    border-left 2px solid rgba(0, 0, 0, .1)
+    &:hover
+      color link-light-hover
+  for bc in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black' 'primary')
+    &.{bc}
+      color primary-white

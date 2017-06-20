@@ -1,60 +1,60 @@
 .cards
-	display flex
-	flex-wrap wrap
+  display flex
+  flex-wrap wrap
 .card
-	position relative
-	background-color #fff
-	box-shadow 0 1px 2px 0 box-shadow-grey
-	border 1px solid border-grey
-	border-radius border-radius-normal
-	width 285px
-	display flex
-	flex-direction column
-	&.fluid
-		span(1/1)
-	.image
-		flex 0 0 auto
-		img
-			max-width 100%
-		&.header
-			img
-				border-radius border-radius-normal border-radius-normal 0 0
-	.content
-		padding 1.2rem 1.4rem
-		flex-grow 1
-		a
-			color link-light
-			&:hover
-				color link-light-hover
-		&:after
-			display block
-			content ''
-			clear both
-		.header
-			font-size 1.3rem
-			line-height 1.7rem
-		.sub
-			line-height 1.7rem
-			color color-light-grey
-		p
-			margin-top .7rem
-			color color-light-grey
-		&.footer
-			flex-grow 0
-			span(1/1)
-			padding 1rem 1.4rem
-			color color-light-grey
-			border-top 1px solid lighten(border-grey, 25%)
-			font-size .86rem
-			&.button
-				padding 0
-				text-align center
-				border-radius 0 0 border-radius-normal border-radius-normal
-				&:hover
-					color link-light-hover
-				&:hover, &:active
-					box-shadow none !important
-			i
-				margin-right .5rem
-				font-size 0.84rem
-				color text-grey
+  position relative
+  background-color #fff
+  box-shadow 0 1px 2px 0 box-shadow-grey
+  border 1px solid border-grey
+  border-radius border-radius-normal
+  width 285px
+  display flex
+  flex-direction column
+  &.fluid
+    span(1/1)
+  .image
+    flex 0 0 auto
+    img
+      max-width 100%
+    &.header
+      img
+        border-radius border-radius-normal border-radius-normal 0 0
+  .content
+    padding 1.2rem 1.4rem
+    flex-grow 1
+    a
+      color link-light
+      &:hover
+        color link-light-hover
+    &:after
+      display block
+      content ''
+      clear both
+    .header
+      font-size 1.3rem
+      line-height 1.7rem
+    .sub
+      line-height 1.7rem
+      color color-light-grey
+    p
+      margin-top .7rem
+      color color-light-grey
+    &.footer
+      flex-grow 0
+      span(1/1)
+      padding 1rem 1.4rem
+      color color-light-grey
+      border-top 1px solid lighten(border-grey, 25%)
+      font-size .86rem
+      &.button
+        padding 0
+        text-align center
+        border-radius 0 0 border-radius-normal border-radius-normal
+        &:hover
+          color link-light-hover
+        &:hover, &:active
+          box-shadow none !important
+      i
+        margin-right .5rem
+        font-size 0.84rem
+        color text-grey

@@ -1,61 +1,60 @@
 .dropdown
-	position relative
-	display inline-block
-	&.disabled
-		.toggle
-			opacity .4
-			pointer-events none
-			cursor default
-	.toggle
-		cursor pointer
-		&:not(.button) > i
-			margin 0 .2rem
-	&.floating
-		.menu
-			margin-top 1rem
-	&.open
-		.menu
-			display block
-	.menu
-		background-color #fff
-		absolute top 2rem left 0
-		border 1px solid background-light-grey
-		border-radius border-radius-normal
-		min-width 180px
-		z-index 2000
-		display none
-		padding .4rem 0
-		box-shadow 0 2px 3px 0 rgba(34,36,38,.15)
-	li
-		display block
-		i
-			width 1.3rem
-		&.divider
-			margin .4rem 0 .6rem 0
-		&.disabled
-			opacity .4
-			pointer-events none
-			cursor default
-		&.header
-			text-transform uppercase
-			color text-grey
-			padding 1rem 1.1rem 0.5rem 1.1rem
-			font-size 0.8rem
-			font-weight 900
-		&:hover
-			a
-				color color-primary
-		a
-			color text-grey
-			display block
-			padding 0.54rem 1.1rem
-	&.right
-		.menu
-			left auto
-			right 0
-	&.upward
-		.menu
-			top auto
-			bottom 2rem
-	.sub
-		left 180px
+  position relative
+  display inline-block
+  &.disabled
+    .toggle
+      opacity .4
+      pointer-events none
+      cursor default
+  .toggle
+    cursor pointer
+    &:not(.button) > i
+      margin 0 .2rem
+  &.floating
+    .menu
+      margin-top 1rem
+  &.open
+    .menu
+      display block
+  .menu
+    background-color #fff
+    absolute top 2rem left 0
+    border 2px solid background-light-grey
+    border-radius border-radius-normal
+    min-width 180px
+    z-index 2000
+    display none
+    padding 1rem 0
+  li
+    display block
+    i
+      width 1.3rem
+    &.divider
+      margin .6rem 0
+    &.disabled
+      opacity .4
+      pointer-events none
+      cursor default
+    &.header
+      color text-grey
+      padding 0.5rem 1.4rem 0.5rem 1.4rem
+      font-size 1rem
+      font-weight 500
+    &:hover
+      a
+        color color-primary
+    a
+      color text-grey
+      display block
+      padding 0.25rem 1.4rem
+      line-height 1.6em
+  &.right
+    .menu
+      left auto
+      right 0
+  &.upward
+    .menu
+      top auto
+      bottom 2rem
+  .sub
+    left 180px
