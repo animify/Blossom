@@ -1,6 +1,6 @@
 {
   "name": "blossom-ui",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "A free open-source design framework for the modern web",
   "main": "index.js",
   "scripts": {
