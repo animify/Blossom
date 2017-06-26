@@ -1,11 +1,9 @@
-for clr in ('primary' 'red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black')
-  .text-{clr}
-    text-color(clr)
-
-for bc in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black' 'primary' 'ash' 'smoke')
-  .{bc}:not(.button)
-    background-color lookup('color-' + bc) !important
+for color in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black' 'primary' 'ash' 'smoke')
+  .{color}:not(.button):not(.text)
+    background-color lookup('color-' + color)
     &.light
-      background-color lighten(lookup('color-' + bc), 20%) !important
+      background-color lighten(lookup('color-' + color), 18%)
     &.dark
-      background-color darken(lookup('color-' + bc), 20%) !important
+      background-color darken(lookup('color-' + color), 18%)
+  .text.{color}
+    text-color(color)
