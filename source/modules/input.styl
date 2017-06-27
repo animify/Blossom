@@ -9,13 +9,12 @@
   input, textarea
     font-family font-family-standard
     font-size font-size-standard
-    color text-grey
+    color text-default
     margin 0
     font-size font-size-standard
     max-width 100%
-    height em-height
-    line-height em-height
-    padding 0.79rem 1rem
+    line-height 1.125
+    padding 0.75rem 1rem
     outline 0
     border-radius border-radius-normal
     text-align left
@@ -24,8 +23,9 @@
     transition border-color 0.14s ease
     min-width 220px
     background-color #fff
+    height 2.625em
     +placeholder()
-      color color-light-grey
+      color text-default
     &:focus
       border-color color-primary
   textarea

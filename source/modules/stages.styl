@@ -35,12 +35,12 @@
     flex-direction row
     align-items stretch
     background-color #fff
-    padding 1rem 1.3rem
+    padding 1rem 1.8rem
     position relative
     .header
       display block
       font-weight 500
-      font-size 1rem
+      font-size font-size-standard
       color color-heading
     &:last-child
       &:before, &:after
@@ -63,6 +63,14 @@
       border-left .6rem solid border-grey
       absolute right -0.6rem top 35%
       z-index 800
+    .icon
+      margin-right 1.1rem
+      width 2.2rem
+      text-align center
+      i
+        font-size font-size-h3
+        relative top .5rem
+        color color-grey
     & + .stage
       border-left 1px solid border-grey
     &.disabled > *
@@ -76,20 +84,13 @@
         color color-primary
       &:before
         border-left-color background-lightest-grey
-    .icon
-      margin-right 1.1rem
-      width 2.2rem
-      text-align center
-      i
-        font-size 2rem
-        relative top .6rem
     .content
       flex 0 1 auto
-      color color-light-grey
+      color text-default
       line-height 1.5rem
     small
       display block
-      color text-grey
+      color text-default
       margin .4rem 0 0 0
     pre
       margin 1rem 0 0 0

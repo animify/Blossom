@@ -54,7 +54,8 @@ btn-border(c)
   box-shadow inset 0px 0px 0px 1px lookup('color-' + c)
 
 btn-size(c)
-  font-size lookup('button-' + c)
+  font-size lookup('button-' + c + '-fontsize')
+  padding lookup('button-' + c + '-padding')
 
 btn-color(c)
   color lookup('text-button-' + c)
