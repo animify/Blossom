@@ -47,6 +47,9 @@ gridpush(n)
 pull(n)
   margin-left percentage(-(n)/grid-length)
 
+tooltip-text(c)
+  font-size lookup('tooltip-' + c)
+
 text-color(c)
   color lookup('color-' + c)
 
@@ -59,6 +62,9 @@ btn-size(c)
 
 btn-color(c)
   color lookup('text-button-' + c)
+
+btn-disabled-color(c)
+  color lighten(lookup('color-' + c), 70%)
 
 btn-color-outlined(c)
   color lookup('color-' + c)

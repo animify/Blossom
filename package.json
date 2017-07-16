@@ -1,6 +1,6 @@
 {
   "name": "blossom-ui",
-  "version": "1.4.5",
+  "version": "1.5.0",
   "description": "A free open-source design framework for the modern web",
   "main": "index.js",
   "scripts": {
@@ -24,12 +24,12 @@
     "responsive",
     "design"
   ],
-  "author": "Stefan Mansson <st.mansson@icloud.com> (http://cindr.io)",
+  "author": "Stefan Mansson <st.mansson@icloud.com> (https://cindr.io)",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
     "url": "https://github.com/aotik/Blossom/issues"
   },
-  "homepage": "http://getblossom.io",
+  "homepage": "https://getblossom.io",
   "dependencies": {
     "app-root-path": "^2.0.1",
     "babel-preset-es2015": "^6.24.1",

@@ -19,10 +19,11 @@ primary-white = #fff
 primary-black = #000
 
 color-heading = #1c2a40
+
 color-red = #ff2d2d
 color-orange = #ff8f17
 color-yellow = #ffbd00
-color-green = #01bc67
+color-green = #12d057
 color-teal = #00b1a1
 color-blue = #1d7aff
 color-violet = #af00e8
@@ -36,9 +37,8 @@ color-ash = #6b6c6e
 color-smoke = #e3e7eb
 
 background-light-grey = lighten(color-smoke, 20%)
-background-lighter-grey = lighten(color-smoke, 60%)
-background-lightest-grey = lighten(color-smoke, 75%)
-background-code-grey = #f3f7fc
+background-lighter-grey = #f5f7fa
+background-lightest-grey = lighten(background-lighter-grey, 25%)
 
 border-info = lighten(color-blue, 10%)
 border-warning = lighten(color-yellow, 10%)
@@ -46,7 +46,7 @@ border-important = lighten(color-red, 10%)
 border-success = lighten(color-green, 10%)
 
 border-grey = color-smoke
-box-shadow-grey = rgba(38,38,40,.15)
+box-shadow-grey = rgba(38,38,40,.1)
 
 text-button-primary = primary-white
 text-button-red = primary-white
@@ -61,15 +61,14 @@ text-button-pink = primary-white
 text-button-brown = primary-white
 text-button-grey = primary-white
 text-button-black = primary-white
-text-button-default = darken(color-grey, 20%)
-hover-text-button-default = darken(color-grey, 40%)
+text-button-white = text-default
+
+text-default = color-grey
+text-disabled = lighten(text-default, 35%)
+text-code = primary-black
 
 link-light = lighten(color-grey, 15%)
 link-light-hover = darken(color-grey, 20%)
-
-text-default = color-grey
-text-code = primary-black
-
 
 //Identifiers
 border-radius-normal = 4px
@@ -80,15 +79,22 @@ standard-page-width = 1124px
 standard-page-padding = 1rem
 
 //Button size
-button-small-fontsize = 0.8em
-button-medium-fontsize = 1.2em
-button-large-fontsize = 1.34em
-button-big-fontsize = 1.5em
+button-small-fontsize = .86rem
+button-medium-fontsize = 1.2rem
+button-large-fontsize = 1.34rem
+button-big-fontsize = 1.5rem
 
 button-small-padding = .65em 1.8em
 button-medium-padding = .75em 1.8em
 button-large-padding = .85em 2em
 button-big-padding = .95em 2.2em
+
+//Tooltip text size
+tooltip-tiny = .72rem
+tooltip-small = .86rem
+tooltip-medium = 1.1rem
+tooltip-large = 1.4rem
+tooltip-big = 1.8rem
 
 //Image size
 image-mini = 35px
@@ -108,6 +114,7 @@ duration-l = .3s
 duration-xl = .5s
 duration-xxl = .8s
 duration-xxxl = 1.2s
+duration-xxxxl = 2s
 
 //Grids
 grid-padding = 15px

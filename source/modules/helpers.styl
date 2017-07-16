@@ -47,6 +47,12 @@
 .borderless
   border 0 !important
 
+.disabled, [disabled]
+  cursor not-allowed
+  & > *
+    pointer-events none
+    color text-disabled !important
+
 .centered
   &:not(.vertical):not(.horizontal)
     align(both)

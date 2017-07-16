@@ -2,6 +2,19 @@
   center(standard-page-width, standard-page-padding)
   position relative
   cf()
+
 .bind
   height 100%
   width 100%
+
+.group
+  .button
+    margin 0 !important
+    border-radius 0
+    &.outlined
+      & + .outlined
+        margin-left -1px !important
+    &:first-of-type
+      border-radius border-radius-normal 0 0 border-radius-normal
+    &:last-of-type
+      border-radius 0 border-radius-normal border-radius-normal 0
