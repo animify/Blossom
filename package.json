@@ -1,6 +1,6 @@
 {
   "name": "blossom-ui",
-  "version": "1.5.0",
+  "version": "1.6.1",
   "description": "A free open-source design framework for the modern web",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aotik/Blossom.git"
+    "url": "git+https://github.com/cindr-io/Blossom.git"
   },
   "keywords": [
     "blossom",
@@ -27,7 +27,7 @@
   "author": "Stefan Mansson <st.mansson@icloud.com> (https://cindr.io)",
   "license": "SEE LICENSE IN LICENSE",
   "bugs": {
-    "url": "https://github.com/aotik/Blossom/issues"
+    "url": "https://github.com/cindr-io/Blossom/issues"
   },
   "homepage": "https://getblossom.io",
   "dependencies": {
