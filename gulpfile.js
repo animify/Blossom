@@ -85,6 +85,11 @@ gulp.task('copy gulp', function (cb) {
   return false
 })
 
+gulp.task('copy fonts', function (cb) {
+    return gulp.src('./source/fonts/*')
+      .pipe(gulp.dest(origin + '/css/fonts'))
+})
+
 gulp.task('copy source', function (cb) {
   if (origin = source.ROOT) {
     return gulp.src(['./source/**/*', '!./source/**/_.styl'])
@@ -108,7 +113,7 @@ gulp.task('check custom', function (cb) {
 })
 
 gulp.task('build', function(cb) {
-  runSequence('purge', ['compile css', 'compile js'], ['minify css', 'minify js'], ['copy gulp', 'copy source'], 'check custom', cb)
+  runSequence('purge', ['compile css', 'compile js'], ['minify css', 'minify js'], ['copy gulp', 'copy source'], 'copy fonts', 'check custom', cb)
 })
 
 gulp.task('watch', ['watch source'])

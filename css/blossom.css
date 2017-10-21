@@ -1,3 +1,59 @@
+@font-face {
+  font-family: 'Inter UI';
+  src: url("fonts/InterUI-Black.eot");
+  src: url("fonts/InterUI-Black.eot?#iefix") format('embedded-opentype'), url("fonts/InterUI-Black.woff") format('woff');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter UI';
+  src: url("fonts/InterUI-BoldItalic.eot");
+  src: url("fonts/InterUI-BoldItalic.eot?#iefix") format('embedded-opentype'), url("fonts/InterUI-BoldItalic.woff") format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Inter UI';
+  src: url("fonts/InterUI-Medium.eot");
+  src: url("fonts/InterUI-Medium.eot?#iefix") format('embedded-opentype'), url("fonts/InterUI-Medium.woff") format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter UI';
+  src: url("fonts/InterUI-BlackItalic.eot");
+  src: url("fonts/InterUI-BlackItalic.eot?#iefix") format('embedded-opentype'), url("fonts/InterUI-BlackItalic.woff") format('woff');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Inter UI';
+  src: url("fonts/InterUI-MediumItalic.eot");
+  src: url("fonts/InterUI-MediumItalic.eot?#iefix") format('embedded-opentype'), url("fonts/InterUI-MediumItalic.woff") format('woff');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Inter UI';
+  src: url("fonts/InterUI-RegularItalic.eot");
+  src: url("fonts/InterUI-RegularItalic.eot?#iefix") format('embedded-opentype'), url("fonts/InterUI-RegularItalic.woff") format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Inter UI';
+  src: url("fonts/InterUI-Bold.eot");
+  src: url("fonts/InterUI-Bold.eot?#iefix") format('embedded-opentype'), url("fonts/InterUI-Bold.woff") format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter UI';
+  src: url("fonts/InterUI-Regular.eot");
+  src: url("fonts/InterUI-Regular.eot?#iefix") format('embedded-opentype'), url("fonts/InterUI-Regular.woff") format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -99,7 +155,7 @@ html {
   width: 100%;
 }
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter UI", sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -162,7 +218,6 @@ a {
 }
 a:hover {
   color: #2a46de;
-  text-decoration: underline;
 }
 li > a:hover {
   text-decoration: none;
@@ -2036,12 +2091,14 @@ small {
   position: absolute;
   top: 2rem;
   left: 0;
-  border: 2px solid #e9ecef;
+  border: 1px solid #e9ecef;
   border-radius: 4px;
-  min-width: 180px;
+  min-width: 13rem;
   z-index: 2000;
   display: none;
   padding: 1rem 0;
+  -webkit-box-shadow: 0 1px 5px 0 rgba(70,72,75,0.1);
+  box-shadow: 0 1px 5px 0 rgba(70,72,75,0.1);
 }
 .dropdown li {
   display: block;
@@ -2083,7 +2140,7 @@ small {
   bottom: 2rem;
 }
 .dropdown .sub {
-  left: 180px;
+  left: 13rem;
 }
 .table {
   width: 100%;
@@ -2184,8 +2241,8 @@ small {
   text-align: left;
   border-radius: 4px;
   padding: 0.75em 1em;
-  -webkit-box-shadow: 0 2px 2px 0 rgba(38,38,40,0.1);
-  box-shadow: 0 2px 2px 0 rgba(38,38,40,0.1);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(70,72,75,0.1);
+  box-shadow: 0 1px 2px 0 rgba(70,72,75,0.1);
   -webkit-transform: scale(0);
   -moz-transform: scale(0);
   -o-transform: scale(0);
@@ -2550,23 +2607,23 @@ small {
 }
 .button.green {
   color: #fff;
-  background-color: #12d057;
+  background-color: #06c78a;
 }
 .button.green.disabled,
 .button.green[disabled],
 .button.green.loading {
   pointer-events: none;
-  color: #b1f8cb;
+  color: #a6fce1;
 }
 .button.green.outlined {
-  color: #12d057;
+  color: #06c78a;
   background-color: transparent;
-  -webkit-box-shadow: inset 0px 0px 0px 1px #12d057;
-  box-shadow: inset 0px 0px 0px 1px #12d057;
+  -webkit-box-shadow: inset 0px 0px 0px 1px #06c78a;
+  box-shadow: inset 0px 0px 0px 1px #06c78a;
 }
 .button.green:hover {
   color: #fff;
-  background-color: #11bf50;
+  background-color: #06b77f;
 }
 .button.teal {
   color: #fff;
@@ -2815,7 +2872,7 @@ ol.list {
 .list .item {
   padding: 0.25rem 0;
   position: relative;
-  line-height: 1.2rem;
+  line-height: 1.7rem;
   display: list-item;
   table-layout: fixed;
 }
@@ -2833,18 +2890,18 @@ ol.list {
 .list li .header,
 .list .item .header {
   font-weight: 600;
-  line-height: 1.15rem;
+  line-height: 1.5rem;
 }
 .list li .icon,
 .list .item .icon {
   display: inline-block;
   vertical-align: middle !important;
-  margin-right: 12px;
+  margin-right: 1rem;
 }
 .list li .icon.large,
 .list .item .icon.large {
-  font-size: 1.2em;
-  line-height: 2rem;
+  font-size: 1.4em;
+  line-height: 2.6rem;
 }
 .list li .content,
 .list .item .content {
@@ -2935,7 +2992,7 @@ ol.ordered li[value]:before {
   color: text-lighter-grey;
   padding: 0.5rem 0.86rem;
   display: inline-block;
-  font-size: 0.7em;
+  font-size: 0.76rem;
   line-height: 0.76em;
   border-radius: 4px;
   font-weight: 700;
@@ -2947,7 +3004,7 @@ ol.ordered li[value]:before {
   border-radius: 50%;
   width: 2.4em;
   height: 2.4em;
-  line-height: 0.86em;
+  line-height: 1em;
   text-align: center;
 }
 .label .detail {
@@ -3064,7 +3121,7 @@ ol.ordered li[value]:before {
   border-color: #ff4242;
 }
 .message.success {
-  border-color: #14ea62;
+  border-color: #07e59f;
 }
 .message.info {
   border-color: #3487ff;
@@ -3077,7 +3134,7 @@ ol.ordered li[value]:before {
 .input input[type="text"],
 .input input[type="number"],
 .input textarea {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Inter UI", sans-serif;
   font-size: 16px;
   color: #53565a;
   margin: 0;
@@ -3200,8 +3257,8 @@ ol.ordered li[value]:before {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA0ppVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6ODgxODM1MEM1RTU1MTFFNzhGMDBFQjg1MzE5M0IxRTciIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6ODgxODM1MEI1RTU1MTFFNzhGMDBFQjg1MzE5M0IxRTciIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDpjOTFhNDk2My01ZTU0LTExZTctOTIxOS1lMjc3NWExMTcwNGQiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDpjOTFhNDk2My01ZTU0LTExZTctOTIxOS1lMjc3NWExMTcwNGQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4V+8aSAAAC60lEQVR42mL8//8/w2AGTAyDHIw6cNSBow4cdSCNAQs+yQsXLjA8f/6cqhZ+/fqVwcPDg4GHh8cSxH3w4MElDg4OBgkJCewaQDUJLuzj40P1EAkPD2f8/PnzxP8Q8GXx4sWJO3bswOkGvA4EGkZVx4mLi4PMbf+PCi4CMScuN9AtDXJzczMsXLiwDMisQJP6hVcjPUKQk5OTYdeuXSlAM/+ihd6vmTNnBh47dmzgopiLi4th7969oUDzfqA57u/mzZvTQGr27ds3MA4ERevu3bvdgGZ9QnPc/58/f1ba29uD1R05coQ8B4aFhVEUcsBotQSa8xaL47oDAwPhasl2YEBAAIOoqCiDpKSkMBAQ7TgBAQGGPXv26ALNeILuuL9//8708/NDyZxkO3DTpk3s79+/n/jr16/nL168WGJmZsZPjANbWloUgPqvoTsOaM4KX19fVnT1ZDsQiMORLfj06dN6S0tLDnyOc3Z2Fv3w4cMJLNG6Exgj3Nj0UOLAEnSLgJYvsrGxwVp+urm58QGrsj3oen7//n3U399fCJenyHbg1q1bVf78+fMU3cJ3795NAIYkiiVOTk7sX758WY2uFih2GZjmZPGFOtkOBBUzhw4dcgKyP6NbDEybdebm5rBoZfr+/fuc/5jgQWVlpRahNEtRLubn52c4d+5cMCimsDgyLzc3lwkYrX1YHPcKaLEZqBSgmQMjIiLglfzZs2fTsTgCVDtswiL+AWipC6i4IQZQFMUwACwLGa5cuVL3nzD4cerUqSAhISGiy02qOBAEQIX16dOnJ+Bx3N+jR48mABujJNU6VHMgtChhAcotwea6w4cPFxIbrTRzIBMTE0NDQwMvUH4XsuNOnjzZLCgoSFa9TbYD8TX5CwoKRIFV11KgurPbtm1ro6TVc+DAAZxuYMQ3uoWr0wTSA3Qcg7e3NwMrKysbsMH56+3btwwsLCxkOdDCwoIBV+gzjg6/jTpw1IGjDhx14OAGAAEGALOQyYV820TZAAAAAElFTkSuQmCC");
 }
 .input .checkbox.selected .toggle {
-  -webkit-box-shadow: inset 0 0 0 1rem #12d057;
-  box-shadow: inset 0 0 0 1rem #12d057;
+  -webkit-box-shadow: inset 0 0 0 1rem #06c78a;
+  box-shadow: inset 0 0 0 1rem #06c78a;
 }
 .input .checkbox.selected .toggle:after {
   -webkit-transform: scale(1);
@@ -3281,6 +3338,11 @@ ol.ordered li[value]:before {
 .input.disabled.range input[type=range]::-webkit-slider-thumb {
   border: 3px solid #e9ecef;
   background-color: #fff;
+}
+.input.block textarea,
+.input.block input {
+  max-width: none;
+  width: 100%;
 }
 .action input {
   border-radius: 4px 0 0 4px;
@@ -3498,16 +3560,16 @@ ol.ordered li[value]:before {
   color: #ffbd00;
 }
 .green:not(.button):not(.text) {
-  background-color: #12d057;
+  background-color: #06c78a;
 }
 .green:not(.button):not(.text).light {
-  background-color: #29ec70;
+  background-color: #0cf8ad;
 }
 .green:not(.button):not(.text).dark {
-  background-color: #0fab47;
+  background-color: #05a371;
 }
 .text.green {
-  color: #12d057;
+  color: #06c78a;
 }
 .teal:not(.button):not(.text) {
   background-color: #00b1a1;
@@ -3812,10 +3874,7 @@ ol.ordered li[value]:before {
 }
 .comments .comment {
   position: relative;
-  margin-top: 0.8rem;
-}
-.comments .comment .comment {
-  margin-left: -1.8rem;
+  margin-top: 1.4rem;
 }
 .comments .comment .avatar {
   width: 2.5rem;
@@ -3878,7 +3937,10 @@ ol.ordered li[value]:before {
   margin-top: 1rem;
 }
 .comments .group {
-  margin-top: 1rem;
+  margin-top: 1.4rem;
+}
+.comments .group .button {
+  border-radius: 4px;
 }
 .progress {
   background-color: #e9ecef;
@@ -3912,7 +3974,7 @@ ol.ordered li[value]:before {
   height: 2.7rem;
 }
 .progress.large .status {
-  line-height: 2.6rem;
+  line-height: 2.7rem;
   font-size: 1rem;
 }
 .progress:not(.tiny):not(.small) .bar.show .status {
@@ -4023,6 +4085,7 @@ ol.ordered li[value]:before {
   background-color: #fff;
   padding: 1rem 1.8rem;
   position: relative;
+  overflow: hidden;
 }
 .stages .stage .header {
   display: block;
@@ -4078,7 +4141,7 @@ ol.ordered li[value]:before {
   filter: alpha(opacity=40);
 }
 .stages .stage.completed i {
-  color: #12d057;
+  color: #06c78a;
 }
 .stages .stage.active {
   background-color: #f8f9fb;
@@ -4120,7 +4183,7 @@ code {
   border-radius: 4px;
   font-family: 'Roboto Mono', 'Consolas', 'Monaco', 'Lucida Console', monospace;
   line-height: 1.6rem;
-  font-size: 0.8rem;
+  font-size: 0.86rem;
   font-weight: 500;
 }
 p code {
