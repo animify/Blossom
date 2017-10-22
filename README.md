@@ -1,5 +1,8 @@
 # Blossom UI
 
+[![downloads](https://img.shields.io/npm/dm/blossom-ui.svg?style=flat-square)](https://npm-stat.com/charts.html?package=blossom-ui&from=2017-07-01)
+[![npm](https://img.shields.io/npm/v/blossom-ui.svg?style=flat-square)](https://www.npmjs.com/package/blossom-ui)
+
 Blossom has been built for the ground up to provide an easy way for beginner and advanced web designers and developers to get their hands on a simple but powerful design framework. With a massive library of web elements, Blossom allows users to build & design intuitive websites efficiently.
 
 ---
