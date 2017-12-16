@@ -69,3 +69,17 @@ dropdownStyle()
         cursor pointer
         &:hover
             color $color-primary
+
+messageStyle()
+    border 0
+    border-left 6px solid $color-border
+    margin 1rem 0
+    padding 1rem 1.5rem
+    border-radius $border-radius-m
+    color $color-text-default
+    background-color $color-grey-light
+
+messageStyleType(style)
+    border-color lookup('$color-border-' + style)
+    background-color lighten(@border-color, 90%)
+    color darken(@border-color, 45%)
