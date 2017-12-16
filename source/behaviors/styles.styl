@@ -1,0 +1,54 @@
+buttonStyleDefault()
+    color $color-text-default
+    background-color $color-smoke
+    box-shadow $box-shadow-distant
+    border-radius $border-radius-m
+    padding .5em 1em
+
+buttonStyleColored(style)
+    color $color-white
+    background-color lookup('$color-' + style)
+    border 1px solid @background-color
+    &:hover
+        background-color darken(@background-color, 8%)
+        border-color @background-color
+    &.outlined
+        color lookup('$color-' + style)
+        background-color transparent
+        border-color @color
+        &:hover
+            background-color @color
+            color $color-white
+
+inputStyle()
+    color $color-text-default
+    background-color $color-white
+    border 1px solid $color-border
+    border-radius $border-radius-m
+    padding 0.5em 1em
+    +inputPlaceholder()
+        color $color-text-muted
+
+inputStyleTransparent()
+    background-color transparent
+    border 0
+    padding 0
+    margin 0
+
+tableStyle()
+    border 1px solid $color-border
+    border-radius $border-radius-m
+    th
+        font-weight $font-weight-semibold
+        border-bottom 1px solid $color-border
+        padding .5em 1em
+    tr
+        td
+            padding .5em 1em
+            border-bottom 1px solid $color-border
+        &:last-child td
+            border-bottom 0
+
+tableStyleStriped()
+    tr:nth-child(2n)
+        background-color $color-grey-light

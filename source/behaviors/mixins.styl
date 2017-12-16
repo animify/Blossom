@@ -1,17 +1,9 @@
-defaultButtonStyle()
-    color $color-text-default
-    background-color $color-smoke
-    box-shadow 0 4px 12px rgba(0,0,0,0.1)
-
-buttonStyle(style)
-    color $color-white
-    background-color lookup('$color-' + style)
-    &:hover
-        background-color darken(@background-color, 8%)
-    &.outlined
-        color lookup('$color-' + style)
-        background-color transparent
-        border 1px solid @color
-        &:hover
-            background-color @color
-            color $color-white
+inputPlaceholder()
+    &::-webkit-input-placeholder
+        {block}
+    &:-moz-placeholder
+        {block}
+    &::-moz-placeholder
+        {block}
+    &:-ms-input-placeholder
+        {block}

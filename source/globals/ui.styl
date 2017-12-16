@@ -1,23 +1,21 @@
-html
+html, body
     height 100%
     width 100%
 
 body
-    height 100%
-    width 100%
     margin 0
     padding 0
     color $color-text-default
     background-color $color-background-body
     font-family $font-family-standard
     font-size $font-size
-    line-height 1.5em
+    line-height $line-height
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale
 
 for h in (1..4)
     h{h}
         font-size lookup('$font-size-h' + h)
-        font-weight 500
+        font-weight $font-weight-semibold
         color $color-text-header
-        line-height 1.8em
+        line-height $line-height

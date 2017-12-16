@@ -6,11 +6,9 @@
     cursor pointer
     font-weight 500
     font-size $font-size-button
-    border-radius $border-radius-m
-    padding .5em 1em
-    defaultButtonStyle()
+    buttonStyleDefault()
     &:hover
         background-color darken(@background-color, 8%)
     for color in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black' 'primary')
         &.{color}
-            buttonStyle(color)
+            buttonStyleColored(color)
