@@ -83,3 +83,26 @@ messageStyleType(style)
     border-color lookup('$color-border-' + style)
     background-color lighten(@border-color, 90%)
     color darken(@border-color, 45%)
+
+tooltipStyle()
+    &:before
+        background-color #fff
+        box-shadow 1px 1px 0 0 $color-border
+    &:after
+        color $color-text-default
+        background-color #fff
+        border 1px solid $color-border
+        box-shadow 0 1px 2px 0 rgba(0,0,0,.2)
+        padding .5em 1em
+        border-radius $border-radius-m
+    &.dark
+        &:before
+            box-shadow none !important
+            background-color $color-ash
+        &:after
+            border-color $color-ash
+            background-color $color-ash
+            color #fff
+    &[data-position~=bottom]
+        &:before
+            box-shadow -1px -1px 0 0 $color-border
