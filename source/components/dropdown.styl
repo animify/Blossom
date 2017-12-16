@@ -1,0 +1,26 @@
+.dropdown
+    position relative
+    display inline-block
+    .menu
+        absolute top 2rem left 0
+        min-width 13rem
+        z-index 800
+        display none
+    li, a
+        display block
+        line-height $line-height
+    &.open
+        .menu
+            display block
+    &.floating
+        .menu
+            margin-top 1rem
+    &.right
+        .menu
+            left auto
+            right 0
+    &.upward
+        .menu
+            top auto
+            bottom 2rem
+    dropdownStyle()

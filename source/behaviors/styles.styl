@@ -1,7 +1,6 @@
 buttonStyleDefault()
     color $color-text-default
     background-color $color-smoke
-    box-shadow $box-shadow-distant
     border-radius $border-radius-m
     padding .5em 1em
 
@@ -52,3 +51,21 @@ tableStyle()
 tableStyleStriped()
     tr:nth-child(2n)
         background-color $color-grey-light
+
+dropdownStyle()
+    .menu
+        background-color #fff
+        border 1px solid $color-border
+        padding 1em 0
+        border-radius $border-radius-m
+    li
+        padding .2em 1em
+        &.header
+            color $color-text-default
+            font-size $font-size
+            font-weight $font-weight-semibold
+    a
+        color $color-text-default
+        cursor pointer
+        &:hover
+            color $color-primary
