@@ -1,108 +1,108 @@
 buttonStyleDefault()
-    color $color-text-default
-    background-color $color-smoke
-    border-radius $border-radius-m
-    padding .5em 1em
+    color: $color-text-default;
+    background-color: $color-smoke;
+    border-radius: $border-radius-m;
+    padding: .5em 1em;
 
 buttonStyleColored(style)
-    color $color-white
-    background-color lookup('$color-' + style)
-    border 1px solid @background-color
+    color: $color-white;
+    background-color: lookup('$color-' + style);
+    border: 1px solid @background-color;
     &:hover
-        background-color darken(@background-color, 8%)
-        border-color @background-color
+        background-color: darken(@background-color, 8%);
+        border-color: @background-color;
     &.outlined
-        color lookup('$color-' + style)
-        background-color transparent
-        border-color @color
+        color: lookup('$color-' + style);
+        background-color: transparent;
+        border-color: @color;
         &:hover
-            background-color @color
-            color $color-white
+            background-color: @color;
+            color: $color-white;
 
 inputStyle()
-    color $color-text-default
-    background-color $color-white
-    border 1px solid $color-border
-    border-radius $border-radius-m
-    padding 0.5em 1em
+    color: $color-text-default;
+    background-color: $color-white;
+    border: 1px solid $color-border;
+    border-radius: $border-radius-m;
+    padding: 0.5em 1em;
     +inputPlaceholder()
-        color $color-text-muted
+        color: $color-text-muted;
 
 inputStyleTransparent()
-    background-color transparent
-    border 0
-    padding 0
-    margin 0
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0;
 
 tableStyle()
-    border 1px solid $color-border
-    border-radius $border-radius-m
+    border: 1px solid $color-border;
+    border-radius: $border-radius-m;
     th
-        font-weight $font-weight-semibold
-        border-bottom 1px solid $color-border
-        padding .5em 1em
+        font-weight: $font-weight-semibold;
+        border-bottom: 1px solid $color-border;
+        padding: .5em 1em;
     tr
         td
-            padding .5em 1em
-            border-bottom 1px solid $color-border
+            padding: .5em 1em;
+            border-bottom: 1px solid $color-border;
         &:last-child td
-            border-bottom 0
+            border-bottom: 0;
 
 tableStyleStriped()
     tr:nth-child(2n)
-        background-color $color-grey-light
+        background-color: $color-grey-light;
 
 dropdownStyle()
     .menu
-        background-color #fff
-        border 1px solid $color-border
-        padding 1em 0
-        border-radius $border-radius-m
+        background-color: #fff;
+        border: 1px solid $color-border;
+        padding: 1em 0;
+        border-radius: $border-radius-m;
     li
-        padding .2em 1em
+        padding: .2em 1em;
         &.header
-            color $color-text-default
-            font-size $font-size
-            font-weight $font-weight-semibold
+            color: $color-text-default;
+            font-size: $font-size;
+            font-weight: $font-weight-semibold;
     a
-        color $color-text-default
-        cursor pointer
+        color: $color-text-default;
+        cursor: pointer;
         &:hover
-            color $color-primary
+            color: $color-primary;
 
 messageStyle()
-    border 0
-    border-left 6px solid $color-border
-    margin 1rem 0
-    padding 1rem 1.5rem
-    border-radius $border-radius-m
-    color $color-text-default
-    background-color $color-grey-light
+    border: 0;
+    border-left: 6px solid $color-border;
+    margin: 1rem 0;
+    padding: 1rem 1.5rem;
+    border-radius: $border-radius-m;
+    color: $color-text-default;
+    background-color: $color-grey-light;
 
 messageStyleType(style)
-    border-color lookup('$color-border-' + style)
-    background-color lighten(@border-color, 90%)
-    color darken(@border-color, 45%)
+    border-color: lookup('$color-border-' + style);
+    background-color: lighten(@border-color, 90%);
+    color: darken(@border-color, 45%);
 
 tooltipStyle()
     &:before
-        background-color #fff
-        box-shadow 1px 1px 0 0 $color-border
+        background-color: #fff;
+        box-shadow: 1px 1px 0 0 $color-border;
     &:after
-        color $color-text-default
-        background-color #fff
-        border 1px solid $color-border
-        box-shadow 0 1px 2px 0 rgba(0,0,0,.2)
-        padding .5em 1em
-        border-radius $border-radius-m
+        color: $color-text-default;
+        background-color: #fff;
+        border: 1px solid $color-border;
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,.2);
+        padding: .5em 1em;
+        border-radius: $border-radius-m;
     &.dark
         &:before
-            box-shadow none !important
-            background-color $color-ash
+            box-shadow: none !important;
+            background-color: $color-ash;
         &:after
-            border-color $color-ash
-            background-color $color-ash
-            color #fff
+            border-color: $color-ash;
+            background-color: $color-ash;
+            color: #fff;
     &[data-position~=bottom]
         &:before
-            box-shadow -1px -1px 0 0 $color-border
+            box-shadow: -1px -1px 0 0 $color-border;
