@@ -1,14 +1,14 @@
 .button
-    display inline-block
-    position relative
-    outline 0
-    border 0
-    cursor pointer
-    font-weight 500
-    font-size $font-size-button
-    buttonStyleDefault()
+    display: inline-block;
+    position: relative;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: $font-size-button;
+    buttonStyleDefault();
     &:hover
-        background-color darken(@background-color, 8%)
+        background-color: darken(@background-color, 8%);
     for color in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black' 'primary')
         &.{color}
-            buttonStyleColored(color)
+            buttonStyleColored(color);
