@@ -1,2 +1,31 @@
-buttonStyleDefault()
-    color: red;
+style()
+    color: $color-text-default;
+    background-color: $color-smoke;
+    border-radius: $border-radius-m;
+    padding: .5em 1em;
+
+hoverStyle()
+    background-color: darken(@background-color, 8%);
+
+coloredStyle(color)
+    color: $color-white;
+    background-color: lookup('$color-' + color);
+    border: 1px solid @background-color;
+    &:hover
+        background-color: darken(@background-color, 8%);
+        border-color: @background-color;
+
+outlinedStyle()
+    background-color: transparent;
+    border: 1px solid @color;
+    &:hover
+        background-color: @color;
+        color: $color-white;
+
+outlinedColoredStyle(color)
+    color: lookup('$color-' + color);
+    background-color: transparent;
+    border-color: @color;
+    &:hover
+        background-color: @color;
+        color: $color-white;

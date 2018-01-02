@@ -1,7 +1,7 @@
 use('./../plugins/getFilename.js')
 use('./../plugins/exists.js')
 
-filename = './../themes/default/' + getFilename() + '/style.styl';
+filename = './../themes/default/' + getFilename() + '/style';
 @import filename if exists(filename);
 
 .button
@@ -12,10 +12,13 @@ filename = './../themes/default/' + getFilename() + '/style.styl';
     cursor: pointer;
     font-weight: 500;
     font-size: $font-size-button;
-    buttonStyleDefault();
+    style();
     &:hover
-        background-color: #fff unless @background-color;
-        background-color: darken(@background-color, 8%);
+        hoverStyle();
+    &.outlined
+        outlinedStyle(color);
     for color in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black' 'primary')
         &.{color}
-            buttonStyleColored(color);
+            coloredStyle(color);
+            &.outlined
+                outlinedColoredStyle(color);
