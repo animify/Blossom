@@ -1,7 +1,7 @@
 use('./../plugins/getFilename.js')
 use('./../plugins/exists.js')
 
-filename = './../themes/default/' + getFilename() + '/style';
+filename = './../themes/' + $theme + '/' + getFilename() + '/style';
 @import filename if exists(filename);
 
 .button

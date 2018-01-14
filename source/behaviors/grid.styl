@@ -9,24 +9,24 @@
         max-width: 100%;
         gridPadding();
 
+    &.nogutter
+        padding: 0;
+        margin: 0;
+
     & .col
         flex: 0 0 100%;
         max-width: 100%;
         gridPadding();
 
-    &.nogutter
-        padding: 0;
-        margin: 0;
-
-    for size in 'xs' 's' 'm' 'l' 'xl' 'xxl'
-        +above(size)
-            .{size}-equal
-                flex-basis: 0;
-                flex-grow: 1;
-                max-width: 100%;
-        for len in (1..$grid-length)
+        for size in $grid-sizes
             +above(size)
-                .{size}-{len}
-                    gridWidth(len);
-                .push-{size}-{len}
-                    gridpush(len);
+                &.{size}-equal
+                    flex-basis: 0;
+                    flex-grow: 1;
+                    max-width: 100%;
+            for len in (1..$grid-length)
+                +above(size)
+                    &.{size}-{len}
+                        gridWidth(len);
+                    &.push-{size}-{len}
+                        gridPush(len);
