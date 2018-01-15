@@ -1,106 +1,124 @@
+-fn = './../themes/' + $theme + '/' + getFilename() + '/style';
+
+@import './../defaults/_tooltip'
+@import -fn if exists(-fn);
+
 .tooltip[data-content]
-    position relative
-    tooltipStyle()
+    position relative;
+
     &:before
-        position absolute
-        z-index 2
-        width .8rem
-        height .8rem
-        content ' '
-        transform-origin center top
-        transform rotate(45deg) scale(0)
-        transition all cubic-bezier(0.02, 0.49, 0.01, 0.97) .14s
-        opacity 0
+        position: absolute;
+        z-index: 2;
+        width: .8rem;
+        height: .8rem;
+        content: ' ';
+        transform-origin: center top;
+        transform: rotate(45deg) scale(0);
+        transition: all cubic-bezier(0.02, 0.49, 0.01, 0.97) .14s;
+        opacity: 0;
+        will-change: transform, opacity
+        styleArrow();
+
     &:after
-        cursor default
-        pointer-events none
-        content attr(data-content)
-        position absolute
-        z-index 1
-        max-width none
-        white-space nowrap
-        text-align left
-        transform scale(0)
-        transition all cubic-bezier(0.02, 0.49, 0.01, 0.97) .14s
+        cursor: default;
+        pointer-events: none;
+        content: attr(data-content);
+        position: absolute;
+        z-index: 1;
+        max-width: none;
+        white-space: nowrap;
+        text-align: left;
+        transform: scale(0);
+        transition: all cubic-bezier(0.02, 0.49, 0.01, 0.97) .14s;
+        will-change: transform, opacity
+        styleBody();
+
+    &.dark
+        &:before
+            box-shadow: none !important;
+            styleArrowDark();
+        &:after
+            styleBodyDark();
+
     &:hover
         &:before
-            transform rotate(45deg) scale(1)
-            opacity 1
+            transform: rotate(45deg) scale(1);
+            opacity: 1;
         &:after
-            transform scale(1)
+            transform: scale(1);
 
-    for size in ('tiny' 'small' 'medium' 'large')
+    for size in ($generic-sizes)
         &[data-text={size}]
             &:after
-                font-size lookup('$font-size-tooltip-' + size)
+                font-size: lookup('$font-size-' + size);
 
     &[data-position~=top]
         &:before
-            bottom 100%
-            margin-bottom .18rem
+            bottom: 100%;
+            margin-bottom: .18rem;
         &:after
-            bottom 100%
-            margin-bottom .6rem
+            bottom: 100%;
+            margin-bottom: .6rem;
 
     &[data-position~=bottom]
         &:before
-            top 100%
-            margin-top .4rem
+            top: 100%;
+            margin-top: .4rem;
         &:after
-            top 100%
-            margin-top .6rem
+            top: 100%;
+            margin-top: .6rem;
 
     &[data-position="top left"]
         &:before
-            left 1rem
+            left: 1rem;
         &:after
-            left 0
-            right auto
-            transform-origin left bottom
+            left: 0;
+            right: auto;
+            transform-origin: left bottom;
 
     &[data-position="top center"]
         &:before
-            left 50%
+            left: 50%;
         &:after
-            left 50%
-            transform-origin center bottom
-            transform translateX(-50%) scale(0)
+            left: 50%;
+            transform-origin: center bottom;
+            transform: translateX(-50%) scale(0);
         &:hover
             &:after
-                transform translateX(-50%) scale(1)
+                transform: translateX(-50%) scale(1);
             &:before
-                transform rotate(45deg) scale(1)
+                transform: rotate(45deg) scale(1);
 
     &[data-position="top right"]
         &:before
-            right 1rem
+            right: 1rem;
         &:after
-            right 0
-            left auto
-            transform-origin right bottom
+            right: 0;
+            left: auto;
+            transform-origin: right bottom;
 
     &[data-position="bottom left"]
         &:before
-            left 1rem
+            left: 1rem;
         &:after
-            left 0
-            right auto
-            transform-origin left top
+            left: 0;
+            right: auto;
+            transform-origin: left top;
 
     &[data-position="bottom center"]
         &:before
-            left 50%
+            left: 50%;
         &:after
-            left 50%
-            transform-origin center top
-            transform translateX(-50%) scale(0)
+            left: 50%;
+            transform-origin: center top;
+            transform: translateX(-50%) scale(0);
         &:hover:after
-            transform translateX(-50%) scale(1)
+            transform: translateX(-50%) scale(1);
 
     &[data-position="bottom right"]
         &:before
-            right 1rem
+            right: 1rem;
         &:after
-            right 0
-            left auto
-            transform-origin right top
+            right: 0;
+            left: auto;
+            transform-origin: right top;
