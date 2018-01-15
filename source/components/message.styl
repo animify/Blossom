@@ -1,11 +1,14 @@
+filename = './../themes/' + $theme + '/' + getFilename() + '/style';
+@import filename if exists(filename);
+
 .message
     border: 0;
-    messageStyle();
+    style();
     &.warning
-        messageStyleType('warning');
+        coloredStyle('warning');
     &.important
-        messageStyleType('important');
+        coloredStyle('important');
     &.success
-        messageStyleType('success');
+        coloredStyle('success');
     &.info
-        messageStyleType('info');
+        coloredStyle('info');

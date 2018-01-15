@@ -1,8 +1,7 @@
-use('./../plugins/getFilename.js')
-use('./../plugins/exists.js')
+$fn = './../themes/' + $theme + '/' + getFilename() + '/style';
 
-filename = './../themes/' + $theme + '/' + getFilename() + '/style';
-@import filename if exists(filename);
+@import './../defaults/_button'
+@import $fn if exists($fn);
 
 .button
     display: inline-block;
@@ -10,15 +9,23 @@ filename = './../themes/' + $theme + '/' + getFilename() + '/style';
     outline: 0;
     border: 0;
     cursor: pointer;
-    font-weight: 500;
-    font-size: $font-size-button;
-    style();
+    font-weight: $button_font-weight;
+    font-size: $button_font-size;
+    line-height: $button_line-height;
+    styleDefault();
+
     &:hover
-        hoverStyle();
+        styleHover();
+
     &.outlined
-        outlinedStyle(color);
-    for color in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black' 'primary')
+        styleOutlined(color);
+
+    for size in ($generic-sizes)
+        &.{size}
+            styleSized(size);
+
+    for color in ($colors)
         &.{color}
-            coloredStyle(color);
+            styleColored(color);
             &.outlined
-                outlinedColoredStyle(color);
+                styleOutlinedColored(color);

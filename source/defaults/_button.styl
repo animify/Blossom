@@ -1,0 +1,40 @@
+$button_font-weight = $font-weight-semibold;
+$button_padding = .5em 1em;
+$button_border-width = 1px;
+$button_line-height = $line-height;
+$button_font-size = $font-size;
+
+styleDefault()
+    color: $color-text-default;
+    background-color: $color-smoke;
+    border-radius: $border-radius-m;
+    padding: $button_padding;
+
+styleHover()
+    background-color: darken(@background-color, 8%);
+
+styleOutlined()
+    background-color: transparent;
+    border: $button_border-width solid @color;
+    &:hover
+        background-color: @color;
+        color: $color-white;
+
+styleSized(size)
+    font-size: lookup('$font-size-' + size);
+
+styleColored(color)
+    color: $color-white;
+    background-color: lookup('$color-' + color);
+    border: $button_border-width solid @background-color;
+    &:hover
+        background-color: darken(@background-color, 8%);
+        border-color: @background-color;
+
+styleOutlinedColored(color)
+    color: lookup('$color-' + color);
+    background-color: transparent;
+    border-color: @color;
+    &:hover
+        background-color: @color;
+        color: $color-white;
