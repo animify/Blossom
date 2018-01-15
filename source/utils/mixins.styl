@@ -1,0 +1,24 @@
+inputPlaceholder()
+    &::-webkit-input-placeholder
+        {block}
+    &:-moz-placeholder
+        {block}
+    &::-moz-placeholder
+        {block}
+    &:-ms-input-placeholder
+        {block}
+
+// GRID MIXINS
+
+gridRowMargin()
+    margin: auto -($grid-padding);
+
+gridPadding()
+    padding: 0 $grid-padding;
+
+gridWidth(n)
+    flex: 0 0 percentage(n / $grid-length);
+    max-width: percentage(n / $grid-length);
+
+gridPush(n)
+    margin-left: percentage(n / $grid-length);

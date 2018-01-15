@@ -1,0 +1,31 @@
+-fn = './../themes/' + $theme + '/' + getFilename() + '/style';
+
+@import './../defaults/_button'
+@import -fn if exists(-fn);
+
+.button
+    display: inline-block;
+    position: relative;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    font-weight: $button.font-weight;
+    font-size: $button.font-size;
+    line-height: $button.line-height;
+    styleDefault();
+
+    &:hover
+        styleHover();
+
+    &.outlined
+        styleOutlined(color);
+
+    for size in ($generic-sizes)
+        &.{size}
+            styleSized(size);
+
+    for color in ($colors)
+        &.{color}
+            styleColored(color);
+            &.outlined
+                styleOutlinedColored(color);

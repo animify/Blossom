@@ -1,0 +1,16 @@
+-fn = './../themes/' + $theme + '/' + getFilename() + '/style';
+
+@import './../defaults/_message'
+@import -fn if exists(-fn);
+
+.message
+    border: 0;
+    styleDefault();
+    &.warning
+        styleColored('warning');
+    &.important
+        styleColored('important');
+    &.success
+        styleColored('success');
+    &.info
+        styleColored('info');

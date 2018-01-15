@@ -1,0 +1,17 @@
+.table
+    border-collapse: separate;
+    tableStyle();
+    &.basic
+        border: 0;
+        th, tr
+            background-color: transparent;
+    &.cells
+        th, tr td
+            border-left: 1px solid $color-border;
+            &:first-child
+                border-left: 0;
+    &.simple
+        th
+            background-color: transparent;
+    &.striped
+        tableStyleStriped();
