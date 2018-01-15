@@ -1,21 +1,26 @@
-$button_font-weight = $font-weight-semibold;
-$button_padding = .5em 1em;
-$button_border-width = 1px;
-$button_line-height = $line-height;
-$button_font-size = $font-size;
+$button ?= {
+    background-color: $color-smoke,
+    border-radius: $border-radius-m,
+    border-width: 1px,
+    color: $color-text-default,
+    font-size: $font-size
+    font-weight: $font-weight-semibold,
+    line-height: $line-height,
+    padding: .5em 1em
+}
 
 styleDefault()
-    color: $color-text-default;
-    background-color: $color-smoke;
-    border-radius: $border-radius-m;
-    padding: $button_padding;
+    color: $button.color;
+    background-color: $button.background-color;
+    border-radius: $button.border-radius;
+    padding: $button.padding;
 
 styleHover()
     background-color: darken(@background-color, 8%);
 
 styleOutlined()
     background-color: transparent;
-    border: $button_border-width solid @color;
+    border: $button.border-width solid @color;
     &:hover
         background-color: @color;
         color: $color-white;
@@ -26,7 +31,7 @@ styleSized(size)
 styleColored(color)
     color: $color-white;
     background-color: lookup('$color-' + color);
-    border: $button_border-width solid @background-color;
+    border: $button.border-width solid @background-color;
     &:hover
         background-color: darken(@background-color, 8%);
         border-color: @background-color;

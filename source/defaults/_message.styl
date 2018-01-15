@@ -1,0 +1,26 @@
+$message ?= {
+    background-color: $color-grey-light,
+    border-color: $color-border,
+    border-radius: $border-radius-m,
+    border-width: 6px,
+    color: $color-text-default,
+    line-height: $line-height,
+    margin: 1rem 0,
+    padding: 1rem 1.5rem
+}
+
+styleDefault()
+    border-left: $message.border-width solid $message.border-color;
+    margin: $message.margin;
+    padding: $message.padding;
+    border-radius: $message.border-radius;
+    color: $message.color;
+    line-height: $message.line-height;
+    background-color: $message.background-color;
+
+styleColored(type)
+    border-color: lookup('$color-border-' + type);
+    background-color: lighten(@border-color, 90%);
+    color: darken(@border-color, 45%);
+    h5
+        color: darken(@border-color, 60%);

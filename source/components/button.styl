@@ -1,7 +1,7 @@
-$fn = './../themes/' + $theme + '/' + getFilename() + '/style';
+-fn = './../themes/' + $theme + '/' + getFilename() + '/style';
 
 @import './../defaults/_button'
-@import $fn if exists($fn);
+@import -fn if exists(-fn);
 
 .button
     display: inline-block;
@@ -9,9 +9,9 @@ $fn = './../themes/' + $theme + '/' + getFilename() + '/style';
     outline: 0;
     border: 0;
     cursor: pointer;
-    font-weight: $button_font-weight;
-    font-size: $button_font-size;
-    line-height: $button_line-height;
+    font-weight: $button.font-weight;
+    font-size: $button.font-size;
+    line-height: $button.line-height;
     styleDefault();
 
     &:hover
