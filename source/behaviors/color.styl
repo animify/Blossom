@@ -1,0 +1,9 @@
+for color in ($colors)
+    .{color}:not(.button):not(.text)
+        background-color: lookup('$color-' + color);
+        &.light
+            background-color: lighten(lookup('$color-' + color), $color-variation);
+        &.dark
+            background-color: darken(lookup('$color-' + color), $color-variation);
+    .text.{color}
+        color: lookup('$color-' + color);
