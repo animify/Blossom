@@ -1,0 +1,17 @@
+for scale in ($scale-names)
+    .{scale}-hide
+        +below(scale)
+            display none
+    .{scale}-show
+        +below(scale)
+            display block
+    .{scale}-stack
+        +below(scale)
+            stack()
+            margin 0 !important
+            padding 0
+        &able > *
+            +below(scale)
+                stack()
+                margin 0 !important
+                padding 0
