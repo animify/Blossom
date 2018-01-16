@@ -1,14 +1,14 @@
 for scale in ($scale-names)
     +below(scale)
         .{scale}-hide
-            display none
+            display: none;
         .{scale}-show
-            display block
+            display: block;
         .{scale}-stack
-            stack()
-            margin 0 !important
-            padding 0
+            stack();
+            margin: 0 !important;
+            padding: 0;
         .{scale}-stackable > *
-            stack()
-            margin 0 !important
-            padding 0
+            stack();
+            margin: 0 !important;
+            padding: 0;
