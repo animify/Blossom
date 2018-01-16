@@ -1,12 +1,12 @@
 inputPlaceholder()
     &::-webkit-input-placeholder
-        {block}
+        { block }
     &:-moz-placeholder
-        {block}
+        { block }
     &::-moz-placeholder
-        {block}
+        { block }
     &:-ms-input-placeholder
-        {block}
+        { block }
 
 // GRID MIXINS
 
@@ -22,3 +22,10 @@ gridWidth(n)
 
 gridPush(n)
     margin-left: percentage(n / $grid-length);
+
+disabled()
+    &.disabled, &[disabled]
+        cursor: default;
+        opacity: .7;
+        pointer-events: none;
+        { block }

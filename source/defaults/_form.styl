@@ -1,0 +1,27 @@
+$form ?= {}
+
+$form.input = {
+    background-color: $color-white
+    border-color: $color-border
+    border-radius: $border-radius-m
+    border-width: 1px
+    color: $color-text-default
+    color--muted: $color-text-muted
+    padding: .5em 1em
+}
+
+styleInputDefault()
+    color: $form.input.color;
+    background-color: $form.input.background-color;
+    border: $form.input.border-width solid $form.input.border-color;
+    border-radius: $form.input.border-radius;
+    padding: $form.input.padding;
+
+styleInputPlaceholder()
+    color: $form.input.color--muted;
+
+styleInputTransparent()
+    background-color: transparent;
+
+styleInputDisabled()
+    color: $form.input.color--muted;

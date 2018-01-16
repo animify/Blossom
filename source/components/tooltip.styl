@@ -1,6 +1,6 @@
 -fn = './../themes/' + $theme + '/' + getFilename() + '/style';
 
-@import './../defaults/_tooltip'
+@import './../defaults/_tooltip';
 @import -fn if exists(-fn);
 
 .tooltip[data-content]
