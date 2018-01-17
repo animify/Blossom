@@ -3,12 +3,14 @@ $form ?= {}
 $form.input = {
     background-color: $color-white
     border-color: $color-border
+    border-color--focus: $color-primary
     border-radius: $border-radius-m
     border-width: 1px
     color: $color-text-default
     color--muted: $color-text-muted
     box-shadow: $box-shadow-form
     padding: 14px 18px
+    transition: $animation-type-ease $animation-duration-m
 }
 
 styleInputDefault()
@@ -18,6 +20,10 @@ styleInputDefault()
     border-radius: $form.input.border-radius;
     box-shadow: $form.input.box-shadow;
     padding: $form.input.padding;
+    transition: border-color $form.input.transition
+
+styleInputFocus()
+    border-color: $form.input.border-color--focus;
 
 styleInputPlaceholder()
     color: $form.input.color--muted;

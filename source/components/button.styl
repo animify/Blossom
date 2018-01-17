@@ -20,6 +20,9 @@
     &.outlined
         styleOutlined(color);
 
+    +disabled()
+        styleDisabled();
+
     for size in ($generic-sizes)
         &.{size}
             styleSized(size);

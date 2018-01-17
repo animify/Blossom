@@ -25,6 +25,12 @@ styleOutlined()
         background-color: @color;
         color: $color-white;
 
+styleDisabled()
+    user-select: none;
+    color: $button.color !important;
+    background-color: $button.background-color !important;
+    border-color: @background-color;
+
 styleSized(size)
     font-size: lookup('$font-size-' + size);
 
