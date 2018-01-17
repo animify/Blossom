@@ -1,0 +1,35 @@
+-fn = './../themes/' + $theme + '/' + getFilename() + '/style';
+
+@import './../defaults/_list'
+@import -fn if exists(-fn);
+
+.list
+    styleDefault();
+    li, .item
+        styleItem();
+
+    &.ordered
+        counter-reset: orderedListItem;
+        .list
+            counter-reset: orderedListItem;
+        li, .item
+            list-style: none;
+            &:before
+                counter-increment: orderedListItem;
+                content: counters(orderedListItem, ".") " ";
+                margin-right: .3rem;
+                styleCounter();
+        ol&
+            li[value], .item[value]
+                &:before
+                    content: attr(value);
+                    margin-right: .5rem;
+
+    &.bulleted
+        padding-left: 1rem;
+        li, .item
+            position: relative;
+            &:before
+                content: '\2022';
+                absolute: left auto top;
+                styleBullet();

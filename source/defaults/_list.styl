@@ -1,0 +1,42 @@
+$list ?= {
+    color: $color-text-default
+    font-size: $font-size
+    line-height: $line-height
+    margin: .5rem 0 0 0
+    padding: 0 0 0 1rem
+}
+
+$list.item = {
+    line-height: $line-height
+    margin: 0 0 .5rem 0
+}
+
+$list.counter = {
+    opacity: .6
+    margin-bottom: .8rem
+}
+
+$list.bullet = {
+    opacity: .6
+    margin: 0 0 0 -1rem
+}
+
+styleDefault()
+    & .list
+        margin: $list.margin;
+        padding: $list.padding;
+
+styleItem()
+    color: $list.color;
+    font-size: $list.font-size;
+    line-height: $list.item.line-height;
+    margin: $list.item.margin;
+
+styleCounter()
+    opacity: $list.counter.opacity;
+    margin-bottom: $list.counter.margin-bottom;
+    margin-right: $list.counter.margin-right;
+
+styleBullet()
+    opacity: $list.bullet.opacity;
+    margin: $list.bullet.margin;
