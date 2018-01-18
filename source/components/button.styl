@@ -17,9 +17,6 @@
     &:hover
         styleHover();
 
-    &.outlined
-        styleOutlined(color);
-
     +disabled()
         styleDisabled();
 
@@ -30,5 +27,3 @@
     for color in ($colors)
         &.{color}
             styleColored(color);
-            &.outlined
-                styleOutlinedColored(color);

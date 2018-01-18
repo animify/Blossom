@@ -2,7 +2,7 @@ $button ?= {
     background-color: $color-smoke,
     border-radius: $border-radius-m,
     border-width: 1px,
-    color: $color-text-default,
+    color: $color-text-body,
     font-size: $font-size
     font-weight: $font-weight-bold,
     line-height: $line-height,
@@ -14,9 +14,11 @@ styleDefault()
     background-color: $button.background-color;
     border-radius: $button.border-radius;
     padding: $button.padding;
+    transition: box-shadow $animation-duration-m $animation-type-ease, background-color $animation-duration-m $animation-type-ease;
 
 styleHover()
-    background-color: darken(@background-color, 8%);
+    box-shadow: 0 4px 16px rgba(0, 1, 31, 0.2);
+    background-color: lighten(@background-color, 25%);
 
 styleOutlined()
     background-color: transparent;
@@ -39,13 +41,5 @@ styleColored(color)
     background-color: lookup('$color-' + color);
     border: $button.border-width solid @background-color;
     &:hover
-        background-color: darken(@background-color, 8%);
+        background-color: lighten(@background-color, 5%);
         border-color: @background-color;
-
-styleOutlinedColored(color)
-    color: lookup('$color-' + color);
-    background-color: transparent;
-    border-color: @color;
-    &:hover
-        background-color: @color;
-        color: $color-white;
