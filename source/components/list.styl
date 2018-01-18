@@ -7,6 +7,9 @@
     styleDefault();
     li, .item
         styleItem();
+        & > .header
+            display: block;
+            styleItemHeader();
 
     &.ordered
         counter-reset: orderedListItem;
@@ -33,3 +36,22 @@
                 content: '\2022';
                 absolute: left auto top;
                 styleBullet();
+
+    &.divided
+        max-width: 36rem;
+        &.block
+            max-width: none;
+            width: 100%;
+        li, .item
+            margin: 0;
+            styleDivided();
+            a
+                display: inline-block;
+                float: right;
+
+    &.horizontal
+        li, .item
+            margin: 0;
+            display: inline-block;
+            & + li, & + .item
+                margin-left: 1.5rem

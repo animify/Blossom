@@ -19,3 +19,10 @@ for h in (1..5)
         font-weight: $font-weight-semibold;
         color: $color-text-header;
         line-height: $line-height;
+
+a
+    text-decoration: none;
+    color: $color-primary;
+    &:hover
+        color: lighten($color-primary, 20%);
+        cursor: pointer;
