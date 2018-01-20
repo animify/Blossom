@@ -1,7 +1,10 @@
 module.exports = function() {
     return function(style) {
         style.define('getFilename', function(path) {
-            return /([^\\]+)$/.exec(this.currentBlock.filename)[1].split('.')[0];
+            const parts = this.currentBlock.filename.split('\\');
+            parts.pop();
+
+            return parts.pop();
         });
     };
 };
