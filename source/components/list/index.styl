@@ -14,75 +14,75 @@ $list_bullet-margin = 0 0 0 -1rem;
 $list_divided-padding = .8rem 0;
 
 .list
-	& .list
-		margin: $list-margin;
-		padding: $list-padding;
+    & .list
+        margin: $list-margin;
+        padding: $list-padding;
 
-	li, .item
-		color: $list-color;
-		font-size: $list-font-size;
-		line-height: $list_item-line-height;
-		margin: $list_item-margin;
+    li, .item
+        color: $list-color;
+        font-size: $list-font-size;
+        line-height: $list_item-line-height;
+        margin: $list_item-margin;
 
-		& > .header
-			display: block;
-			font-weight: $list_item_header-font-weight;
+        & > .header
+            display: block;
+            font-weight: $list_item_header-font-weight;
 
-	&.ordered
-		counter-reset: orderedListItem;
+    &.ordered
+        counter-reset: orderedListItem;
 
-		.list
-			counter-reset: orderedListItem;
+        .list
+            counter-reset: orderedListItem;
 
-		li, .item
-			list-style: none;
+        li, .item
+            list-style: none;
 
-			&:before
-				content: counters(orderedListItem,'.') ' ';
-				counter-increment: orderedListItem;
-				margin-bottom: $list_counter-margin-bottom;
-				margin-right: .3rem;
-				margin-right: $list_counter-margin-right;
-				opacity: $list_counter-opacity;
+            &:before
+                content: counters(orderedListItem,'.') ' ';
+                counter-increment: orderedListItem;
+                margin-bottom: $list_counter-margin-bottom;
+                margin-right: .3rem;
+                margin-right: $list_counter-margin-right;
+                opacity: $list_counter-opacity;
 
-		ol&
-			li[value], .item[value]
-				&:before
-					content: attr(value);
-					margin-right: .5rem;
+        ol&
+            li[value], .item[value]
+                &:before
+                    content: attr(value);
+                    margin-right: .5rem;
 
-	&.bulleted
-		padding-left: 1rem;
+    &.bulleted
+        padding-left: 1rem;
 
-		li, .item
-			position: relative;
+        li, .item
+            position: relative;
 
-			&:before
-				absolute: left auto top;
-				content: '\2022';
-				margin: $list_bullet-margin;
-				opacity: $list_bullet-opacity;
+            &:before
+                absolute: left auto top;
+                content: '\2022';
+                margin: $list_bullet-margin;
+                opacity: $list_bullet-opacity;
 
-	&.divided
-		max-width: 36rem;
+    &.divided
+        max-width: 36rem;
 
-		&.block
-			max-width: none;
-			width: 100%;
+        &.block
+            max-width: none;
+            width: 100%;
 
-		li, .item
-			border-bottom: 1px solid $color-border;
-			margin: 0;
-			padding: $list_divided-padding;
+        li, .item
+            border-bottom: 1px solid $color-border;
+            margin: 0;
+            padding: $list_divided-padding;
 
-			a
-				display: inline-block;
-				float: right;
+            a
+                display: inline-block;
+                float: right;
 
-	&.horizontal
-		li, .item
-			display: inline-block;
-			margin: 0;
+    &.horizontal
+        li, .item
+            display: inline-block;
+            margin: 0;
 
-			& + li, & + .item
-				margin-left: 1.5rem;
+            & + li, & + .item
+                margin-left: 1.5rem;

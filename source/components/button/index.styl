@@ -10,37 +10,37 @@ $button-line-height = $line-height;
 $button-padding = .66em .86em;
 
 .button
-	background-color: $button-background-color;
-	border: $button-border-width solid $button-border-color;
-	border: 0;
-	border-radius: $button-border-radius;
-	color: $button-color;
-	cursor: pointer;
-	display: inline-block;
-	font-size: $button-font-size;
-	font-weight: $button-font-weight;
-	line-height: $button-line-height;
-	outline: 0;
-	padding: $button-padding;
-	position: relative;
-	transition: box-shadow $animation-duration-m $animation-type-ease;
+    background-color: $button-background-color;
+    border: $button-border-width solid $button-border-color;
+    border: 0;
+    border-radius: $button-border-radius;
+    color: $button-color;
+    cursor: pointer;
+    display: inline-block;
+    font-size: $button-font-size;
+    font-weight: $button-font-weight;
+    line-height: $button-line-height;
+    outline: 0;
+    padding: $button-padding;
+    position: relative;
+    transition: box-shadow $animation-duration-m $animation-type-ease;
 
-	&:hover
-		box-shadow: inset 0 -2px 0 rgba(0,0,31,.1);
-		color: inherit;
+    &:hover
+        box-shadow: inset 0 -2px 0 rgba(0,0,31,.1);
+        color: inherit;
 
-	+disabled()
-		background-color: $button-background-color !important;
-		border-color: @background-color;
-		color: $button-color !important;
-		user-select: none;
+    +disabled()
+        background-color: $button-background-color !important;
+        border-color: @background-color;
+        color: $button-color !important;
+        user-select: none;
 
-	for size in $generic-sizes
-		&.{size}
-			font-size: lookup('$font-size-' + size);
+    for size in $generic-sizes
+        &.{size}
+            font-size: lookup('$font-size-' + size);
 
-	for color in $colors
-		&.{color}
-			background-color: lookup('$color-' + color);
-			border: $button-border-width solid @background-color;
-			color: $color-white;
+    for color in $colors
+        &.{color}
+            background-color: lookup('$color-' + color);
+            border: $button-border-width solid @background-color;
+            color: $color-white;

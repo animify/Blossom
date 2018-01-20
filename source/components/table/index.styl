@@ -4,40 +4,40 @@ $table-border-color = $color-border;
 $table-border-width = 1px;
 
 .table
-	border: $table-border-width solid $table-border-color;
-	border-collapse: separate;
-	border-radius: $table-border-radius;
+    border: $table-border-width solid $table-border-color;
+    border-collapse: separate;
+    border-radius: $table-border-radius;
 
-	th
-		border-bottom: $table-border-width solid $table-border-color;
-		font-weight: $font-weight-semibold;
-		padding: .5em 1em;
+    th
+        border-bottom: $table-border-width solid $table-border-color;
+        font-weight: $font-weight-semibold;
+        padding: .5em 1em;
 
-	td
-		border-bottom: $table-border-width solid $table-border-color;
-		padding: .5em 1em;
+    td
+        border-bottom: $table-border-width solid $table-border-color;
+        padding: .5em 1em;
 
-	&:last-child td
-		border-bottom: 0;
+    &:last-child td
+        border-bottom: 0;
 
-	&.basic
-		border: 0;
+    &.basic
+        border: 0;
 
-		th, tr
-			background-color: transparent;
+        th, tr
+            background-color: transparent;
 
-	&.cells
-		th, tr td
-			border-left: $table-border-width solid $table-border-color;
+    &.cells
+        th, tr td
+            border-left: $table-border-width solid $table-border-color;
 
-			&:first-child
-				border-left: 0;
+            &:first-child
+                border-left: 0;
 
-	&.simple
-		th
-			background-color: transparent;
+    &.simple
+        th
+            background-color: transparent;
 
-	&.striped
-		tr
-			&:nth-child(2n)
-				background-color: $color-grey-light;
+    &.striped
+        tr
+            &:nth-child(2n)
+                background-color: $color-grey-light;

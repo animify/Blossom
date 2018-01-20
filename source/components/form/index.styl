@@ -11,43 +11,43 @@ $input-padding = 14px 18px;
 $input-transition = $animation-type-ease $animation-duration-;
 
 .input
-	font-style: normal;
-	position: relative;
+    font-style: normal;
+    position: relative;
 
-	input[type='text'], input[type='number'], input[type='password'], textarea
-		background-color: $input-background-color;
-		border: 0;
-		border: $input-border-width solid $input-border-color;
-		border-radius: $input-border-radius;
-		box-shadow: $input-box-shadow;
-		color: $input-color;
-		font-family: $font-family-standard;
-		font-size: $font-size;
-		line-height: $line-height;
-		min-width: 220px;
-		outline: 0;
-		padding: $input-padding;
-		text-align: left;
-		transition: border-color $input-transition;
+    input[type='text'], input[type='number'], input[type='password'], textarea
+        background-color: $input-background-color;
+        border: 0;
+        border: $input-border-width solid $input-border-color;
+        border-radius: $input-border-radius;
+        box-shadow: $input-box-shadow;
+        color: $input-color;
+        font-family: $font-family-standard;
+        font-size: $font-size;
+        line-height: $line-height;
+        min-width: 220px;
+        outline: 0;
+        padding: $input-padding;
+        text-align: left;
+        transition: border-color $input-transition;
 
-		&:focus
-			border-color: $input-border-color--focus;
+        &:focus
+            border-color: $input-border-color--focus;
 
-		+inputPlaceholder()
-			color: $input-color--muted;
+        +inputPlaceholder()
+            color: $input-color--muted;
 
-	&.transparent
-		input[type='text'], input[type='number'], input[type='password'], textarea
-			background-color: transparent;
-			border: 0;
-			margin: 0;
-			padding: 0;
+    &.transparent
+        input[type='text'], input[type='number'], input[type='password'], textarea
+            background-color: transparent;
+            border: 0;
+            margin: 0;
+            padding: 0;
 
-	+disabled()
-		input[type='text'], input[type='number'], input[type='password'], textarea
-			color: $input-color--muted;
+    +disabled()
+        input[type='text'], input[type='number'], input[type='password'], textarea
+            color: $input-color--muted;
 
-	textarea
-		max-height: 12rem;
-		min-height: 8rem;
-		resize: vertical;
+    textarea
+        max-height: 12rem;
+        min-height: 8rem;
+        resize: vertical;

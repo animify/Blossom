@@ -15,53 +15,53 @@ $dropdown_link-color = $color-text-body;
 $dropdown_link-color--hover = $color-base;
 
 .dropdown
-	display: inline-block;
-	position: relative;
+    display: inline-block;
+    position: relative;
 
-	.menu
-		absolute: top 2rem left 0;
-		background-color: $dropdown-background-color;
-		border: $dropdown-border-width solid $dropdown-border-color;
-		border-radius: $dropdown-border-radius;
-		box-shadow: $dropdown-box-shadow;
-		display: none;
-		min-width: 13rem;
-		padding: $dropdown-padding;
-		z-index: 800;
+    .menu
+        absolute: top 2rem left 0;
+        background-color: $dropdown-background-color;
+        border: $dropdown-border-width solid $dropdown-border-color;
+        border-radius: $dropdown-border-radius;
+        box-shadow: $dropdown-box-shadow;
+        display: none;
+        min-width: 13rem;
+        padding: $dropdown-padding;
+        z-index: 800;
 
-		li, a
-			display: block;
-			line-height: $dropdown-line-height;
+        li, a
+            display: block;
+            line-height: $dropdown-line-height;
 
-		li
-			padding: $dropdown_item-padding;
+        li
+            padding: $dropdown_item-padding;
 
-			&.header
-				color: $dropdown_item_header-color;
-				font-size: $dropdown_item_header-font-size;
-				font-weight: $dropdown_item_header-font-weight;
+            &.header
+                color: $dropdown_item_header-color;
+                font-size: $dropdown_item_header-font-size;
+                font-weight: $dropdown_item_header-font-weight;
 
-		a
-			color: $dropdown_link-color;
-			cursor: pointer;
+        a
+            color: $dropdown_link-color;
+            cursor: pointer;
 
-			&:hover
-				color: $dropdown_link-color--hover;
+            &:hover
+                color: $dropdown_link-color--hover;
 
-	&.open
-		.menu
-			display: block;
+    &.open
+        .menu
+            display: block;
 
-	&.floating
-		.menu
-			margin-top: 1rem;
+    &.floating
+        .menu
+            margin-top: 1rem;
 
-	&.right
-		.menu
-			left: auto;
-			right: 0;
+    &.right
+        .menu
+            left: auto;
+            right: 0;
 
-	&.upward
-		.menu
-			bottom: 2rem;
-			top: auto;
+    &.upward
+        .menu
+            bottom: 2rem;
+            top: auto;

@@ -10,51 +10,52 @@ $progress_status-font-weight = $font-weight-bold;
 $progress_status-line-height = $progress-height;
 
 styleSized(size)
-	if (size == 'tiny')
-		height: .26rem;
+    if (size == 'tiny')
+        height: .26rem;
 
-	if (size == 'small')
-		height: .8rem;
+    if (size == 'small')
+        height: .8rem;
+        
 
-	if (size == 'large')
-		height: 2.8rem;
+    if (size == 'large')
+        height: 2.8rem;
 
-		.status
-			font-size: $font-size;
-			line-height: 2.8rem;
+        .status
+            font-size: $font-size;
+            line-height: 2.8rem;
 
 .progress
-	cf();
-	background-color: $progress-background-color;
-	border-radius: $progress-border-radius;
-	content: '';
-	height: $progress-height;
+    cf();
+    background-color: $progress-background-color;
+    border-radius: $progress-border-radius;
+    content: '';
+    height: $progress-height;
 
-	.bar
-		background-color: $progress_bar-background-color;
-		border-radius: $progress_bar-border-radius;
-		height: 100%;
-		position: relative;
-		width: 0;
+    .bar
+        background-color: $progress_bar-background-color;
+        border-radius: $progress_bar-border-radius;
+        height: 100%;
+        position: relative;
+        width: 0;
 
-		.status
-			absolute: right .6rem;
-			color: $progress_status-color;
-			display: none;
-			font-size: $progress_status-font-size;
-			font-weight: $progress_status-font-weight;
-			line-height: $progress_status-line-height;
+        .status
+            absolute: right .6rem;
+            color: $progress_status-color;
+            display: none;
+            font-size: $progress_status-font-size;
+            font-weight: $progress_status-font-weight;
+            line-height: $progress_status-line-height;
 
-	&.tiny
-		styleSized('tiny');
+    &.tiny
+        styleSized('tiny');
 
-	&.small
-		styleSized('small');
+    &.small
+        styleSized('small');
 
-	&.large
-		styleSized('large');
+    &.large
+        styleSized('large');
 
-	&:not(.tiny):not(.small)
-		.bar.show
-			.status
-				display: block;
+    &:not(.tiny):not(.small)
+        .bar.show
+            .status
+                display: block;

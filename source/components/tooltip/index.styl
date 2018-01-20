@@ -14,145 +14,145 @@ $tooltip_body-color--dark = $color-white;
 $tooltip_body-padding = .5em 1em;
 
 .tooltip[data-content]
-	position: relative;
+    position: relative;
 
-	&:before
-		background-color: $tooltip_arrow-background-color;
-		box-shadow: $tooltip_arrow-box-shadow;
-		content: ' ';
-		height: .8rem;
-		opacity: 0;
-		position: absolute;
-		transform: rotate(45deg) scale(0);
-		transform-origin: center top;
-		transition: all cubic-bezier(.02,.49,.01,.97) .14s;
-		width: .8rem;
-		will-change: transform,opacity;
-		z-index: 2;
+    &:before
+        background-color: $tooltip_arrow-background-color;
+        box-shadow: $tooltip_arrow-box-shadow;
+        content: ' ';
+        height: .8rem;
+        opacity: 0;
+        position: absolute;
+        transform: rotate(45deg) scale(0);
+        transform-origin: center top;
+        transition: all cubic-bezier(.02,.49,.01,.97) .14s;
+        width: .8rem;
+        will-change: transform,opacity;
+        z-index: 2;
 
-		../[data-position~=bottom]:before
-			box-shadow: $tooltip_arrow-box-shadow--inverted;
+        ../[data-position~=bottom]:before
+            box-shadow: $tooltip_arrow-box-shadow--inverted;
 
-	&:after
-		background-color: $tooltip_body-background-color;
-		border: $tooltip_body-border;
-		border-radius: $tooltip_body-border-radius;
-		box-shadow: $tooltip_body-box-shadow;
-		color: $tooltip_body-color;
-		content: attr(data-content);
-		cursor: default;
-		max-width: none;
-		padding: $tooltip_body-padding;
-		pointer-events: none;
-		position: absolute;
-		text-align: left;
-		transform: scale(0);
-		transition: all cubic-bezier(.02,.49,.01,.97) .14s;
-		white-space: nowrap;
-		will-change: transform,opacity;
-		z-index: 1;
+    &:after
+        background-color: $tooltip_body-background-color;
+        border: $tooltip_body-border;
+        border-radius: $tooltip_body-border-radius;
+        box-shadow: $tooltip_body-box-shadow;
+        color: $tooltip_body-color;
+        content: attr(data-content);
+        cursor: default;
+        max-width: none;
+        padding: $tooltip_body-padding;
+        pointer-events: none;
+        position: absolute;
+        text-align: left;
+        transform: scale(0);
+        transition: all cubic-bezier(.02,.49,.01,.97) .14s;
+        white-space: nowrap;
+        will-change: transform,opacity;
+        z-index: 1;
 
-	&.dark
-		&:before
-			background-color: $tooltip_arrow-background-color--dark;
-			box-shadow: none !important;
+    &.dark
+        &:before
+            background-color: $tooltip_arrow-background-color--dark;
+            box-shadow: none !important;
 
-		&:after
-			background-color: $tooltip_body-background-color--dark;
-			border-color: $tooltip_body-border-color--dark;
-			color: $tooltip_body-color--dark;
+        &:after
+            background-color: $tooltip_body-background-color--dark;
+            border-color: $tooltip_body-border-color--dark;
+            color: $tooltip_body-color--dark;
 
-	&:hover
-		&:before
-			opacity: 1;
-			transform: rotate(45deg) scale(1);
+    &:hover
+        &:before
+            opacity: 1;
+            transform: rotate(45deg) scale(1);
 
-		&:after
-			transform: scale(1);
+        &:after
+            transform: scale(1);
 
-	for size in $generic-sizes
-		&[data-text={size}]
-			&:after
-				font-size: lookup('$font-size-' + size);
+    for size in $generic-sizes
+        &[data-text={size}]
+            &:after
+                font-size: lookup('$font-size-' + size);
 
-	&[data-position~=top]
-		&:before
-			bottom: 100%;
-			margin-bottom: .18rem;
+    &[data-position~=top]
+        &:before
+            bottom: 100%;
+            margin-bottom: .18rem;
 
-		&:after
-			bottom: 100%;
-			margin-bottom: .6rem;
+        &:after
+            bottom: 100%;
+            margin-bottom: .6rem;
 
-	&[data-position~=bottom]
-		&:before
-			margin-top: .4rem;
-			top: 100%;
+    &[data-position~=bottom]
+        &:before
+            margin-top: .4rem;
+            top: 100%;
 
-		&:after
-			margin-top: .6rem;
-			top: 100%;
+        &:after
+            margin-top: .6rem;
+            top: 100%;
 
-	&[data-position='top left']
-		&:before
-			left: 1rem;
+    &[data-position='top left']
+        &:before
+            left: 1rem;
 
-		&:after
-			left: 0;
-			right: auto;
-			transform-origin: left bottom;
+        &:after
+            left: 0;
+            right: auto;
+            transform-origin: left bottom;
 
-	&[data-position='top center']
-		&:before
-			left: 50%;
+    &[data-position='top center']
+        &:before
+            left: 50%;
 
-		&:after
-			left: 50%;
-			transform: translateX(-50%) scale(0);
-			transform-origin: center bottom;
+        &:after
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            transform-origin: center bottom;
 
-		&:hover
-			&:after
-				transform: translateX(-50%) scale(1);
+        &:hover
+            &:after
+                transform: translateX(-50%) scale(1);
 
-			&:before
-				transform: rotate(45deg) scale(1);
+            &:before
+                transform: rotate(45deg) scale(1);
 
-	&[data-position='top right']
-		&:before
-			right: 1rem;
+    &[data-position='top right']
+        &:before
+            right: 1rem;
 
-		&:after
-			left: auto;
-			right: 0;
-			transform-origin: right bottom;
+        &:after
+            left: auto;
+            right: 0;
+            transform-origin: right bottom;
 
-	&[data-position='bottom left']
-		&:before
-			left: 1rem;
+    &[data-position='bottom left']
+        &:before
+            left: 1rem;
 
-		&:after
-			left: 0;
-			right: auto;
-			transform-origin: left top;
+        &:after
+            left: 0;
+            right: auto;
+            transform-origin: left top;
 
-	&[data-position='bottom center']
-		&:before
-			left: 50%;
+    &[data-position='bottom center']
+        &:before
+            left: 50%;
 
-		&:after
-			left: 50%;
-			transform: translateX(-50%) scale(0);
-			transform-origin: center top;
+        &:after
+            left: 50%;
+            transform: translateX(-50%) scale(0);
+            transform-origin: center top;
 
-		&:hover:after
-			transform: translateX(-50%) scale(1);
+        &:hover:after
+            transform: translateX(-50%) scale(1);
 
-	&[data-position='bottom right']
-		&:before
-			right: 1rem;
+    &[data-position='bottom right']
+        &:before
+            right: 1rem;
 
-		&:after
-			left: auto;
-			right: 0;
-			transform-origin: right top;
+        &:after
+            left: auto;
+            right: 0;
+            transform-origin: right top;

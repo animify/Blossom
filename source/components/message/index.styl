@@ -9,35 +9,35 @@ $message-margin = 1rem 0;
 $message-padding = 1rem 1.5rem;
 
 styleColored(type)
-	border-color: lookup('$color-border-' + type);
-	background-color: lighten(@border-color,90%);
-	color: darken(@border-color,45%);
+    border-color: lookup('$color-border-' + type);
+    background-color: lighten(@border-color,90%);
+    color: darken(@border-color,45%);
 
-	h5
-		color: darken(@border-color,60%);
+    h5
+        color: darken(@border-color,60%);
 
 .message
-	margin: $message-margin;
-	padding: $message-padding;
-	border: 0;
-	border-left: $message-border-width solid $message-border-color;
-	border-radius: $message-border-radius;
-	background-color: $message-background-color;
-	color: $message-color;
-	line-height: $message-line-height;
+    margin: $message-margin;
+    padding: $message-padding;
+    border: 0;
+    border-left: $message-border-width solid $message-border-color;
+    border-radius: $message-border-radius;
+    background-color: $message-background-color;
+    color: $message-color;
+    line-height: $message-line-height;
 
-	&.warning
-		styleColored('warning');
+    &.warning
+        styleColored('warning');
 
-	&.important
-		styleColored('important');
+    &.important
+        styleColored('important');
 
-	&.success
-		styleColored('success');
+    &.success
+        styleColored('success');
 
-	&.info
-		styleColored('info');
+    &.info
+        styleColored('info');
 
-	a
-		color: inherit;
-		text-decoration: underline;
+    a
+        color: inherit;
+        text-decoration: underline;
