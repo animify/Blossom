@@ -1,58 +1,53 @@
--fn = './../themes/' + $theme + '/' + getFilename() + '/style';
-
-@import -fn if exists(-fn);
-
-$form ?= {}
-
-$form.input = {
-    background-color: $color-white
-    border-color: $color-border
-    border-color--focus: $color-base
-    border-radius: $border-radius-m
-    border-width: 1px
-    color: $color-text-body
-    color--muted: $color-text-muted
-    box-shadow: $box-shadow-form
-    padding: 14px 18px
-    transition: $animation-type-ease $animation-duration-m
-}
+ifExists(getFilename(),$theme);
+$input-background-color = $color-white;
+$input-border-color = $color-border;
+$input-border-color--focus = $color-base;
+$input-border-radius = $border-radius-m;
+$input-border-width = 1px;
+$input-color = $color-text-body;
+$input-color--muted = $color-text-muted;
+$input-box-shadow = $box-shadow-form;
+$input-padding = 14px 18px;
+$input-transition = $animation-type-ease $animation-duration-;
 
 .input
-    position: relative;
-    font-style: normal;
+	font-style: normal;
+	position: relative;
 
-    input[type="text"], input[type="number"], input[type="password"], textarea
-        font-family: $font-family-standard;
-        font-size: $font-size;
-        outline: 0;
-        border: 0;
-        min-width: 220px;
-        text-align: left;
-        line-height: $line-height;
-        color: $form.input.color;
-        background-color: $form.input.background-color;
-        border: $form.input.border-width solid $form.input.border-color;
-        border-radius: $form.input.border-radius;
-        box-shadow: $form.input.box-shadow;
-        padding: $form.input.padding;
-        transition: border-color $form.input.transition
-        &:focus
-            border-color: $form.input.border-color--focus;
-        +inputPlaceholder()
-            color: $form.input.color--muted;
+	input[type='text'], input[type='number'], input[type='password'], textarea
+		background-color: $input-background-color;
+		border: 0;
+		border: $input-border-width solid $input-border-color;
+		border-radius: $input-border-radius;
+		box-shadow: $input-box-shadow;
+		color: $input-color;
+		font-family: $font-family-standard;
+		font-size: $font-size;
+		line-height: $line-height;
+		min-width: 220px;
+		outline: 0;
+		padding: $input-padding;
+		text-align: left;
+		transition: border-color $input-transition;
 
-    &.transparent
-        input[type="text"], input[type="number"], input[type="password"], textarea
-            border: 0;
-            padding: 0;
-            margin: 0;
-            background-color: transparent;
+		&:focus
+			border-color: $input-border-color--focus;
 
-    +disabled()
-        input[type="text"], input[type="number"], input[type="password"], textarea
-            color: $form.input.color--muted;
+		+inputPlaceholder()
+			color: $input-color--muted;
 
-    textarea
-        resize: vertical;
-        min-height: 8rem;
-        max-height: 12rem;
+	&.transparent
+		input[type='text'], input[type='number'], input[type='password'], textarea
+			background-color: transparent;
+			border: 0;
+			margin: 0;
+			padding: 0;
+
+	+disabled()
+		input[type='text'], input[type='number'], input[type='password'], textarea
+			color: $input-color--muted;
+
+	textarea
+		max-height: 12rem;
+		min-height: 8rem;
+		resize: vertical;

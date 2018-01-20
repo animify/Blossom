@@ -1,37 +1,26 @@
--fn = './../themes/' + $theme + '/' + getFilename() + '/style';
-
-@import -fn if exists(-fn);
-
-$menu ?= {
-    background-color: $color-grey-light
-    padding: 1rem 3rem
-}
-
-$menu.item = {
-    line-height: $line-height
-    color: $color-text-light
-    font-weight: $font-weight-semibold
-    margin: 0 0 0 2rem
-    hover: {
-        color: $color-text-body
-    }
-}
-
-$menu.item.active = {
-    color: $color-base
-}
+ifExists(getFilename(),$theme);
+$menu-background-color = $color-grey-light;
+$menu-padding = 1rem 3rem;
+$menu_item-line-height = $line-height;
+$menu_item-color = $color-text-light;
+$menu_item-font-weight = $font-weight-semibold;
+$menu_item-margin = 0 0 0 2rem;
 
 .menu
-    &.basic
-        padding: $menu.padding;
-        background-color: $menu.background-color;
-        .item
-            color: $menu.item.color;
-            line-height: $menu.item.line-height;
-            font-weight: $menu.item.font-weight;
-            & + .item
-                margin: $menu.item.margin;
-            &:hover
-                color: $menu.item.hover.color;
-            &.active
-                color: $menu.item.active.color;
+	&.basic
+		background-color: $menu-background-color;
+		padding: $menu-padding;
+
+		.item
+			color: $menu_item-color;
+			font-weight: $menu_item-font-weight;
+			line-height: $menu_item-line-height;
+
+			& + .item
+				margin: $menu_item-margin;
+
+			&:hover
+				color: $color-text-body;
+
+			&.active
+				color: $color-base;

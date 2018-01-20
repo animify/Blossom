@@ -1,96 +1,88 @@
--fn = './../themes/' + $theme + '/' + getFilename() + '/style';
-
-@import -fn if exists(-fn);
-
-$list ?= {
-    color: $color-text-body
-    font-size: $font-size
-    line-height: $line-height
-    margin: .5rem 0 0 0
-    padding: 0 0 0 1rem
-}
-
-$list.item = {
-    line-height: $line-height
-    margin: 0 0 .5rem 0
-}
-
-$list.item.header = {
-    font-weight: $font-weight-semibold
-}
-
-$list.counter = {
-    opacity: .6
-    margin-bottom: .8rem
-}
-
-$list.bullet = {
-    opacity: .6
-    margin: 0 0 0 -1rem
-}
-
-$list.divided = {
-    padding: .8rem 0
-}
+ifExists(getFilename(),$theme);
+$list-color = $color-text-body;
+$list-font-size = $font-size;
+$list-line-height = $line-height;
+$list-margin = .5rem 0 0 0;
+$list-padding = 0 0 0 1rem;
+$list_item-line-height = $line-height;
+$list_item-margin = 0 0 .5rem 0;
+$list_item_header-font-weight = $font-weight-semibold;
+$list_counter-opacity = .6;
+$list_counter-margin-bottom = .8rem;
+$list_bullet-opacity = .6;
+$list_bullet-margin = 0 0 0 -1rem;
+$list_divided-padding = .8rem 0;
 
 .list
-    & .list
-        margin: $list.margin;
-        padding: $list.padding;
-    li, .item
-        color: $list.color;
-        font-size: $list.font-size;
-        line-height: $list.item.line-height;
-        margin: $list.item.margin;
-        & > .header
-            display: block;
-            font-weight: $list.item.header.font-weight;
+	& .list
+		margin: $list-margin;
+		padding: $list-padding;
 
-    &.ordered
-        counter-reset: orderedListItem;
-        .list
-            counter-reset: orderedListItem;
-        li, .item
-            list-style: none;
-            &:before
-                counter-increment: orderedListItem;
-                content: counters(orderedListItem, ".") " ";
-                margin-right: .3rem;
-                opacity: $list.counter.opacity;
-                margin-bottom: $list.counter.margin-bottom;
-                margin-right: $list.counter.margin-right;
-        ol&
-            li[value], .item[value]
-                &:before
-                    content: attr(value);
-                    margin-right: .5rem;
+	li, .item
+		color: $list-color;
+		font-size: $list-font-size;
+		line-height: $list_item-line-height;
+		margin: $list_item-margin;
 
-    &.bulleted
-        padding-left: 1rem;
-        li, .item
-            position: relative;
-            &:before
-                content: '\2022';
-                absolute: left auto top;
-                opacity: $list.bullet.opacity;
-                margin: $list.bullet.margin;
+		& > .header
+			display: block;
+			font-weight: $list_item_header-font-weight;
 
-    &.divided
-        max-width: 36rem;
-        &.block
-            max-width: none;
-            width: 100%;
-        li, .item
-            margin: 0;
-            padding: $list.divided.padding;
-            border-bottom: 1px solid $color-border;
-            a
-                display: inline-block;
-                float: right;
+	&.ordered
+		counter-reset: orderedListItem;
 
-    &.horizontal
-        li, .item
-            margin: 0;
-            display: inline-block;
-            & + li, & + .item
-                margin-left: 1.5rem
+		.list
+			counter-reset: orderedListItem;
+
+		li, .item
+			list-style: none;
+
+			&:before
+				content: counters(orderedListItem,'.') ' ';
+				counter-increment: orderedListItem;
+				margin-bottom: $list_counter-margin-bottom;
+				margin-right: .3rem;
+				margin-right: $list_counter-margin-right;
+				opacity: $list_counter-opacity;
+
+		ol&
+			li[value], .item[value]
+				&:before
+					content: attr(value);
+					margin-right: .5rem;
+
+	&.bulleted
+		padding-left: 1rem;
+
+		li, .item
+			position: relative;
+
+			&:before
+				absolute: left auto top;
+				content: '\2022';
+				margin: $list_bullet-margin;
+				opacity: $list_bullet-opacity;
+
+	&.divided
+		max-width: 36rem;
+
+		&.block
+			max-width: none;
+			width: 100%;
+
+		li, .item
+			border-bottom: 1px solid $color-border;
+			margin: 0;
+			padding: $list_divided-padding;
+
+			a
+				display: inline-block;
+				float: right;
+
+	&.horizontal
+		li, .item
+			display: inline-block;
+			margin: 0;
+
+			& + li, & + .item
+				margin-left: 1.5rem;

@@ -1,42 +1,43 @@
--fn = './../themes/' + $theme + '/' + getFilename() + '/style';
-
-@import -fn if exists(-fn);
-
-$message ?= {
-    background-color: $color-grey-light,
-    border-color: $color-border,
-    border-radius: $border-radius-m,
-    border-width: 6px,
-    color: $color-text-body,
-    line-height: $line-height,
-    margin: 1rem 0,
-    padding: 1rem 1.5rem
-}
+ifExists(getFilename(),$theme);
+$message-background-color = $color-grey-light;
+$message-border-color = $color-border;
+$message-border-radius = $border-radius-m;
+$message-border-width = 6px;
+$message-color = $color-text-body;
+$message-line-height = $line-height;
+$message-margin = 1rem 0;
+$message-padding = 1rem 1.5rem;
 
 styleColored(type)
-    border-color: lookup('$color-border-' + type);
-    background-color: lighten(@border-color, 90%);
-    color: darken(@border-color, 45%);
-    h5
-        color: darken(@border-color, 60%);
+	border-color: lookup('$color-border-' + type);
+	background-color: lighten(@border-color,90%);
+	color: darken(@border-color,45%);
+
+	h5
+		color: darken(@border-color,60%);
 
 .message
-    border: 0;
-    border-left: $message.border-width solid $message.border-color;
-    margin: $message.margin;
-    padding: $message.padding;
-    border-radius: $message.border-radius;
-    color: $message.color;
-    line-height: $message.line-height;
-    background-color: $message.background-color;
-    &.warning
-        styleColored('warning');
-    &.important
-        styleColored('important');
-    &.success
-        styleColored('success');
-    &.info
-        styleColored('info');
-    a
-        color: inherit;
-        text-decoration: underline;
+	margin: $message-margin;
+	padding: $message-padding;
+	border: 0;
+	border-left: $message-border-width solid $message-border-color;
+	border-radius: $message-border-radius;
+	background-color: $message-background-color;
+	color: $message-color;
+	line-height: $message-line-height;
+
+	&.warning
+		styleColored('warning');
+
+	&.important
+		styleColored('important');
+
+	&.success
+		styleColored('success');
+
+	&.info
+		styleColored('info');
+
+	a
+		color: inherit;
+		text-decoration: underline;

@@ -1,77 +1,67 @@
--fn = './../themes/' + $theme + '/' + getFilename() + '/style';
-
-@import -fn if exists(-fn);
-
-$dropdown ?= {
-    background-color: $color-white,
-    border-color: $color-border,
-    border-radius: $border-radius-m,
-    border-width: 1px,
-    box-shadow: $box-shadow-close,
-    color: $color-text-body,
-    line-height: $line-height,
-    padding: .8rem 0,
-}
-
-$dropdown.item = {
-    padding: .2em 1.4em
-}
-
-$dropdown.link = {
-    color: $color-text-body,
-    color--hover: $color-base
-}
-
-$dropdown.item.header = {
-    color: $color-text-body,
-    font-size: $font-size,
-    font-weight: $font-weight-semibold
-}
+ifExists(getFilename(),$theme);
+$dropdown-background-color = $color-white;
+$dropdown-border-color = $color-border;
+$dropdown-border-radius = $border-radius-m;
+$dropdown-border-width = 1px;
+$dropdown-box-shadow = $box-shadow-close;
+$dropdown-color = $color-text-body;
+$dropdown-line-height = $line-height;
+$dropdown-padding = .8rem 0;
+$dropdown_item-padding = .2em 1.4em;
+$dropdown_item_header-color = $color-text-body;
+$dropdown_item_header-font-size = $font-size;
+$dropdown_item_header-font-weight = $font-weight-semibold;
+$dropdown_link-color = $color-text-body;
+$dropdown_link-color--hover = $color-base;
 
 .dropdown
-    position: relative;
-    display: inline-block;
-    styleDefault();
+	display: inline-block;
+	position: relative;
 
-    .menu
-        absolute: top 2rem left 0;
-        min-width: 13rem;
-        z-index: 800;
-        display: none;
-        background-color: $dropdown.background-color;
-        border: $dropdown.border-width solid $dropdown.border-color;
-        padding: $dropdown.padding;
-        border-radius: $dropdown.border-radius;
-        box-shadow: $dropdown.box-shadow
-        li, a
-            display: block;
-            line-height: $dropdown.line-height;
-        li
-            padding: $dropdown.item.padding
-            &.header
-                color: $dropdown.item.header.color;
-                font-size: $dropdown.item.header.font-size;
-                font-weight: $dropdown.item.header.font-weight;
-        a
-            cursor: pointer;
-            color: $dropdown.link.color;
-            &:hover
-                color: $dropdown.link.color--hover;
+	.menu
+		absolute: top 2rem left 0;
+		background-color: $dropdown-background-color;
+		border: $dropdown-border-width solid $dropdown-border-color;
+		border-radius: $dropdown-border-radius;
+		box-shadow: $dropdown-box-shadow;
+		display: none;
+		min-width: 13rem;
+		padding: $dropdown-padding;
+		z-index: 800;
 
-    &.open
-        .menu
-            display: block;
+		li, a
+			display: block;
+			line-height: $dropdown-line-height;
 
-    &.floating
-        .menu
-            margin-top: 1rem;
+		li
+			padding: $dropdown_item-padding;
 
-    &.right
-        .menu
-            left: auto;
-            right: 0;
+			&.header
+				color: $dropdown_item_header-color;
+				font-size: $dropdown_item_header-font-size;
+				font-weight: $dropdown_item_header-font-weight;
 
-    &.upward
-        .menu
-            top: auto;
-            bottom: 2rem;
+		a
+			color: $dropdown_link-color;
+			cursor: pointer;
+
+			&:hover
+				color: $dropdown_link-color--hover;
+
+	&.open
+		.menu
+			display: block;
+
+	&.floating
+		.menu
+			margin-top: 1rem;
+
+	&.right
+		.menu
+			left: auto;
+			right: 0;
+
+	&.upward
+		.menu
+			bottom: 2rem;
+			top: auto;
