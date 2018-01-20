@@ -1,15 +1,50 @@
 -fn = './../themes/' + $theme + '/' + getFilename() + '/style';
 
-@import './../defaults/_list'
 @import -fn if exists(-fn);
 
+$list ?= {
+    color: $color-text-body
+    font-size: $font-size
+    line-height: $line-height
+    margin: .5rem 0 0 0
+    padding: 0 0 0 1rem
+}
+
+$list.item = {
+    line-height: $line-height
+    margin: 0 0 .5rem 0
+}
+
+$list.item.header = {
+    font-weight: $font-weight-semibold
+}
+
+$list.counter = {
+    opacity: .6
+    margin-bottom: .8rem
+}
+
+$list.bullet = {
+    opacity: .6
+    margin: 0 0 0 -1rem
+}
+
+$list.divided = {
+    padding: .8rem 0
+}
+
 .list
-    styleDefault();
+    & .list
+        margin: $list.margin;
+        padding: $list.padding;
     li, .item
-        styleItem();
+        color: $list.color;
+        font-size: $list.font-size;
+        line-height: $list.item.line-height;
+        margin: $list.item.margin;
         & > .header
             display: block;
-            styleItemHeader();
+            font-weight: $list.item.header.font-weight;
 
     &.ordered
         counter-reset: orderedListItem;
@@ -21,7 +56,9 @@
                 counter-increment: orderedListItem;
                 content: counters(orderedListItem, ".") " ";
                 margin-right: .3rem;
-                styleCounter();
+                opacity: $list.counter.opacity;
+                margin-bottom: $list.counter.margin-bottom;
+                margin-right: $list.counter.margin-right;
         ol&
             li[value], .item[value]
                 &:before
@@ -35,7 +72,8 @@
             &:before
                 content: '\2022';
                 absolute: left auto top;
-                styleBullet();
+                opacity: $list.bullet.opacity;
+                margin: $list.bullet.margin;
 
     &.divided
         max-width: 36rem;
@@ -44,7 +82,8 @@
             width: 100%;
         li, .item
             margin: 0;
-            styleDivided();
+            padding: $list.divided.padding;
+            border-bottom: 1px solid $color-border;
             a
                 display: inline-block;
                 float: right;

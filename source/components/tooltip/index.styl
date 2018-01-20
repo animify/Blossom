@@ -1,7 +1,27 @@
 -fn = './../themes/' + $theme + '/' + getFilename() + '/style';
 
-@import './../defaults/_tooltip';
 @import -fn if exists(-fn);
+
+$tooltip ?= {}
+
+$tooltip.arrow = {
+    background-color: $color-white,
+    background-color--dark: $color-ash,
+    box-shadow: 1px 1px 0 0 $color-border
+    box-shadow--inverted: -1px -1px 0 0 $color-border
+}
+
+$tooltip.body = {
+    background-color: $color-white,
+    background-color--dark: $color-ash,
+    border: 1px solid $color-border,
+    border-color--dark: $color-ash,
+    border-radius: $border-radius-m,
+    box-shadow: $box-shadow-subtle,
+    color: $color-text-body,
+    color--dark: $color-white,
+    padding: .5em 1em,
+}
 
 .tooltip[data-content]
     position relative;
@@ -17,7 +37,11 @@
         transition: all cubic-bezier(0.02, 0.49, 0.01, 0.97) .14s;
         opacity: 0;
         will-change: transform, opacity
-        styleArrow();
+        background-color: $tooltip.arrow.background-color;
+        box-shadow: $tooltip.arrow.box-shadow;
+        ../[data-position~=bottom]:before
+            box-shadow: $tooltip.arrow.box-shadow--inverted;
+
 
     &:after
         cursor: default;
@@ -31,14 +55,21 @@
         transform: scale(0);
         transition: all cubic-bezier(0.02, 0.49, 0.01, 0.97) .14s;
         will-change: transform, opacity
-        styleBody();
+        color: $tooltip.body.color;
+        background-color: $tooltip.body.background-color;
+        border: $tooltip.body.border;
+        box-shadow: $tooltip.body.box-shadow;
+        padding: $tooltip.body.padding;
+        border-radius: $tooltip.body.border-radius;
 
     &.dark
         &:before
             box-shadow: none !important;
-            styleArrowDark();
+            background-color: $tooltip.arrow.background-color--dark;
         &:after
-            styleBodyDark();
+            border-color: $tooltip.body.border-color--dark;
+            background-color: $tooltip.body.background-color--dark;
+            color: $tooltip.body.color--dark;
 
     &:hover
         &:before

@@ -1,0 +1,52 @@
+-fn = './../themes/' + $theme + '/' + getFilename() + '/style';
+
+@import -fn if exists(-fn);
+
+$button ?= {
+    background-color: $bg-color-gray,
+    border-radius: $border-radius-m,
+    border-width: 1px,
+    color: $color-text-body,
+    font-size: $font-size
+    font-weight: $font-weight-bold,
+    line-height: $line-height,
+    padding: .66em .86em
+}
+
+.button
+    display: inline-block;
+    position: relative;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    font-weight: $button.font-weight;
+    font-size: $button.font-size;
+    line-height: $button.line-height;
+    color: $button.color;
+    background-color: $button.background-color;
+    border-radius: $button.border-radius;
+    padding: $button.padding;
+    transition: box-shadow $animation-duration-m $animation-type-ease, background-color $animation-duration-m $animation-type-ease;
+
+    &:hover
+        box-shadow: 0 4px 16px rgba(0, 1, 31, 0.2);
+        background-color: lighten(@background-color, 25%);
+
+    +disabled()
+        user-select: none;
+        color: $button.color !important;
+        background-color: $button.background-color !important;
+        border-color: @background-color;
+
+    for size in ($generic-sizes)
+        &.{size}
+            font-size: lookup('$font-size-' + size);
+
+    for color in ($colors)
+        &.{color}
+            color: $color-white;
+            background-color: lookup('$color-' + color);
+            border: $button.border-width solid @background-color;
+            &:hover
+                background-color: lighten(@background-color, 5%);
+                border-color: @background-color;

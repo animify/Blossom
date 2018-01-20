@@ -1,0 +1,57 @@
+-fn = './../themes/' + $theme + '/' + getFilename() + '/style';
+
+@import -fn if exists(-fn);
+
+$table ?= {
+    background-color: $color-white,
+    border-color: $color-border,
+    border-width: 1px,
+}
+
+$table.th = {
+    font-weight: $font-weight-semibold,
+    padding: .5em 1em
+}
+
+$table.td = {
+    padding: .5em 1em
+}
+
+$table.striped = {
+    background-color: $color-grey-light
+}
+
+.table
+    border-collapse: separate;
+    border: $table.border-width solid $table.border-color;
+    border-radius: $table.border-radius;
+    th
+        font-weight: $table.th.font-weight;
+        border-bottom: $table.border-width solid $table.border-color;
+        padding: $table.th.padding;
+    td
+        padding: $table.td.padding;
+        border-bottom: $table.border-width solid $table.border-color;
+
+    &:last-child td
+        border-bottom: 0;
+
+    &.basic
+        border: 0;
+        th, tr
+            background-color: transparent;
+
+    &.cells
+        th, tr td
+            border-left: $table.border-width solid $table.border-color;
+            &:first-child
+                border-left: 0;
+
+    &.simple
+        th
+            background-color: transparent;
+
+    &.striped
+        tr
+            &:nth-child(2n)
+                background-color: $table.striped.background-color;
