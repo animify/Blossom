@@ -1,61 +1,74 @@
-ifExists(getFilename(),$theme);
-$progress-background-color = $color-border;
-$progress-border-radius = $border-radius-m;
-$progress-height = 1.6rem;
-$progress_bar-border-radius = $progress-border-radius;
-$progress_bar-background-color = darken($progress-background-color,76%);
-$progress_status-color = $color-white;
-$progress_status-font-size = $font-size-small;
-$progress_status-font-weight = $font-weight-bold;
-$progress_status-line-height = $progress-height;
+ifExists(getFilename(), $theme);
+$background-color = $color-border;
+$border-radius = $border-radius-m;
+$height = 1.6rem;
+$bar-border-radius = $border-radius;
+$bar-background-color = darken($background-color, 76%);
+$status-color = $color-white;
+$status-font-size = $font-size-small;
+$status-font-weight = $font-weight-bold;
+$status-line-height = $height;
 
-styleSized(size)
-    if (size == 'tiny')
-        height: .26rem;
+styleSized(size) {
+    if (size == 'tiny') {
+        height: 0.26rem;
+    }
 
-    if (size == 'small')
-        height: .8rem;
-        
+    if (size == 'small') {
+        height: 0.8rem;
+    }
 
-    if (size == 'large')
+    if (size == 'large') {
         height: 2.8rem;
 
-        .status
+        .status {
             font-size: $font-size;
             line-height: 2.8rem;
+        }
+    }
+}
 
-.progress
+.progress {
     cf();
-    background-color: $progress-background-color;
-    border-radius: $progress-border-radius;
+    background-color: $background-color;
+    border-radius: $border-radius;
     content: '';
-    height: $progress-height;
+    height: $height;
 
-    .bar
-        background-color: $progress_bar-background-color;
-        border-radius: $progress_bar-border-radius;
+    .bar {
+        background-color: $bar-background-color;
+        border-radius: $bar-border-radius;
         height: 100%;
         position: relative;
         width: 0;
 
-        .status
-            absolute: right .6rem;
-            color: $progress_status-color;
+        .status {
+            absolute: right 0.6rem;
+            color: $status-color;
             display: none;
-            font-size: $progress_status-font-size;
-            font-weight: $progress_status-font-weight;
-            line-height: $progress_status-line-height;
+            font-size: $status-font-size;
+            font-weight: $status-font-weight;
+            line-height: $status-line-height;
+        }
+    }
 
-    &.tiny
+    &.tiny {
         styleSized('tiny');
+    }
 
-    &.small
+    &.small {
         styleSized('small');
+    }
 
-    &.large
+    &.large {
         styleSized('large');
+    }
 
-    &:not(.tiny):not(.small)
-        .bar.show
-            .status
+    &:not(.tiny):not(.small) {
+        .bar.show {
+            .status {
                 display: block;
+            }
+        }
+    }
+}

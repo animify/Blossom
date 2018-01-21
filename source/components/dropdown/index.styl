@@ -1,18 +1,17 @@
 ifExists(getFilename(),$theme);
-$dropdown-background-color = $color-white;
-$dropdown-border-color = $color-border;
-$dropdown-border-radius = $border-radius-m;
-$dropdown-border-width = 1px;
-$dropdown-box-shadow = $box-shadow-close;
-$dropdown-color = $color-text-body;
-$dropdown-line-height = $line-height;
-$dropdown-padding = .8rem 0;
-$dropdown_item-padding = .2em 1.4em;
-$dropdown_item_header-color = $color-text-body;
-$dropdown_item_header-font-size = $font-size;
-$dropdown_item_header-font-weight = $font-weight-semibold;
-$dropdown_link-color = $color-text-body;
-$dropdown_link-color--hover = $color-base;
+$background-color = $color-white;
+$border-color = $color-border;
+$border-radius = $border-radius-m;
+$border-width = 1px;
+$box-shadow = $box-shadow-close;
+$line-height = $line-height;
+$padding = .8rem 0;
+$item-padding = .2em 1.4em;
+$header-color = $color-text-body;
+$header-font-size = $font-size;
+$header-font-weight = $font-weight-semibold;
+$link-color = $color-text-body;
+$link-color_hover = $color-base;
 
 .dropdown
     display: inline-block;
@@ -20,33 +19,33 @@ $dropdown_link-color--hover = $color-base;
 
     .menu
         absolute: top 2rem left 0;
-        background-color: $dropdown-background-color;
-        border: $dropdown-border-width solid $dropdown-border-color;
-        border-radius: $dropdown-border-radius;
-        box-shadow: $dropdown-box-shadow;
+        background-color: $background-color;
+        border: $border-width solid $border-color;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
         display: none;
         min-width: 13rem;
-        padding: $dropdown-padding;
+        padding: $padding;
         z-index: 800;
 
         li, a
             display: block;
-            line-height: $dropdown-line-height;
+            line-height: $line-height;
 
         li
-            padding: $dropdown_item-padding;
+            padding: $item-padding;
 
             &.header
-                color: $dropdown_item_header-color;
-                font-size: $dropdown_item_header-font-size;
-                font-weight: $dropdown_item_header-font-weight;
+                color: $header-color;
+                font-size: $header-font-size;
+                font-weight: $header-font-weight;
 
         a
-            color: $dropdown_link-color;
+            color: $link-color;
             cursor: pointer;
 
             &:hover
-                color: $dropdown_link-color--hover;
+                color: $link-color_hover;
 
     &.open
         .menu

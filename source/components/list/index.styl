@@ -1,32 +1,32 @@
 ifExists(getFilename(),$theme);
-$list-color = $color-text-body;
-$list-font-size = $font-size;
-$list-line-height = $line-height;
-$list-margin = .5rem 0 0 0;
-$list-padding = 0 0 0 1rem;
-$list_item-line-height = $line-height;
-$list_item-margin = 0 0 .5rem 0;
-$list_item_header-font-weight = $font-weight-semibold;
-$list_counter-opacity = .6;
-$list_counter-margin-bottom = .8rem;
-$list_bullet-opacity = .6;
-$list_bullet-margin = 0 0 0 -1rem;
-$list_divided-padding = .8rem 0;
+$color = $color-text-body;
+$font-size = $font-size;
+$line-height = $line-height;
+$margin = .5rem 0 0 0;
+$padding = 0 0 0 1rem;
+$item-line-height = $line-height;
+$item-margin = 0 0 .5rem 0;
+$header-font-weight = $font-weight-semibold;
+$counter-opacity = .6;
+$counter-margin-bottom = .8rem;
+$bullet-opacity = .6;
+$bullet-margin = 0 0 0 -1rem;
+$divided-padding = .8rem 0;
 
 .list
     & .list
-        margin: $list-margin;
-        padding: $list-padding;
+        margin: $margin;
+        padding: $padding;
 
     li, .item
-        color: $list-color;
-        font-size: $list-font-size;
-        line-height: $list_item-line-height;
-        margin: $list_item-margin;
+        color: $color;
+        font-size: $font-size;
+        line-height: $item-line-height;
+        margin: $item-margin;
 
         & > .header
             display: block;
-            font-weight: $list_item_header-font-weight;
+            font-weight: $header-font-weight;
 
     &.ordered
         counter-reset: orderedListItem;
@@ -40,10 +40,10 @@ $list_divided-padding = .8rem 0;
             &:before
                 content: counters(orderedListItem,'.') ' ';
                 counter-increment: orderedListItem;
-                margin-bottom: $list_counter-margin-bottom;
+                margin-bottom: $counter-margin-bottom;
                 margin-right: .3rem;
-                margin-right: $list_counter-margin-right;
-                opacity: $list_counter-opacity;
+                margin-right: $counter-margin-right;
+                opacity: $counter-opacity;
 
         ol&
             li[value], .item[value]
@@ -60,8 +60,8 @@ $list_divided-padding = .8rem 0;
             &:before
                 absolute: left auto top;
                 content: '\2022';
-                margin: $list_bullet-margin;
-                opacity: $list_bullet-opacity;
+                margin: $bullet-margin;
+                opacity: $bullet-opacity;
 
     &.divided
         max-width: 36rem;
@@ -73,7 +73,7 @@ $list_divided-padding = .8rem 0;
         li, .item
             border-bottom: 1px solid $color-border;
             margin: 0;
-            padding: $list_divided-padding;
+            padding: $divided-padding;
 
             a
                 display: inline-block;

@@ -1,21 +1,21 @@
 ifExists(getFilename(),$theme);
-$table-background-color = $color-white;
-$table-border-color = $color-border;
-$table-border-width = 1px;
+$background-color = $color-white;
+$border-color = $color-border;
+$border-width = 1px;
 
 .table
-    border: $table-border-width solid $table-border-color;
+    border: $border-width solid $border-color;
     border-collapse: separate;
-    border-radius: $table-border-radius;
+    border-radius: $border-radius;
 
     th
-        border-bottom: $table-border-width solid $table-border-color;
-        font-weight: $font-weight-semibold;
         padding: .5em 1em;
+        border-bottom: $border-width solid $border-color;
+        font-weight: $font-weight-semibold;
 
     td
-        border-bottom: $table-border-width solid $table-border-color;
         padding: .5em 1em;
+        border-bottom: $border-width solid $border-color;
 
     &:last-child td
         border-bottom: 0;
@@ -28,7 +28,7 @@ $table-border-width = 1px;
 
     &.cells
         th, tr td
-            border-left: $table-border-width solid $table-border-color;
+            border-left: $border-width solid $border-color;
 
             &:first-child
                 border-left: 0;

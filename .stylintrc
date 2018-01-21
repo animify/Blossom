@@ -39,7 +39,7 @@
     "semicolons": "always",
     "sortOrder": "grouped",
     "stackedProperties": "never",
-    "tabStopChar"= " ",
+    "tabStopChar": "\\s\\s",
     "trailingWhitespace": "never",
     "universal": false,
     "valid": true,

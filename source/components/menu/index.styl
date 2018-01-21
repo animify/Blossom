@@ -1,23 +1,23 @@
 ifExists(getFilename(),$theme);
-$menu-background-color = $color-grey-light;
-$menu-padding = 1rem 3rem;
-$menu_item-line-height = $line-height;
-$menu_item-color = $color-text-light;
-$menu_item-font-weight = $font-weight-semibold;
-$menu_item-margin = 0 0 0 2rem;
+$background-color = $color-grey-light;
+$padding = 1rem 3rem;
+$item-line-height = $line-height;
+$item-color = $color-text-light;
+$item-font-weight = $font-weight-semibold;
+$item-margin = 0 0 0 2rem;
 
 .menu
     &.basic
-        background-color: $menu-background-color;
-        padding: $menu-padding;
+        background-color: $background-color;
+        padding: $padding;
 
         .item
-            color: $menu_item-color;
-            font-weight: $menu_item-font-weight;
-            line-height: $menu_item-line-height;
+            color: $item-color;
+            font-weight: $item-font-weight;
+            line-height: $item-line-height;
 
             & + .item
-                margin: $menu_item-margin;
+                margin: $item-margin;
 
             &:hover
                 color: $color-text-body;

@@ -1,24 +1,24 @@
 ifExists(getFilename(),$theme);
-$tooltip_arrow-background-color = $color-white;
-$tooltip_arrow-background-color--dark = $color-ash;
-$tooltip_arrow-box-shadow = 1px 1px 0 0 $color-border;
-$tooltip_arrow-box-shadow--inverted = -1px -1px 0 0 $color-border;
-$tooltip_body-background-color = $color-white;
-$tooltip_body-background-color--dark = $color-ash;
-$tooltip_body-border = 1px solid $color-border;
-$tooltip_body-border-color--dark = $color-ash;
-$tooltip_body-border-radius = $border-radius-m;
-$tooltip_body-box-shadow = $box-shadow-subtle;
-$tooltip_body-color = $color-text-body;
-$tooltip_body-color--dark = $color-white;
-$tooltip_body-padding = .5em 1em;
+$arrow-background-color = $color-white;
+$arrow-background-color-dark = $color-ash;
+$arrow-box-shadow = 1px 1px 0 0 $color-border;
+$arrow-box-shadow--inverted = -1px -1px 0 0 $color-border;
+$body-background-color = $color-white;
+$body-background-color-dark = $color-ash;
+$body-border = 1px solid $color-border;
+$body-border-color-dark = $color-ash;
+$body-border-radius = $border-radius-m;
+$body-box-shadow = $box-shadow-subtle;
+$body-color = $color-text-body;
+$body-color-dark = $color-white;
+$body-padding = .5em 1em;
 
 .tooltip[data-content]
     position: relative;
 
     &:before
-        background-color: $tooltip_arrow-background-color;
-        box-shadow: $tooltip_arrow-box-shadow;
+        background-color: $arrow-background-color;
+        box-shadow: $arrow-box-shadow;
         content: ' ';
         height: .8rem;
         opacity: 0;
@@ -31,18 +31,18 @@ $tooltip_body-padding = .5em 1em;
         z-index: 2;
 
         ../[data-position~=bottom]:before
-            box-shadow: $tooltip_arrow-box-shadow--inverted;
+            box-shadow: $arrow-box-shadow--inverted;
 
     &:after
-        background-color: $tooltip_body-background-color;
-        border: $tooltip_body-border;
-        border-radius: $tooltip_body-border-radius;
-        box-shadow: $tooltip_body-box-shadow;
-        color: $tooltip_body-color;
+        background-color: $body-background-color;
+        border: $body-border;
+        border-radius: $body-border-radius;
+        box-shadow: $body-box-shadow;
+        color: $body-color;
         content: attr(data-content);
         cursor: default;
         max-width: none;
-        padding: $tooltip_body-padding;
+        padding: $body-padding;
         pointer-events: none;
         position: absolute;
         text-align: left;
@@ -54,13 +54,13 @@ $tooltip_body-padding = .5em 1em;
 
     &.dark
         &:before
-            background-color: $tooltip_arrow-background-color--dark;
+            background-color: $arrow-background-color-dark;
             box-shadow: none !important;
 
         &:after
-            background-color: $tooltip_body-background-color--dark;
-            border-color: $tooltip_body-border-color--dark;
-            color: $tooltip_body-color--dark;
+            background-color: $body-background-color-dark;
+            border-color: $body-border-color-dark;
+            color: $body-color-dark;
 
     &:hover
         &:before
