@@ -1,79 +1,84 @@
 $grid
-  padding 0 grid-padding
-  *zoom 1
-  float left
-  clear none
-  text-align inherit
-  margin-left 0%
-  margin-right 0%
-  width 100%
-  &:before, &:after
-    display table
-    content ''
-  &:after
-    clear both
+    padding: 0 grid-padding;
+    @css { * }zoom: 1;
+    float: left;
+    clear: none;
+    text-align: inherit;
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 100%;
+
+    &:before, &:after
+        display: table;
+        content: '';
+
+    &:after
+        clear: both;
 
 placeholder()
-  &::-webkit-input-placeholder
-      {block}
-  &:-moz-placeholder
-      {block}
-  &::-moz-placeholder
-      {block}
-  &:-ms-input-placeholder
-      {block}
+    &::-webkit-input-placeholder
+        {block};
+
+    &:-moz-placeholder
+        {block};
+
+    &::-moz-placeholder
+        {block};
+
+    &:-ms-input-placeholder
+        {block};
 
 image-size(s)
-  img
-    width lookup('image-' + s)
-    height auto
+    img
+        width: lookup('image-' + s);
+        height: auto;
 
 grid(n)
-  width percentage(n/grid-length)
+    width: percentage((n / grid-length));
 
 flexgridpadding()
-  padding 0 grid-padding
+    padding: 0 grid-padding;
 
 gridrowmargin()
-  margin auto -(grid-padding)
+    margin: auto - grid-padding;
 
 flexgrid(n)
-  flex 0 0 percentage(n/grid-length)
-  max-width percentage(n/grid-length)
+    flex: 0 0 percentage((n / grid-length));
+    max-width: percentage((n / grid-length));
 
 gridpush(n)
-  margin-left percentage(n/grid-length)
+    margin-left: percentage((n / grid-length));
 
 pull(n)
-  margin-left percentage(-(n)/grid-length)
+    margin-left: percentage((-(n) / grid-length));
 
 tooltip-text(c)
-  font-size lookup('tooltip-' + c)
+    font-size: lookup('tooltip-' + c);
 
 text-color(c)
-  color lookup('color-' + c)
+    color: lookup('color-' + c);
 
 btn-border(c)
-  box-shadow inset 0px 0px 0px 1px lookup('color-' + c)
+    box-shadow: inset 0px 0px 0px 1px lookup('color-' + c);
 
 btn-size(c)
-  font-size lookup('button-' + c + '-fontsize')
-  padding lookup('button-' + c + '-padding')
+    font-size: lookup('button-' + c + '-fontsize');
+    padding: lookup('button-' + c + '-padding');
 
 btn-color(c)
-  color lookup('text-button-' + c)
+    color: lookup('text-button-' + c);
 
 btn-disabled-color(c)
-  color lighten(lookup('color-' + c), 70%)
+    color: lighten(lookup('color-' + c), 70%);
 
 btn-color-outlined(c)
-  color lookup('color-' + c)
+    color: lookup('color-' + c);
 
 btn-background(c)
-  background-color lookup('color-' + c)
+    background-color: lookup('color-' + c);
 
 btn-background-hover(c)
-  if c == 'black'
-    background-color lighten(lookup('color-' + c), 14%)
-  else
-    background-color darken(lookup('color-' + c), 8%)
+    if (c == 'black')
+        background-color: lighten(lookup('color-' + c), 14%);
+    else
+        background-color: darken(lookup('color-' + c), 8%);

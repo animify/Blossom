@@ -1,62 +1,78 @@
 .dropdown
-  position relative
-  display inline-block
-  &.disabled
-    .toggle
-      opacity .4
-      pointer-events none
-      cursor default
-  .toggle
-    cursor pointer
-    &:not(.button) > i
-      margin 0 .2rem
-      font-size font-size-small
-  &.floating
-    .menu
-      margin-top 1rem
-  &.open
-    .menu
-      display block
-  .menu
-    background-color #fff
-    absolute top 2rem left 0
-    border 1px solid background-light-grey
-    border-radius border-radius-normal
-    min-width 13rem
-    z-index 2000
-    display none
-    padding 1rem 0
-    box-shadow 0 1px 5px 0 box-shadow-grey
-  li
-    display block
-    i
-      width 1.3rem
-    &.divider
-      margin .6rem 0
+    position: relative;
+    display: inline-block;
+
     &.disabled
-      opacity .4
-      pointer-events none
-      cursor default
-    &.header
-      color text-default
-      padding 0.5rem 1.4rem 0.5rem 1.4rem
-      font-size font-size-standard
-      font-weight 500
-    &:hover
-      a
-        color color-primary
-    a
-      color text-default
-      display block
-      padding 0.25rem 1.4rem
-      line-height 1.6em
-  &.right
+        .toggle
+            opacity: .4;
+            pointer-events: none;
+            cursor: default;
+
+    .toggle
+        cursor: pointer;
+
+        &:not(.button) > i
+            margin: 0 .2rem;
+            font-size: font-size-small;
+
+    &.floating
+        .menu
+            margin-top: 1rem;
+
+    &.open
+        .menu
+            display: block;
+
     .menu
-      left auto
-      right 0
-  &.upward
-    .menu
-      top auto
-      bottom 2rem
-  .sub
-    left 13rem
+        background-color: #fff;
+        absolute: top 2rem left 0;
+        border: 1px solid background-light-grey;
+        border-radius: border-radius-normal;
+        min-width: 13rem;
+        z-index: 2000;
+        display: none;
+        padding: 1rem 0;
+        box-shadow: 0 1px 5px 0 box-shadow-grey;
+
+    li
+        display: block;
+
+        i
+            width: 1.3rem;
+
+        &.divider
+            margin: .6rem 0;
+
+        &.disabled
+            opacity: .4;
+            pointer-events: none;
+            cursor: default;
+
+        &.header
+            color: text-default;
+            padding: .5rem 1.4rem .5rem 1.4rem;
+            font-size: font-size-standard;
+            font-weight: 500;
+
+        &:hover
+            a
+                color: color-primary;
+
+        a
+            color: text-default;
+            display: block;
+            padding: .25rem 1.4rem;
+            line-height: 1.6em;
+
+    &.right
+        .menu
+            left: auto;
+            right: 0;
+
+    &.upward
+        .menu
+            top: auto;
+            bottom: 2rem;
+
+    .sub
+        left: 13rem;

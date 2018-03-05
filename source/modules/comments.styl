@@ -1,56 +1,74 @@
 .comments
-  cf()
-  .comment
-    position relative
-    margin-top 1.4rem
-    cf()
-    .avatar
-      width 2.5rem
-      height 2.5rem
-      height auto
-      display block
-      vertical-align top
-      margin-top .26rem
-      float left
-      border-radius border-radius-normal
-      img
-        max-width 100%
-        border-radius border-radius-normal
-    .content
-      display block
-      vertical-align top
-      margin-left 3.4rem
-      .actions
-        display block
-        font-size font-size-small
-        margin-top .63rem
-        .action
-          display inline-block
-          vertical-align top
-          color light-link
-          & + .action
-            margin-left 0.6rem
-          &.active
-            color light-link-hover
-          &:hover
-            color light-link-hover
-      .meta
-        font-size font-size-small
-        color text-default
-        margin-left .6rem
-      .creator
-        font-weight 600
-        color color-heading
-        line-height 1.62rem
-        &:hover
-          color primary-color
-      .text
-        line-height 1.14rem
-  .reply
-    position relative
-    textarea
-      margin-top 1rem
-  .group
-    margin-top 1.4rem
-    .button
-      border-radius border-radius-normal
+    cf();
+
+    .comment
+        position: relative;
+        margin-top: 1.4rem;
+
+        cf();
+
+        .avatar
+            width: 2.5rem;
+            height: 2.5rem;
+            height: auto;
+            display: block;
+            vertical-align: top;
+            margin-top: .26rem;
+            float: left;
+            border-radius: border-radius-normal;
+
+            img
+                max-width: 100%;
+                border-radius: border-radius-normal;
+
+        .content
+            display: block;
+            vertical-align: top;
+            margin-left: 3.4rem;
+
+            .actions
+                display: block;
+                font-size: font-size-small;
+                margin-top: .63rem;
+
+                .action
+                    display: inline-block;
+                    vertical-align: top;
+                    color: light-link;
+
+                    & + .action
+                        margin-left: .6rem;
+
+                    &.active
+                        color: light-link-hover;
+
+                    &:hover
+                        color: light-link-hover;
+
+            .meta
+                font-size: font-size-small;
+                color: text-default;
+                margin-left: .6rem;
+
+            .creator
+                font-weight: 600;
+                color: color-heading;
+                line-height: 1.62rem;
+
+                &:hover
+                    color: primary-color;
+
+            .text
+                line-height: 1.14rem;
+
+    .reply
+        position: relative;
+
+        textarea
+            margin-top: 1rem;
+
+    .group
+        margin-top: 1.4rem;
+
+        .button
+            border-radius: border-radius-normal;

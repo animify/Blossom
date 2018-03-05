@@ -1,9 +1,12 @@
-for color in ('red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black' 'primary' 'ash' 'smoke')
-  .{color}:not(.button):not(.text)
-    background-color lookup('color-' + color)
-    &.light
-      background-color lighten(lookup('color-' + color), 18%)
-    &.dark
-      background-color darken(lookup('color-' + color), 18%)
-  .text.{color}
-    text-color(color)
+for color in 'red' 'orange' 'yellow' 'green' 'teal' 'blue' 'violet' 'purple' 'pink' 'brown' 'grey' 'black' 'primary' 'ash' 'smoke'
+    .{color}:not(.button):not(.text)
+        background-color: lookup('color-' + color);
+
+        &.light
+            background-color: lighten(lookup('color-' + color), 18%);
+
+        &.dark
+            background-color: darken(lookup('color-' + color), 18%);
+
+    .text.{color}
+        text-color(color);

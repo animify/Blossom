@@ -1,126 +1,144 @@
-arrow-indent = 1rem
-dark-tooltip-color = color-ash
+arrow-indent = 1rem;
+dark-tooltip-color = color-ash;
 
 .tooltip[data-content]
-  position relative
-  &:before
-    background-color #fff
-    position absolute
-    z-index 2
-    width .8rem
-    height .8rem
-    content ' '
-    font-size 1rem
-    box-shadow 1px 1px 0 0 border-grey
-    transform-origin center top
-    transform rotate(45deg) scale(0)
-    transition all cubic-bezier(0.02, 0.49, 0.01, 0.97) .14s
-    opacity 0
-  &:after
-    content attr(data-content)
-    position absolute
-    z-index 1
-    color text-default
-    background-color #fff
-    border 1px solid border-grey
-    max-width none
-    white-space nowrap
-    font-size 1rem
-    text-align left
-    border-radius border-radius-normal
-    padding .75em 1em
-    box-shadow 0 1px 2px 0 box-shadow-grey
-    transform scale(0)
-    transition all cubic-bezier(0.02, 0.49, 0.01, 0.97) .14s
-    cursor default
-    pointer-events none
-  for size in ('tiny' 'small' 'medium' 'large' 'big')
-    &[data-text={size}]
-      &:after
-        tooltip-text(size)
-  &.dark
-    &:before
-      box-shadow none !important
-      background-color dark-tooltip-color
-    &:after
-      border-color dark-tooltip-color
-      background-color dark-tooltip-color
-      color #fff
-  &:hover
-    &:before
-      transform rotate(45deg) scale(1)
-      opacity 1
-    &:after
-      transform scale(1)
+    position: relative;
 
-  &[data-position~=top]
     &:before
-      bottom 100%
-      margin-bottom .18rem
-    &:after
-      bottom 100%
-      margin-bottom .6rem
+        background-color: #fff;
+        position: absolute;
+        z-index: 2;
+        width: .8rem;
+        height: .8rem;
+        content: ' ';
+        font-size: 1rem;
+        box-shadow: 1px 1px 0 0 border-grey;
+        transform-origin: center top;
+        transform: rotate(45deg) scale(0);
+        transition: all cubic-bezier(.02, .49, .01, .97) .14s;
+        opacity: 0;
 
-  &[data-position~=bottom]
-    &:before
-      top 100%
-      margin-top .4rem
-      box-shadow -1px -1px 0 0 border-grey
     &:after
-      top 100%
-      margin-top .6rem
+        content: attr(data-content);
+        position: absolute;
+        z-index: 1;
+        color: text-default;
+        background-color: #fff;
+        border: 1px solid border-grey;
+        max-width: none;
+        white-space: nowrap;
+        font-size: 1rem;
+        text-align: left;
+        border-radius: border-radius-normal;
+        padding: .75em 1em;
+        box-shadow: 0 1px 2px 0 box-shadow-grey;
+        transform: scale(0);
+        transition: all cubic-bezier(.02, .49, .01, .97) .14s;
+        cursor: default;
+        pointer-events: none;
 
-  &[data-position="top left"]
-    &:before
-      left arrow-indent
-    &:after
-      left 0
-      right auto
-      transform-origin left bottom
+    for size in 'tiny' 'small' 'medium' 'large' 'big'
+        &[data-text={size}]
+            &:after
+                tooltip-text(size);
 
-  &[data-position="top center"]
-    &:before
-      left 50%
-    &:after
-      left 50%
-      transform-origin center bottom
-      transform translateX(-50%) scale(0)
+    &.dark
+        &:before
+            box-shadow: none !important;
+            background-color: dark-tooltip-color;
+
+        &:after
+            border-color: dark-tooltip-color;
+            background-color: dark-tooltip-color;
+            color: #fff;
+
     &:hover
-      &:after
-        transform translateX(-50%) scale(1)
-      &:before
-        transform rotate(45deg) scale(1)
+        &:before
+            transform: rotate(45deg) scale(1);
+            opacity: 1;
 
-  &[data-position="top right"]
-    &:before
-      right arrow-indent
-    &:after
-      right 0
-      left auto
-      transform-origin right bottom
+        &:after
+            transform: scale(1);
 
-  &[data-position="bottom left"]
-    &:before
-      left arrow-indent
-    &:after
-      left 0
-      right auto
-      transform-origin left top
+    &[data-position~=top]
+        &:before
+            bottom: 100%;
+            margin-bottom: .18rem;
 
-  &[data-position="bottom center"]
-    &:before
-      left 50%
-    &:after
-      left 50%
-      transform-origin center top
-      transform translateX(-50%) scale(0)
-    &:hover:after
-      transform translateX(-50%) scale(1)
+        &:after
+            bottom: 100%;
+            margin-bottom: .6rem;
 
-  &[data-position="bottom right"]
-    &:before
-      right arrow-indent
-    &:after
-      right 0
-      left auto
-      transform-origin right top
+    &[data-position~=bottom]
+        &:before
+            top: 100%;
+            margin-top: .4rem;
+            box-shadow: -1px -1px 0 0 border-grey;
+
+        &:after
+            top: 100%;
+            margin-top: .6rem;
+
+    &[data-position='top left']
+        &:before
+            left: arrow-indent;
+
+        &:after
+            left: 0;
+            right: auto;
+            transform-origin: left bottom;
+
+    &[data-position='top center']
+        &:before
+            left: 50%;
+
+        &:after
+            left: 50%;
+            transform-origin: center bottom;
+            transform: translateX(-50%) scale(0);
+
+        &:hover
+            &:after
+                transform: translateX(-50%) scale(1);
+
+            &:before
+                transform: rotate(45deg) scale(1);
+
+    &[data-position='top right']
+        &:before
+            right: arrow-indent;
+
+        &:after
+            right: 0;
+            left: auto;
+            transform-origin: right bottom;
+
+    &[data-position='bottom left']
+        &:before
+            left: arrow-indent;
+
+        &:after
+            left: 0;
+            right: auto;
+            transform-origin: left top;
+
+    &[data-position='bottom center']
+        &:before
+            left: 50%;
+
+        &:after
+            left: 50%;
+            transform-origin: center top;
+            transform: translateX(-50%) scale(0);
+
+        &:hover:after
+            transform: translateX(-50%) scale(1);
+
+    &[data-position='bottom right']
+        &:before
+            right: arrow-indent;
+
+        &:after
+            right: 0;
+            left: auto;
+            transform-origin: right top;
