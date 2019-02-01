@@ -66,4 +66,4 @@ Found any issues with the build? Make sure you let me know by posting an issue.
 
 ---
 
-Licensed under MIT - Copyright (c) Cindr.io 2017
+Licensed under MIT - Copyright (c) Stefan Mansson 2019
